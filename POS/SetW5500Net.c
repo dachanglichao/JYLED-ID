@@ -96,14 +96,14 @@ void Load_Net_Parameters(void)
 	Sub_Mask[2]=ParameterDatas[12];
 	Sub_Mask[3]=ParameterDatas[13];
 
-//	Phy_Addr[0]=0x0c;//加载物理地址
-//	Phy_Addr[1]=0x29;
-//	Phy_Addr[2]=0xab;
-//	Phy_Addr[3]=0x7c;
-//	Phy_Addr[4]=MainCode>>8;;
-//	Phy_Addr[5]=MainCode;
-	memcpy(Phy_Addr,snedData+1,6);
-	if(Phy_Addr[0] % 2 != 0) Phy_Addr[0] = 0x02;
+	Phy_Addr[0]=0x0c;//加载物理地址
+	Phy_Addr[1]=0x29;
+	Phy_Addr[2]=0xab;
+	Phy_Addr[3]=0x7c;
+	Phy_Addr[4]=MainCode>>8;;
+	Phy_Addr[5]=MainCode;
+//	memcpy(Phy_Addr,snedData+1,6);
+//	if(Phy_Addr[0] % 2 != 0) Phy_Addr[0] = 0x02;
 
 	IP_Addr[0]=ParameterDatas[0];//加载本机IP地址
 	IP_Addr[1]=ParameterDatas[1];

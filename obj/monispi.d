@@ -1,0 +1,12 @@
+.\obj\monispi.o: CommonDevDriver\MoNiSPI.C
+.\obj\monispi.o: .\FWlib\inc\stm32f10x_gpio.h
+.\obj\monispi.o: .\CM3\stm32f10x.h
+.\obj\monispi.o: .\CM3\core_cm3.h
+.\obj\monispi.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\monispi.o: .\CM3\system_stm32f10x.h
+.\obj\monispi.o: .\FWlib\inc\stm32f10x_conf.h
+.\obj\monispi.o: .\FWlib\inc\stm32f10x_gpio.h
+.\obj\monispi.o: .\FWlib\inc\stm32f10x_rcc.h
+.\obj\monispi.o: .\CM3\stm32f10x.h
+.\obj\monispi.o: .\StdPeripheralByDK\GPIO.H
+.\obj\monispi.o: CommonDevDriver\MoNiSPI.H

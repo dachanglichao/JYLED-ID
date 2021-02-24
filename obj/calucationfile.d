@@ -1,0 +1,16 @@
+.\obj\calucationfile.o: POS\CalucationFile.c
+.\obj\calucationfile.o: .\Define\MyDefine.h
+.\obj\calucationfile.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\obj\calucationfile.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\obj\calucationfile.o: .\CM3\stm32f10x.h
+.\obj\calucationfile.o: .\CM3\core_cm3.h
+.\obj\calucationfile.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\calucationfile.o: .\CM3\system_stm32f10x.h
+.\obj\calucationfile.o: .\FWlib\inc\stm32f10x_conf.h
+.\obj\calucationfile.o: .\FWlib\inc\stm32f10x_gpio.h
+.\obj\calucationfile.o: .\CM3\stm32f10x.h
+.\obj\calucationfile.o: .\FWlib\inc\stm32f10x_rcc.h
+.\obj\calucationfile.o: .\Define\char.h
+.\obj\calucationfile.o: POS\CalucationFile.h
+.\obj\calucationfile.o: .\Define\MyDefine.h
+.\obj\calucationfile.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdlib.h

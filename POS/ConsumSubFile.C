@@ -38,9 +38,9 @@ extern ulong global_key;
 extern ulong  BatchNum;
 
 
-
+extern u8 scidcode[6];
 //写脱机限额
-uchar WriteNoNetLimitMoney(uchar *buf)
+static uchar WriteNoNetLimitMoney(uchar *buf)
 {
 	uint 	sw1sw2=0;
 	uchar	FileAID[10];
@@ -48,8 +48,9 @@ uchar WriteNoNetLimitMoney(uchar *buf)
 	int getreturnS;
 	uchar keydata[100];
 	uchar keydatabd[10];
-		
-	getreturnS = MFRC522_Auth(0x60,usesectornum*4,keydatabd,CardSerialNum);		
+	
+	
+	getreturnS = MFRC522_Auth(0x60,usesectornum*4,scidcode,CardSerialNum);		
 	getreturnS = MFRC522_Read(usesectornum*4+2,keydata);
 	
 	if(memcmp(keydata,buf,4) == 0)
@@ -60,6 +61,17 @@ uchar WriteNoNetLimitMoney(uchar *buf)
 	memcpy(keydata,buf,4);	
 	getreturnS = MFRC522_Write(usesectornum*4+2,keydata);
 		
+	return getreturnS;
+
+}
+//读脱机限额
+static uchar ReadNoNetLimitMoney(uchar *buf)
+{
+	int getreturnS;
+
+	getreturnS = MFRC522_Auth(0x60,usesectornum*4,scidcode,CardSerialNum);		
+	getreturnS = MFRC522_Read(usesectornum*4+2,buf);
+	
 	return getreturnS;
 
 }
@@ -361,6 +373,7 @@ void	ConsumSub(void)//消费主程序
 							}
 						else
 						{
+							ReadNoNetLimitMoney(LimtConsumeData_CPU);
 							jjj=ChgBCDStringToUlong(LimtConsumeData_CPU,4)+CurrentConsumMoney;
 							iii=LimtConsumeMoney;				
 							if(jjj>iii)  //超过脱机限额
@@ -384,37 +397,22 @@ void	ConsumSub(void)//消费主程序
 									{
 											if(ConsumMode==CONSUM_RATION)   
 											{				
-												if(Purse_num==1)
-													NoNetRecord[0] =0x63;
-												else if(Purse_num==3)
-													NoNetRecord[0] =0x60;
-												else//2
-													NoNetRecord[0] =0x62;
+													NoNetRecord[0] =2;									
 											}
 											else
 											{
-												if(Purse_num==1)
-													NoNetRecord[0] =0;
-												else if(Purse_num==3)
-													NoNetRecord[0] =0x5f;
-												else//2
-													NoNetRecord[0] =0x61;
-											}
-											NoNetRecord[0] +=100;																																								
-											memcpy(NoNetRecord+1,CardPrinterNum,6);
-													
-											ChgUlongToBCDString(CurrentConsumMoney,NoNetRecord+7,4);
+													NoNetRecord[0] =1;
+											}																																						
+											memcpy(NoNetRecord+1,CardSerialNum,4);								
+											ChgUlongToBCDString(CurrentConsumMoney,NoNetRecord+5,4);
 
-											Read_Sysdate(NoNetRecord+11);
+											Read_Sysdate(NoNetRecord+9);
 											
-											NoNetRecord[11] = BCDToHex(NoNetRecord[11]);
-											NoNetRecord[12] = BCDToHex(NoNetRecord[12]);
-											NoNetRecord[13] = BCDToHex(NoNetRecord[13]);
-											NoNetRecord[14] = BCDToHex(NoNetRecord[14]);
-											NoNetRecord[15] = BCDToHex(NoNetRecord[15]);
-											NoNetRecord[16] = BCDToHex(NoNetRecord[16]);
-											
-											NoNetRecord[17] = 0;
+											BatchNum++;//消费流水号
+											NoNetRecord[15] = BatchNum>>24;
+											NoNetRecord[16] = BatchNum>>16;
+											NoNetRecord[17] = BatchNum>>8;
+											NoNetRecord[18] = BatchNum;
 
 											Save_OffRecode();//存储脱机记录
 											Disp_Hello();//显示

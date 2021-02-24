@@ -368,8 +368,8 @@ void	Save_OffRecode(void)//存储脱机记录
 	uchar	AllFF[32]={0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,
 						   0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff,0xff};
 	Buffer_39SF020[0]=0xa0;
-	memcpy(Buffer_39SF020+1,NoNetRecord,18);
-	Buffer_39SF020[19]=CalCheckSum(Buffer_39SF020+1,18);
+	memcpy(Buffer_39SF020+1,NoNetRecord,19);
+	Buffer_39SF020[20]=CalCheckSum(Buffer_39SF020+1,19);
 
 	while(1)
 	{
@@ -381,9 +381,9 @@ void	Save_OffRecode(void)//存储脱机记录
 			status=1;
 			for (i=0;i<5;i++)
 			{
-				Flash_Write_Bytes(Addr,Buffer_39SF020,20);//写入
-				Flash_Rd_Bytes(Addr,Buffer,20);
-				if (!memcmp(Buffer,Buffer_39SF020,20))
+				Flash_Write_Bytes(Addr,Buffer_39SF020,21);//写入
+				Flash_Rd_Bytes(Addr,Buffer,21);
+				if (!memcmp(Buffer,Buffer_39SF020,21))
 				{
 					PosConsumCount++;
 					status=0;
@@ -401,8 +401,8 @@ void	Save_OffRecode(void)//存储脱机记录
 		}
 		if(status)  //写错误,当前单元写0数据写入下个单元
 		{
-			memset(Buffer,0,20);
-			Flash_Write_Bytes(Addr,Buffer,20);
+			memset(Buffer,0,21);
+			Flash_Write_Bytes(Addr,Buffer,21);
 
 			offline_ReIndex++; //记录指针指向下一单元                
 			offline_ReIndex = offline_ReIndex%Off_MAXRECORD;
@@ -593,8 +593,8 @@ void	Active_UpOffRe(void)
 	for(ii=offline_UpIndex;ii<Off_MAXRECORD;ii++)
 	{		
 		Addr=(ulong)offline_UpIndex*RECORD_SIZE;	
-		Flash_Rd_Bytes(Addr,DatasBuffer,20);
-		if(DatasBuffer[0]==0xa0 && (DatasBuffer[19]==CalCheckSum(DatasBuffer+1,18)) )
+		Flash_Rd_Bytes(Addr,DatasBuffer,21);
+		if(DatasBuffer[0]==0xa0 && (DatasBuffer[20]==CalCheckSum(DatasBuffer+1,19)) )
 		{
 			status=1;
 			HaveOffRecord =1;

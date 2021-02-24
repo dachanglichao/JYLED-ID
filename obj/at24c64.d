@@ -1,0 +1,16 @@
+.\obj\at24c64.o: CommonDevDriver\AT24C64.C
+.\obj\at24c64.o: .\FWlib\inc\stm32f10x_gpio.h
+.\obj\at24c64.o: .\CM3\stm32f10x.h
+.\obj\at24c64.o: .\CM3\core_cm3.h
+.\obj\at24c64.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\at24c64.o: .\CM3\system_stm32f10x.h
+.\obj\at24c64.o: .\FWlib\inc\stm32f10x_conf.h
+.\obj\at24c64.o: .\FWlib\inc\stm32f10x_gpio.h
+.\obj\at24c64.o: .\FWlib\inc\stm32f10x_rcc.h
+.\obj\at24c64.o: .\CM3\stm32f10x.h
+.\obj\at24c64.o: .\StdPeripheralByDK\GPIO.H
+.\obj\at24c64.o: .\StdPeripheralByDK\IIC.H
+.\obj\at24c64.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdio.h
+.\obj\at24c64.o: .\StdPeripheralByDK\USART.H
+.\obj\at24c64.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+.\obj\at24c64.o: .\CommonDevDriver\AT24C64.h

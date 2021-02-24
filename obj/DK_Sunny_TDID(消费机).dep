@@ -1,0 +1,1247 @@
+Dependencies for Project 'DK_Sunny', Target 'TDID(消费机)': (DO NOT MODIFY !)
+F (.\stm32f10x_startup.s)(0x601D5E86)(--cpu Cortex-M3 -g --apcs=interwork -ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include--pd "__UVISION_VERSION SETA 522" --pd "_RTE_ SETA 1" --pd "STM32F10X_HD SETA 1"--list .\lis\stm32f10x_startup.lst --xref -o .\obj\stm32f10x_startup.o --depend .\obj\stm32f10x_startup.d)
+F (.\APP\main.c)(0x6033BD93)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\main.o --omf_browse .\obj\main.crf --depend .\obj\main.d)
+I (.\uCOS-II\uC-CPU\cpu.h)(0x5BA5CCBB)
+I (.\uCOS-II\uC-CPU\cpu_def.h)(0x5BA5CCBB)
+I (.\uCOS-II\Ports\os_cpu.h)(0x5BA5CCBB)
+I (APP\app_cfg.h)(0x601D5E86)
+I (.\uCOS-II\Source\ucos_ii.h)(0x5BA5CCBB)
+I (.\APP\os_cfg.h)(0x5BA5CCBB)
+I (APP\include.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\bsp.h)(0x5BA8E8E8)
+I (.\FWlib\inc\stm32f10x_gpio.h)(0x5BA5CCBB)
+I (.\CM3\stm32f10x.h)(0x5BE1B476)
+I (.\CM3\core_cm3.h)(0x5BA5CCBB)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (.\CM3\system_stm32f10x.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_conf.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_rcc.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_usart.h)(0x5BA5CCBB)
+I (.\StdPeripheralByDK\USART.H)(0x5BA5CCBC)
+I (.\StdPeripheralByDK\GPIO.h)(0x5BA5CCBC)
+I (.\StdPeripheralByDK\hw_config.h)(0x5BA5CCBC)
+I (.\CommonDevDriver\delay.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\watchdog.h)(0x5BA5CCBB)
+I (.\Define\char.h)(0x5BA5CCBA)
+I (.\CommonDevDriver\AT24C64.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\AT24C256.h)(0x5BA5CCBB)
+I (.\POS\CalucationFile.h)(0x5BC429D3)
+I (.\Define\MyDefine.h)(0x6033C613)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (.\CommonDevDriver\Disp_1629DFile.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\ScanKeyFiles.h)(0x5BA5CCBB)
+I (.\POS\InitSetParameterFile.h)(0x6000244F)
+I (.\POS\SetW5500Net.h)(0x5BC42CBE)
+I (.\CommonDevDriver\w5500.h)(0x60154C04)
+I (.\Define\externVariable.h)(0x601E9B8C)
+I (.\CommonDevDriver\pcf8563.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\MoNiSPI.H)(0x5BA5CCBB)
+I (.\CommonDevDriver\MFRC522.h)(0x5BA5CCBB)
+I (.\POS\PSAM.h)(0x5BA5CCBA)
+I (.\POS\ISO7816.h)(0x5BA5CCBA)
+I (.\CommonDevDriver\SPI_FLASH.h)(0x5BA5CCBB)
+I (.\POS\RecordFiles.h)(0x5BA5CCBA)
+I (.\CommonDevDriver\485.H)(0x5BA5CCBB)
+I (.\Define\variable.h)(0x601E9B8C)
+I (APP\dhcp.h)(0x5BE16E73)
+I (.\cJSON\cJSON.h)(0x601514C5)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
+F (.\APP\stm32f10x_it.c)(0x5BC42EC5)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\stm32f10x_it.o --omf_browse .\obj\stm32f10x_it.crf --depend .\obj\stm32f10x_it.d)
+I (.\uCOS-II\Ports\os_cpu.h)(0x5BA5CCBB)
+I (.\uCOS-II\Source\ucos_ii.h)(0x5BA5CCBB)
+I (.\APP\app_cfg.h)(0x601D5E86)
+I (.\APP\os_cfg.h)(0x5BA5CCBB)
+I (.\StdPeripheralByDK\hw_config.h)(0x5BA5CCBC)
+I (.\CM3\stm32f10x.h)(0x5BE1B476)
+I (.\CM3\core_cm3.h)(0x5BA5CCBB)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (.\CM3\system_stm32f10x.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_conf.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_gpio.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_rcc.h)(0x5BA5CCBB)
+I (.\StdPeripheralByDK\usart.h)(0x5BA5CCBC)
+F (.\FWlib\src\stm32f10x_gpio.c)(0x5BA5CCBA)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\stm32f10x_gpio.o --omf_browse .\obj\stm32f10x_gpio.crf --depend .\obj\stm32f10x_gpio.d)
+I (.\FWlib\inc\stm32f10x_gpio.h)(0x5BA5CCBB)
+I (.\CM3\stm32f10x.h)(0x5BE1B476)
+I (.\CM3\core_cm3.h)(0x5BA5CCBB)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (.\CM3\system_stm32f10x.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_conf.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_rcc.h)(0x5BA5CCBB)
+F (.\FWlib\src\stm32f10x_rcc.c)(0x5BA5CCBA)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\stm32f10x_rcc.o --omf_browse .\obj\stm32f10x_rcc.crf --depend .\obj\stm32f10x_rcc.d)
+I (.\FWlib\inc\stm32f10x_rcc.h)(0x5BA5CCBB)
+I (.\CM3\stm32f10x.h)(0x5BE1B476)
+I (.\CM3\core_cm3.h)(0x5BA5CCBB)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (.\CM3\system_stm32f10x.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_conf.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_gpio.h)(0x5BA5CCBB)
+F (.\FWlib\src\stm32f10x_fsmc.c)(0x5BA5CCBA)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\stm32f10x_fsmc.o --omf_browse .\obj\stm32f10x_fsmc.crf --depend .\obj\stm32f10x_fsmc.d)
+I (.\FWlib\inc\stm32f10x_fsmc.h)(0x5BA5CCBB)
+I (.\CM3\stm32f10x.h)(0x5BE1B476)
+I (.\CM3\core_cm3.h)(0x5BA5CCBB)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (.\CM3\system_stm32f10x.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_conf.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_gpio.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_rcc.h)(0x5BA5CCBB)
+F (.\FWlib\src\stm32f10x_tim.c)(0x5BA5CCBA)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\stm32f10x_tim.o --omf_browse .\obj\stm32f10x_tim.crf --depend .\obj\stm32f10x_tim.d)
+I (.\FWlib\inc\stm32f10x_tim.h)(0x5BA5CCBB)
+I (.\CM3\stm32f10x.h)(0x5BE1B476)
+I (.\CM3\core_cm3.h)(0x5BA5CCBB)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (.\CM3\system_stm32f10x.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_conf.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_gpio.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_rcc.h)(0x5BA5CCBB)
+F (.\FWlib\src\misc.c)(0x5BA5CCBA)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\misc.o --omf_browse .\obj\misc.crf --depend .\obj\misc.d)
+I (.\FWlib\inc\misc.h)(0x5BA5CCBB)
+I (.\CM3\stm32f10x.h)(0x5BE1B476)
+I (.\CM3\core_cm3.h)(0x5BA5CCBB)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (.\CM3\system_stm32f10x.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_conf.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_gpio.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_rcc.h)(0x5BA5CCBB)
+F (.\FWlib\src\stm32f10x_usart.c)(0x5BA5CCBA)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\stm32f10x_usart.o --omf_browse .\obj\stm32f10x_usart.crf --depend .\obj\stm32f10x_usart.d)
+I (.\FWlib\inc\stm32f10x_usart.h)(0x5BA5CCBB)
+I (.\CM3\stm32f10x.h)(0x5BE1B476)
+I (.\CM3\core_cm3.h)(0x5BA5CCBB)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (.\CM3\system_stm32f10x.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_conf.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_gpio.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_rcc.h)(0x5BA5CCBB)
+F (.\FWlib\src\stm32f10x_exti.c)(0x5BA5CCBB)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\stm32f10x_exti.o --omf_browse .\obj\stm32f10x_exti.crf --depend .\obj\stm32f10x_exti.d)
+I (.\FWlib\inc\stm32f10x_exti.h)(0x5BA5CCBB)
+I (.\CM3\stm32f10x.h)(0x5BE1B476)
+I (.\CM3\core_cm3.h)(0x5BA5CCBB)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (.\CM3\system_stm32f10x.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_conf.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_gpio.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_rcc.h)(0x5BA5CCBB)
+F (.\FWlib\src\stm32f10x_flash.c)(0x5BA5CCBA)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\stm32f10x_flash.o --omf_browse .\obj\stm32f10x_flash.crf --depend .\obj\stm32f10x_flash.d)
+I (.\FWlib\inc\stm32f10x_flash.h)(0x5BA5CCBB)
+I (.\CM3\stm32f10x.h)(0x5BE1B476)
+I (.\CM3\core_cm3.h)(0x5BA5CCBB)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (.\CM3\system_stm32f10x.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_conf.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_gpio.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_rcc.h)(0x5BA5CCBB)
+F (.\FWlib\src\stm32f10x_iwdg.c)(0x5BA5CCBA)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\stm32f10x_iwdg.o --omf_browse .\obj\stm32f10x_iwdg.crf --depend .\obj\stm32f10x_iwdg.d)
+I (.\FWlib\inc\stm32f10x_iwdg.h)(0x5BA5CCBB)
+I (.\CM3\stm32f10x.h)(0x5BE1B476)
+I (.\CM3\core_cm3.h)(0x5BA5CCBB)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (.\CM3\system_stm32f10x.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_conf.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_gpio.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_rcc.h)(0x5BA5CCBB)
+F (.\FWlib\src\stm32f10x_spi.c)(0x5BA5CCBA)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\stm32f10x_spi.o --omf_browse .\obj\stm32f10x_spi.crf --depend .\obj\stm32f10x_spi.d)
+I (.\FWlib\inc\stm32f10x_spi.h)(0x5BA5CCBB)
+I (.\CM3\stm32f10x.h)(0x5BE1B476)
+I (.\CM3\core_cm3.h)(0x5BA5CCBB)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (.\CM3\system_stm32f10x.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_conf.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_gpio.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_rcc.h)(0x5BA5CCBB)
+F (.\CM3\core_cm3.c)(0x5BA5CCBB)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\core_cm3.o --omf_browse .\obj\core_cm3.crf --depend .\obj\core_cm3.d)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+F (.\CM3\system_stm32f10x.c)(0x5BA5CCBB)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\system_stm32f10x.o --omf_browse .\obj\system_stm32f10x.crf --depend .\obj\system_stm32f10x.d)
+I (CM3\stm32f10x.h)(0x5BE1B476)
+I (CM3\core_cm3.h)(0x5BA5CCBB)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (CM3\system_stm32f10x.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_conf.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_gpio.h)(0x5BA5CCBB)
+I (.\CM3\stm32f10x.h)(0x5BE1B476)
+I (.\FWlib\inc\stm32f10x_rcc.h)(0x5BA5CCBB)
+F (.\uCOS-II\Ports\os_cpu_a.asm)(0x5BA5CCBB)(--cpu Cortex-M3 -g --apcs=interwork -ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include--pd "__UVISION_VERSION SETA 522" --pd "_RTE_ SETA 1" --pd "STM32F10X_HD SETA 1"--list .\lis\os_cpu_a.lst --xref -o .\obj\os_cpu_a.o --depend .\obj\os_cpu_a.d)
+F (.\uCOS-II\Ports\os_cpu_c.c)(0x5BA5CCBB)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\os_cpu_c.o --omf_browse .\obj\os_cpu_c.crf --depend .\obj\os_cpu_c.d)
+I (uCOS-II\Ports\..\..\uCOS-II\Source\ucos_ii.h)(0x5BA5CCBB)
+I (.\APP\app_cfg.h)(0x601D5E86)
+I (.\APP\os_cfg.h)(0x5BA5CCBB)
+I (.\uCOS-II\Ports\os_cpu.h)(0x5BA5CCBB)
+F (.\uCOS-II\Ports\os_dbg.c)(0x5BA5CCBB)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\os_dbg.o --omf_browse .\obj\os_dbg.crf --depend .\obj\os_dbg.d)
+I (uCOS-II\Ports\..\..\uCOS-II\Source\ucos_ii.h)(0x5BA5CCBB)
+I (.\APP\app_cfg.h)(0x601D5E86)
+I (.\APP\os_cfg.h)(0x5BA5CCBB)
+I (.\uCOS-II\Ports\os_cpu.h)(0x5BA5CCBB)
+F (.\uCOS-II\uC-CPU\cpu_a.asm)(0x5BA5CCBB)(--cpu Cortex-M3 -g --apcs=interwork -ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include--pd "__UVISION_VERSION SETA 522" --pd "_RTE_ SETA 1" --pd "STM32F10X_HD SETA 1"--list .\lis\cpu_a.lst --xref -o .\obj\cpu_a.o --depend .\obj\cpu_a.d)
+F (.\uCOS-II\Source\os_tmr.c)(0x5BA5CCBB)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\os_tmr.o --omf_browse .\obj\os_tmr.crf --depend .\obj\os_tmr.d)
+I (uCOS-II\Source\..\..\uCOS-II\Source\ucos_ii.h)(0x5BA5CCBB)
+I (.\APP\app_cfg.h)(0x601D5E86)
+I (.\APP\os_cfg.h)(0x5BA5CCBB)
+I (.\uCOS-II\Ports\os_cpu.h)(0x5BA5CCBB)
+F (.\uCOS-II\Source\os_core.c)(0x5BA5CCBB)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\os_core.o --omf_browse .\obj\os_core.crf --depend .\obj\os_core.d)
+I (uCOS-II\Source\..\..\uCOS-II\Source\ucos_ii.h)(0x5BA5CCBB)
+I (.\APP\app_cfg.h)(0x601D5E86)
+I (.\APP\os_cfg.h)(0x5BA5CCBB)
+I (.\uCOS-II\Ports\os_cpu.h)(0x5BA5CCBB)
+F (.\uCOS-II\Source\os_flag.c)(0x5BA5CCBB)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\os_flag.o --omf_browse .\obj\os_flag.crf --depend .\obj\os_flag.d)
+I (uCOS-II\Source\..\..\uCOS-II\Source\ucos_ii.h)(0x5BA5CCBB)
+I (.\APP\app_cfg.h)(0x601D5E86)
+I (.\APP\os_cfg.h)(0x5BA5CCBB)
+I (.\uCOS-II\Ports\os_cpu.h)(0x5BA5CCBB)
+F (.\uCOS-II\Source\os_mbox.c)(0x5BA5CCBB)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\os_mbox.o --omf_browse .\obj\os_mbox.crf --depend .\obj\os_mbox.d)
+I (uCOS-II\Source\..\..\uCOS-II\Source\ucos_ii.h)(0x5BA5CCBB)
+I (.\APP\app_cfg.h)(0x601D5E86)
+I (.\APP\os_cfg.h)(0x5BA5CCBB)
+I (.\uCOS-II\Ports\os_cpu.h)(0x5BA5CCBB)
+F (.\uCOS-II\Source\os_mem.c)(0x5BA5CCBB)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\os_mem.o --omf_browse .\obj\os_mem.crf --depend .\obj\os_mem.d)
+I (uCOS-II\Source\..\..\uCOS-II\Source\ucos_ii.h)(0x5BA5CCBB)
+I (.\APP\app_cfg.h)(0x601D5E86)
+I (.\APP\os_cfg.h)(0x5BA5CCBB)
+I (.\uCOS-II\Ports\os_cpu.h)(0x5BA5CCBB)
+F (.\uCOS-II\Source\os_mutex.c)(0x5BA5CCBB)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\os_mutex.o --omf_browse .\obj\os_mutex.crf --depend .\obj\os_mutex.d)
+I (.\uCOS-II\Source\ucos_ii.h)(0x5BA5CCBB)
+I (.\APP\app_cfg.h)(0x601D5E86)
+I (.\APP\os_cfg.h)(0x5BA5CCBB)
+I (.\uCOS-II\Ports\os_cpu.h)(0x5BA5CCBB)
+F (.\uCOS-II\Source\os_q.c)(0x5BA5CCBB)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\os_q.o --omf_browse .\obj\os_q.crf --depend .\obj\os_q.d)
+I (uCOS-II\Source\..\..\uCOS-II\Source\ucos_ii.h)(0x5BA5CCBB)
+I (.\APP\app_cfg.h)(0x601D5E86)
+I (.\APP\os_cfg.h)(0x5BA5CCBB)
+I (.\uCOS-II\Ports\os_cpu.h)(0x5BA5CCBB)
+F (.\uCOS-II\Source\os_sem.c)(0x5BA5CCBB)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\os_sem.o --omf_browse .\obj\os_sem.crf --depend .\obj\os_sem.d)
+I (uCOS-II\Source\..\..\uCOS-II\Source\ucos_ii.h)(0x5BA5CCBB)
+I (.\APP\app_cfg.h)(0x601D5E86)
+I (.\APP\os_cfg.h)(0x5BA5CCBB)
+I (.\uCOS-II\Ports\os_cpu.h)(0x5BA5CCBB)
+F (.\uCOS-II\Source\os_task.c)(0x5BA5CCBB)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\os_task.o --omf_browse .\obj\os_task.crf --depend .\obj\os_task.d)
+I (uCOS-II\Source\..\..\uCOS-II\Source\ucos_ii.h)(0x5BA5CCBB)
+I (.\APP\app_cfg.h)(0x601D5E86)
+I (.\APP\os_cfg.h)(0x5BA5CCBB)
+I (.\uCOS-II\Ports\os_cpu.h)(0x5BA5CCBB)
+F (.\uCOS-II\Source\os_time.c)(0x5BA5CCBB)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\os_time.o --omf_browse .\obj\os_time.crf --depend .\obj\os_time.d)
+I (uCOS-II\Source\..\..\uCOS-II\Source\ucos_ii.h)(0x5BA5CCBB)
+I (.\APP\app_cfg.h)(0x601D5E86)
+I (.\APP\os_cfg.h)(0x5BA5CCBB)
+I (.\uCOS-II\Ports\os_cpu.h)(0x5BA5CCBB)
+F (.\CommonDevDriver\bsp.c)(0x60350815)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\bsp.o --omf_browse .\obj\bsp.crf --depend .\obj\bsp.d)
+I (.\CM3\stm32f10x.h)(0x5BE1B476)
+I (.\CM3\core_cm3.h)(0x5BA5CCBB)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (.\CM3\system_stm32f10x.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_conf.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_gpio.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_rcc.h)(0x5BA5CCBB)
+I (.\StdPeripheralByDK\GPIO.H)(0x5BA5CCBC)
+I (.\StdPeripheralByDK\FSMC.h)(0x5BA5CCBC)
+I (.\StdPeripheralByDK\USART.H)(0x5BA5CCBC)
+I (.\StdPeripheralByDK\TIME.H)(0x5BA5CCBC)
+I (.\StdPeripheralByDK\NVIC.H)(0x5BA5CCBC)
+I (.\uCOS-II\Ports\os_cpu.h)(0x5BA5CCBB)
+I (.\APP\os_cfg.h)(0x5BA5CCBB)
+I (.\StdPeripheralByDK\hw_config.h)(0x5BA5CCBC)
+I (.\FWlib\inc\stm32f10x_exti.h)(0x5BA5CCBB)
+I (CommonDevDriver\Disp_1629DFile.h)(0x5BA5CCBB)
+I (.\Define\char.h)(0x5BA5CCBA)
+I (CommonDevDriver\watchdog.h)(0x5BA5CCBB)
+I (.\StdPeripheralByDK\iic.h)(0x5BA5CCBC)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (.\APP\include.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\bsp.h)(0x5BA8E8E8)
+I (.\FWlib\inc\stm32f10x_usart.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\delay.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\AT24C64.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\AT24C256.h)(0x5BA5CCBB)
+I (.\POS\CalucationFile.h)(0x5BC429D3)
+I (.\Define\MyDefine.h)(0x6033C613)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+I (.\CommonDevDriver\ScanKeyFiles.h)(0x5BA5CCBB)
+I (.\POS\InitSetParameterFile.h)(0x6000244F)
+I (.\POS\SetW5500Net.h)(0x5BC42CBE)
+I (.\CommonDevDriver\w5500.h)(0x60154C04)
+I (.\Define\externVariable.h)(0x601E9B8C)
+I (.\uCOS-II\Source\ucos_ii.h)(0x5BA5CCBB)
+I (.\APP\app_cfg.h)(0x601D5E86)
+I (.\CommonDevDriver\pcf8563.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\MoNiSPI.H)(0x5BA5CCBB)
+I (.\CommonDevDriver\MFRC522.h)(0x5BA5CCBB)
+I (.\POS\PSAM.h)(0x5BA5CCBA)
+I (.\POS\ISO7816.h)(0x5BA5CCBA)
+I (.\CommonDevDriver\SPI_FLASH.h)(0x5BA5CCBB)
+I (.\POS\RecordFiles.h)(0x5BA5CCBA)
+I (.\CommonDevDriver\485.H)(0x5BA5CCBB)
+F (.\CommonDevDriver\AT24C64.C)(0x5BA5CCBB)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\at24c64.o --omf_browse .\obj\at24c64.crf --depend .\obj\at24c64.d)
+I (.\FWlib\inc\stm32f10x_gpio.h)(0x5BA5CCBB)
+I (.\CM3\stm32f10x.h)(0x5BE1B476)
+I (.\CM3\core_cm3.h)(0x5BA5CCBB)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (.\CM3\system_stm32f10x.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_conf.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_rcc.h)(0x5BA5CCBB)
+I (.\StdPeripheralByDK\GPIO.H)(0x5BA5CCBC)
+I (.\StdPeripheralByDK\IIC.H)(0x5BA5CCBC)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (.\StdPeripheralByDK\USART.H)(0x5BA5CCBC)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+I (.\CommonDevDriver\AT24C64.h)(0x5BA5CCBB)
+F (.\CommonDevDriver\delay.c)(0x5BA5CCBB)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\delay.o --omf_browse .\obj\delay.crf --depend .\obj\delay.d)
+I (.\CM3\stm32f10x.h)(0x5BE1B476)
+I (.\CM3\core_cm3.h)(0x5BA5CCBB)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (.\CM3\system_stm32f10x.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_conf.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_gpio.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_rcc.h)(0x5BA5CCBB)
+I (CommonDevDriver\delay.h)(0x5BA5CCBB)
+F (.\CommonDevDriver\Disp_1629DFile.C)(0x600039FF)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\disp_1629dfile.o --omf_browse .\obj\disp_1629dfile.crf --depend .\obj\disp_1629dfile.d)
+I (.\Define\MyDefine.h)(0x6033C613)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (.\CM3\stm32f10x.h)(0x5BE1B476)
+I (.\CM3\core_cm3.h)(0x5BA5CCBB)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (.\CM3\system_stm32f10x.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_conf.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_gpio.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_rcc.h)(0x5BA5CCBB)
+I (.\APP\include.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\bsp.h)(0x5BA8E8E8)
+I (.\FWlib\inc\stm32f10x_usart.h)(0x5BA5CCBB)
+I (.\StdPeripheralByDK\USART.H)(0x5BA5CCBC)
+I (.\StdPeripheralByDK\GPIO.h)(0x5BA5CCBC)
+I (.\StdPeripheralByDK\hw_config.h)(0x5BA5CCBC)
+I (.\CommonDevDriver\delay.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\watchdog.h)(0x5BA5CCBB)
+I (.\Define\char.h)(0x5BA5CCBA)
+I (.\CommonDevDriver\AT24C64.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\AT24C256.h)(0x5BA5CCBB)
+I (.\POS\CalucationFile.h)(0x5BC429D3)
+I (.\CommonDevDriver\Disp_1629DFile.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\ScanKeyFiles.h)(0x5BA5CCBB)
+I (.\POS\InitSetParameterFile.h)(0x6000244F)
+I (.\POS\SetW5500Net.h)(0x5BC42CBE)
+I (.\CommonDevDriver\w5500.h)(0x60154C04)
+I (.\Define\externVariable.h)(0x601E9B8C)
+I (.\uCOS-II\Source\ucos_ii.h)(0x5BA5CCBB)
+I (.\APP\app_cfg.h)(0x601D5E86)
+I (.\APP\os_cfg.h)(0x5BA5CCBB)
+I (.\uCOS-II\Ports\os_cpu.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\pcf8563.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\MoNiSPI.H)(0x5BA5CCBB)
+I (.\CommonDevDriver\MFRC522.h)(0x5BA5CCBB)
+I (.\POS\PSAM.h)(0x5BA5CCBA)
+I (.\POS\ISO7816.h)(0x5BA5CCBA)
+I (.\CommonDevDriver\SPI_FLASH.h)(0x5BA5CCBB)
+I (.\POS\RecordFiles.h)(0x5BA5CCBA)
+I (.\CommonDevDriver\485.H)(0x5BA5CCBB)
+I (CommonDevDriver\ScanKeyFiles.h)(0x5BA5CCBB)
+F (.\CommonDevDriver\ScanKeyFiles.C)(0x5BAF90C3)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\scankeyfiles.o --omf_browse .\obj\scankeyfiles.crf --depend .\obj\scankeyfiles.d)
+I (.\Define\MyDefine.h)(0x6033C613)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (.\CM3\stm32f10x.h)(0x5BE1B476)
+I (.\CM3\core_cm3.h)(0x5BA5CCBB)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (.\CM3\system_stm32f10x.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_conf.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_gpio.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_rcc.h)(0x5BA5CCBB)
+I (.\Define\externVariable.h)(0x601E9B8C)
+I (.\StdPeripheralByDK\GPIO.H)(0x5BA5CCBC)
+I (.\Define\char.H)(0x5BA5CCBA)
+I (.\uCOS-II\Source\ucos_ii.h)(0x5BA5CCBB)
+I (.\APP\app_cfg.h)(0x601D5E86)
+I (.\APP\os_cfg.h)(0x5BA5CCBB)
+I (.\uCOS-II\Ports\os_cpu.h)(0x5BA5CCBB)
+I (CommonDevDriver\ScanKeyFiles.h)(0x5BA5CCBB)
+I (.\APP\include.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\bsp.h)(0x5BA8E8E8)
+I (.\FWlib\inc\stm32f10x_usart.h)(0x5BA5CCBB)
+I (.\StdPeripheralByDK\USART.H)(0x5BA5CCBC)
+I (.\StdPeripheralByDK\hw_config.h)(0x5BA5CCBC)
+I (.\CommonDevDriver\delay.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\watchdog.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\AT24C64.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\AT24C256.h)(0x5BA5CCBB)
+I (.\POS\CalucationFile.h)(0x5BC429D3)
+I (.\CommonDevDriver\Disp_1629DFile.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\ScanKeyFiles.h)(0x5BA5CCBB)
+I (.\POS\InitSetParameterFile.h)(0x6000244F)
+I (.\POS\SetW5500Net.h)(0x5BC42CBE)
+I (.\CommonDevDriver\w5500.h)(0x60154C04)
+I (.\CommonDevDriver\pcf8563.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\MoNiSPI.H)(0x5BA5CCBB)
+I (.\CommonDevDriver\MFRC522.h)(0x5BA5CCBB)
+I (.\POS\PSAM.h)(0x5BA5CCBA)
+I (.\POS\ISO7816.h)(0x5BA5CCBA)
+I (.\CommonDevDriver\SPI_FLASH.h)(0x5BA5CCBB)
+I (.\POS\RecordFiles.h)(0x5BA5CCBA)
+I (.\CommonDevDriver\485.H)(0x5BA5CCBB)
+F (.\CommonDevDriver\W5500.c)(0x60154C04)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\w5500.o --omf_browse .\obj\w5500.crf --depend .\obj\w5500.d)
+I (.\CM3\stm32f10x.h)(0x5BE1B476)
+I (.\CM3\core_cm3.h)(0x5BA5CCBB)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (.\CM3\system_stm32f10x.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_conf.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_gpio.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_rcc.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_spi.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_exti.h)(0x5BA5CCBB)
+I (CommonDevDriver\W5500.h)(0x60154C04)
+I (.\StdPeripheralByDK\NVIC.H)(0x5BA5CCBC)
+I (.\FWlib\inc\misc.h)(0x5BA5CCBB)
+I (CommonDevDriver\delay.h)(0x5BA5CCBB)
+I (.\uCOS-II\Ports\os_cpu.h)(0x5BA5CCBB)
+I (.\uCOS-II\Source\ucos_ii.h)(0x5BA5CCBB)
+I (.\APP\app_cfg.h)(0x601D5E86)
+I (.\APP\os_cfg.h)(0x5BA5CCBB)
+I (.\APP\include.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\bsp.h)(0x5BA8E8E8)
+I (.\FWlib\inc\stm32f10x_usart.h)(0x5BA5CCBB)
+I (.\StdPeripheralByDK\USART.H)(0x5BA5CCBC)
+I (.\StdPeripheralByDK\GPIO.h)(0x5BA5CCBC)
+I (.\StdPeripheralByDK\hw_config.h)(0x5BA5CCBC)
+I (.\CommonDevDriver\watchdog.h)(0x5BA5CCBB)
+I (.\Define\char.h)(0x5BA5CCBA)
+I (.\CommonDevDriver\AT24C64.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\AT24C256.h)(0x5BA5CCBB)
+I (.\POS\CalucationFile.h)(0x5BC429D3)
+I (.\Define\MyDefine.h)(0x6033C613)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (.\CommonDevDriver\Disp_1629DFile.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\ScanKeyFiles.h)(0x5BA5CCBB)
+I (.\POS\InitSetParameterFile.h)(0x6000244F)
+I (.\POS\SetW5500Net.h)(0x5BC42CBE)
+I (.\Define\externVariable.h)(0x601E9B8C)
+I (.\CommonDevDriver\pcf8563.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\MoNiSPI.H)(0x5BA5CCBB)
+I (.\CommonDevDriver\MFRC522.h)(0x5BA5CCBB)
+I (.\POS\PSAM.h)(0x5BA5CCBA)
+I (.\POS\ISO7816.h)(0x5BA5CCBA)
+I (.\CommonDevDriver\SPI_FLASH.h)(0x5BA5CCBB)
+I (.\POS\RecordFiles.h)(0x5BA5CCBA)
+I (.\CommonDevDriver\485.H)(0x5BA5CCBB)
+I (.\uCOS-II\uC-CPU\cpu.h)(0x5BA5CCBB)
+I (.\uCOS-II\uC-CPU\cpu_def.h)(0x5BA5CCBB)
+F (.\CommonDevDriver\watchdog.c)(0x5CFD14E5)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\watchdog.o --omf_browse .\obj\watchdog.crf --depend .\obj\watchdog.d)
+I (.\CM3\stm32f10x.h)(0x5BE1B476)
+I (.\CM3\core_cm3.h)(0x5BA5CCBB)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (.\CM3\system_stm32f10x.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_conf.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_gpio.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_rcc.h)(0x5BA5CCBB)
+I (.\StdPeripheralByDK\gpio.H)(0x5BA5CCBC)
+I (CommonDevDriver\watchdog.h)(0x5BA5CCBB)
+I (.\Define\externVariable.h)(0x601E9B8C)
+I (.\Define\char.H)(0x5BA5CCBA)
+I (.\uCOS-II\Source\ucos_ii.h)(0x5BA5CCBB)
+I (.\APP\app_cfg.h)(0x601D5E86)
+I (.\APP\os_cfg.h)(0x5BA5CCBB)
+I (.\uCOS-II\Ports\os_cpu.h)(0x5BA5CCBB)
+F (.\CommonDevDriver\PCF8563.C)(0x5BA5CCBB)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\pcf8563.o --omf_browse .\obj\pcf8563.crf --depend .\obj\pcf8563.d)
+I (CommonDevDriver\PCF8563.H)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_gpio.h)(0x5BA5CCBB)
+I (.\CM3\stm32f10x.h)(0x5BE1B476)
+I (.\CM3\core_cm3.h)(0x5BA5CCBB)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (.\CM3\system_stm32f10x.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_conf.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_rcc.h)(0x5BA5CCBB)
+I (.\StdPeripheralByDK\GPIO.H)(0x5BA5CCBC)
+I (.\StdPeripheralByDK\IIC.H)(0x5BA5CCBC)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (.\StdPeripheralByDK\USART.H)(0x5BA5CCBC)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+I (.\APP\include.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\bsp.h)(0x5BA8E8E8)
+I (.\FWlib\inc\stm32f10x_usart.h)(0x5BA5CCBB)
+I (.\StdPeripheralByDK\hw_config.h)(0x5BA5CCBC)
+I (.\CommonDevDriver\delay.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\watchdog.h)(0x5BA5CCBB)
+I (.\Define\char.h)(0x5BA5CCBA)
+I (.\CommonDevDriver\AT24C64.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\AT24C256.h)(0x5BA5CCBB)
+I (.\POS\CalucationFile.h)(0x5BC429D3)
+I (.\Define\MyDefine.h)(0x6033C613)
+I (.\CommonDevDriver\Disp_1629DFile.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\ScanKeyFiles.h)(0x5BA5CCBB)
+I (.\POS\InitSetParameterFile.h)(0x6000244F)
+I (.\POS\SetW5500Net.h)(0x5BC42CBE)
+I (.\CommonDevDriver\w5500.h)(0x60154C04)
+I (.\Define\externVariable.h)(0x601E9B8C)
+I (.\uCOS-II\Source\ucos_ii.h)(0x5BA5CCBB)
+I (.\APP\app_cfg.h)(0x601D5E86)
+I (.\APP\os_cfg.h)(0x5BA5CCBB)
+I (.\uCOS-II\Ports\os_cpu.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\MoNiSPI.H)(0x5BA5CCBB)
+I (.\CommonDevDriver\MFRC522.h)(0x5BA5CCBB)
+I (.\POS\PSAM.h)(0x5BA5CCBA)
+I (.\POS\ISO7816.h)(0x5BA5CCBA)
+I (.\CommonDevDriver\SPI_FLASH.h)(0x5BA5CCBB)
+I (.\POS\RecordFiles.h)(0x5BA5CCBA)
+I (.\CommonDevDriver\485.H)(0x5BA5CCBB)
+F (.\CommonDevDriver\MFRC522.c)(0x5BA5CCBB)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\mfrc522.o --omf_browse .\obj\mfrc522.crf --depend .\obj\mfrc522.d)
+I (.\uCOS-II\uC-CPU\cpu.h)(0x5BA5CCBB)
+I (.\uCOS-II\uC-CPU\cpu_def.h)(0x5BA5CCBB)
+I (.\uCOS-II\Ports\os_cpu.h)(0x5BA5CCBB)
+I (.\APP\app_cfg.h)(0x601D5E86)
+I (.\uCOS-II\Source\ucos_ii.h)(0x5BA5CCBB)
+I (.\APP\os_cfg.h)(0x5BA5CCBB)
+I (.\APP\include.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\bsp.h)(0x5BA8E8E8)
+I (.\FWlib\inc\stm32f10x_gpio.h)(0x5BA5CCBB)
+I (.\CM3\stm32f10x.h)(0x5BE1B476)
+I (.\CM3\core_cm3.h)(0x5BA5CCBB)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (.\CM3\system_stm32f10x.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_conf.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_rcc.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_usart.h)(0x5BA5CCBB)
+I (.\StdPeripheralByDK\USART.H)(0x5BA5CCBC)
+I (.\StdPeripheralByDK\GPIO.h)(0x5BA5CCBC)
+I (.\StdPeripheralByDK\hw_config.h)(0x5BA5CCBC)
+I (.\CommonDevDriver\delay.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\watchdog.h)(0x5BA5CCBB)
+I (.\Define\char.h)(0x5BA5CCBA)
+I (.\CommonDevDriver\AT24C64.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\AT24C256.h)(0x5BA5CCBB)
+I (.\POS\CalucationFile.h)(0x5BC429D3)
+I (.\Define\MyDefine.h)(0x6033C613)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (.\CommonDevDriver\Disp_1629DFile.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\ScanKeyFiles.h)(0x5BA5CCBB)
+I (.\POS\InitSetParameterFile.h)(0x6000244F)
+I (.\POS\SetW5500Net.h)(0x5BC42CBE)
+I (.\CommonDevDriver\w5500.h)(0x60154C04)
+I (.\Define\externVariable.h)(0x601E9B8C)
+I (.\CommonDevDriver\pcf8563.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\MoNiSPI.H)(0x5BA5CCBB)
+I (.\CommonDevDriver\MFRC522.h)(0x5BA5CCBB)
+I (.\POS\PSAM.h)(0x5BA5CCBA)
+I (.\POS\ISO7816.h)(0x5BA5CCBA)
+I (.\CommonDevDriver\SPI_FLASH.h)(0x5BA5CCBB)
+I (.\POS\RecordFiles.h)(0x5BA5CCBA)
+I (.\CommonDevDriver\485.H)(0x5BA5CCBB)
+F (.\CommonDevDriver\MoNiSPI.C)(0x5BA5CCBB)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\monispi.o --omf_browse .\obj\monispi.crf --depend .\obj\monispi.d)
+I (.\FWlib\inc\stm32f10x_gpio.h)(0x5BA5CCBB)
+I (.\CM3\stm32f10x.h)(0x5BE1B476)
+I (.\CM3\core_cm3.h)(0x5BA5CCBB)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (.\CM3\system_stm32f10x.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_conf.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_rcc.h)(0x5BA5CCBB)
+I (.\StdPeripheralByDK\GPIO.H)(0x5BA5CCBC)
+I (CommonDevDriver\MoNiSPI.H)(0x5BA5CCBB)
+F (.\CommonDevDriver\AT24C256.C)(0x5BA5CCBB)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\at24c256.o --omf_browse .\obj\at24c256.crf --depend .\obj\at24c256.d)
+I (.\FWlib\inc\stm32f10x_gpio.h)(0x5BA5CCBB)
+I (.\CM3\stm32f10x.h)(0x5BE1B476)
+I (.\CM3\core_cm3.h)(0x5BA5CCBB)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (.\CM3\system_stm32f10x.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_conf.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_rcc.h)(0x5BA5CCBB)
+I (.\StdPeripheralByDK\GPIO.H)(0x5BA5CCBC)
+I (.\StdPeripheralByDK\IIC.H)(0x5BA5CCBC)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (.\StdPeripheralByDK\USART.H)(0x5BA5CCBC)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+I (.\CommonDevDriver\AT24C256.h)(0x5BA5CCBB)
+I (.\Define\char.H)(0x5BA5CCBA)
+I (.\APP\include.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\bsp.h)(0x5BA8E8E8)
+I (.\FWlib\inc\stm32f10x_usart.h)(0x5BA5CCBB)
+I (.\StdPeripheralByDK\hw_config.h)(0x5BA5CCBC)
+I (.\CommonDevDriver\delay.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\watchdog.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\AT24C64.h)(0x5BA5CCBB)
+I (.\POS\CalucationFile.h)(0x5BC429D3)
+I (.\Define\MyDefine.h)(0x6033C613)
+I (.\CommonDevDriver\Disp_1629DFile.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\ScanKeyFiles.h)(0x5BA5CCBB)
+I (.\POS\InitSetParameterFile.h)(0x6000244F)
+I (.\POS\SetW5500Net.h)(0x5BC42CBE)
+I (.\CommonDevDriver\w5500.h)(0x60154C04)
+I (.\Define\externVariable.h)(0x601E9B8C)
+I (.\uCOS-II\Source\ucos_ii.h)(0x5BA5CCBB)
+I (.\APP\app_cfg.h)(0x601D5E86)
+I (.\APP\os_cfg.h)(0x5BA5CCBB)
+I (.\uCOS-II\Ports\os_cpu.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\pcf8563.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\MoNiSPI.H)(0x5BA5CCBB)
+I (.\CommonDevDriver\MFRC522.h)(0x5BA5CCBB)
+I (.\POS\PSAM.h)(0x5BA5CCBA)
+I (.\POS\ISO7816.h)(0x5BA5CCBA)
+I (.\CommonDevDriver\SPI_FLASH.h)(0x5BA5CCBB)
+I (.\POS\RecordFiles.h)(0x5BA5CCBA)
+I (.\CommonDevDriver\485.H)(0x5BA5CCBB)
+F (.\CommonDevDriver\SPI_FLASH.C)(0x5CF8C8D5)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\spi_flash.o --omf_browse .\obj\spi_flash.crf --depend .\obj\spi_flash.d)
+I (.\FWlib\inc\stm32f10x_gpio.h)(0x5BA5CCBB)
+I (.\CM3\stm32f10x.h)(0x5BE1B476)
+I (.\CM3\core_cm3.h)(0x5BA5CCBB)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (.\CM3\system_stm32f10x.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_conf.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_rcc.h)(0x5BA5CCBB)
+I (.\StdPeripheralByDK\GPIO.H)(0x5BA5CCBC)
+I (.\StdPeripheralByDK\DK_SPI.H)(0x5BA5CCBC)
+I (CommonDevDriver\SPI_FLASH.H)(0x5BA5CCBB)
+I (.\StdPeripheralByDK\USART.H)(0x5BA5CCBC)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+I (.\CommonDevDriver\AT24C256.h)(0x5BA5CCBB)
+I (.\Define\char.H)(0x5BA5CCBA)
+I (.\CommonDevDriver\delay.h)(0x5BA5CCBB)
+F (.\CommonDevDriver\485.C)(0x5BA5CCBB)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\485.o --omf_browse .\obj\485.crf --depend .\obj\485.d)
+I (CommonDevDriver\485.H)(0x5BA5CCBB)
+I (.\StdPeripheralByDK\GPIO.H)(0x5BA5CCBC)
+I (.\FWlib\inc\stm32f10x_gpio.h)(0x5BA5CCBB)
+I (.\CM3\stm32f10x.h)(0x5BE1B476)
+I (.\CM3\core_cm3.h)(0x5BA5CCBB)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (.\CM3\system_stm32f10x.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_conf.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_rcc.h)(0x5BA5CCBB)
+I (.\StdPeripheralByDK\USART.H)(0x5BA5CCBC)
+F (.\StdPeripheralByDK\FSMC.c)(0x5BA5CCBC)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\fsmc.o --omf_browse .\obj\fsmc.crf --depend .\obj\fsmc.d)
+I (.\FWlib\inc\stm32f10x_fsmc.h)(0x5BA5CCBB)
+I (.\CM3\stm32f10x.h)(0x5BE1B476)
+I (.\CM3\core_cm3.h)(0x5BA5CCBB)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (.\CM3\system_stm32f10x.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_conf.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_gpio.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_rcc.h)(0x5BA5CCBB)
+I (StdPeripheralByDK\GPIO.H)(0x5BA5CCBC)
+I (.\FWlib\inc\stm32f10x_tim.h)(0x5BA5CCBB)
+I (StdPeripheralByDK\TIME.H)(0x5BA5CCBC)
+I (StdPeripheralByDK\FSMC.h)(0x5BA5CCBC)
+F (.\StdPeripheralByDK\GPIO.C)(0x5BA5CCBC)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\gpio.o --omf_browse .\obj\gpio.crf --depend .\obj\gpio.d)
+I (.\FWlib\inc\stm32f10x_gpio.h)(0x5BA5CCBB)
+I (.\CM3\stm32f10x.h)(0x5BE1B476)
+I (.\CM3\core_cm3.h)(0x5BA5CCBB)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (.\CM3\system_stm32f10x.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_conf.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_rcc.h)(0x5BA5CCBB)
+I (StdPeripheralByDK\GPIO.H)(0x5BA5CCBC)
+F (.\StdPeripheralByDK\NVIC.C)(0x5BA5CCBC)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\nvic.o --omf_browse .\obj\nvic.crf --depend .\obj\nvic.d)
+I (.\FWlib\inc\misc.h)(0x5BA5CCBB)
+I (.\CM3\stm32f10x.h)(0x5BE1B476)
+I (.\CM3\core_cm3.h)(0x5BA5CCBB)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (.\CM3\system_stm32f10x.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_conf.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_gpio.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_rcc.h)(0x5BA5CCBB)
+I (StdPeripheralByDK\NVIC.H)(0x5BA5CCBC)
+F (.\StdPeripheralByDK\TIME.C)(0x5CF67ABB)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\time.o --omf_browse .\obj\time.crf --depend .\obj\time.d)
+I (.\FWlib\inc\stm32f10x_tim.h)(0x5BA5CCBB)
+I (.\CM3\stm32f10x.h)(0x5BE1B476)
+I (.\CM3\core_cm3.h)(0x5BA5CCBB)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (.\CM3\system_stm32f10x.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_conf.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_gpio.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_rcc.h)(0x5BA5CCBB)
+I (StdPeripheralByDK\TIME.H)(0x5BA5CCBC)
+I (.\uCOS-II\Ports\os_cpu.h)(0x5BA5CCBB)
+I (.\uCOS-II\Source\ucos_ii.h)(0x5BA5CCBB)
+I (.\APP\app_cfg.h)(0x601D5E86)
+I (.\APP\os_cfg.h)(0x5BA5CCBB)
+I (StdPeripheralByDK\hw_config.h)(0x5BA5CCBC)
+I (StdPeripheralByDK\usart.h)(0x5BA5CCBC)
+I (.\Define\externvariable.h)(0x601E9B8C)
+I (.\StdPeripheralByDK\GPIO.H)(0x5BA5CCBC)
+I (.\Define\char.H)(0x5BA5CCBA)
+I (.\FWlib\inc\misc.h)(0x5BA5CCBB)
+I (StdPeripheralByDK\NVIC.H)(0x5BA5CCBC)
+I (.\CommonDevDriver\Disp_1629DFile.h)(0x5BA5CCBB)
+I (.\POS\CalucationFile.h)(0x5BC429D3)
+I (.\Define\MyDefine.h)(0x6033C613)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+F (.\StdPeripheralByDK\USART.C)(0x5BA5CCBC)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\usart.o --omf_browse .\obj\usart.crf --depend .\obj\usart.d)
+I (.\FWlib\inc\stm32f10x_usart.h)(0x5BA5CCBB)
+I (.\CM3\stm32f10x.h)(0x5BE1B476)
+I (.\CM3\core_cm3.h)(0x5BA5CCBB)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (.\CM3\system_stm32f10x.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_conf.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_gpio.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_rcc.h)(0x5BA5CCBB)
+I (StdPeripheralByDK\GPIO.H)(0x5BA5CCBC)
+I (StdPeripheralByDK\USART.H)(0x5BA5CCBC)
+I (.\uCOS-II\Ports\os_cpu.h)(0x5BA5CCBB)
+I (.\APP\app_cfg.h)(0x601D5E86)
+I (.\uCOS-II\Source\ucos_ii.h)(0x5BA5CCBB)
+I (.\APP\os_cfg.h)(0x5BA5CCBB)
+I (.\Define\externvariable.h)(0x601E9B8C)
+I (.\Define\char.H)(0x5BA5CCBA)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+F (.\StdPeripheralByDK\hw_config.c)(0x5BAF8184)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\hw_config.o --omf_browse .\obj\hw_config.crf --depend .\obj\hw_config.d)
+I (.\APP\stm32f10x_it.h)(0x5BA5CCBB)
+I (.\CM3\stm32f10x.h)(0x5BE1B476)
+I (.\CM3\core_cm3.h)(0x5BA5CCBB)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (.\CM3\system_stm32f10x.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_conf.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_gpio.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_rcc.h)(0x5BA5CCBB)
+I (StdPeripheralByDK\hw_config.h)(0x5BA5CCBC)
+I (StdPeripheralByDK\usart.h)(0x5BA5CCBC)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+I (.\FWlib\inc\misc.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_exti.h)(0x5BA5CCBB)
+I (.\uCOS-II\Ports\os_cpu.h)(0x5BA5CCBB)
+I (.\uCOS-II\Source\ucos_ii.h)(0x5BA5CCBB)
+I (.\APP\app_cfg.h)(0x601D5E86)
+I (.\APP\os_cfg.h)(0x5BA5CCBB)
+I (.\Define\externvariable.h)(0x601E9B8C)
+I (.\StdPeripheralByDK\GPIO.H)(0x5BA5CCBC)
+I (.\Define\char.H)(0x5BA5CCBA)
+F (.\StdPeripheralByDK\variable.H)(0x00000000)()
+F (.\StdPeripheralByDK\char.H)(0x00000000)()
+F (.\StdPeripheralByDK\externvariable.H)(0x00000000)()
+F (.\StdPeripheralByDK\hw_config.h)(0x5BA5CCBC)()
+F (.\StdPeripheralByDK\iic.c)(0x5BA5CCBC)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\iic.o --omf_browse .\obj\iic.crf --depend .\obj\iic.d)
+I (StdPeripheralByDK\iic.h)(0x5BA5CCBC)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (.\FWlib\inc\stm32f10x_gpio.h)(0x5BA5CCBB)
+I (.\CM3\stm32f10x.h)(0x5BE1B476)
+I (.\CM3\core_cm3.h)(0x5BA5CCBB)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (.\CM3\system_stm32f10x.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_conf.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_rcc.h)(0x5BA5CCBB)
+I (StdPeripheralByDK\GPIO.H)(0x5BA5CCBC)
+F (.\StdPeripheralByDK\DK_SPI.C)(0x5BA5CCBC)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\dk_spi.o --omf_browse .\obj\dk_spi.crf --depend .\obj\dk_spi.d)
+I (.\FWlib\inc\stm32f10x_spi.h)(0x5BA5CCBB)
+I (.\CM3\stm32f10x.h)(0x5BE1B476)
+I (.\CM3\core_cm3.h)(0x5BA5CCBB)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (.\CM3\system_stm32f10x.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_conf.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_gpio.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_rcc.h)(0x5BA5CCBB)
+I (StdPeripheralByDK\GPIO.H)(0x5BA5CCBC)
+I (StdPeripheralByDK\DK_SPI.H)(0x5BA5CCBC)
+F (.\Define\char.H)(0x5BA5CCBA)()
+F (.\Define\externvariable.H)(0x601E9B8C)()
+F (.\Define\MyDefine.H)(0x6033C613)()
+F (.\Define\variable.H)(0x601E9B8C)()
+F (.\POS\CalucationFile.c)(0x5BA5CCBA)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\calucationfile.o --omf_browse .\obj\calucationfile.crf --depend .\obj\calucationfile.d)
+I (.\Define\MyDefine.h)(0x6033C613)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (.\CM3\stm32f10x.h)(0x5BE1B476)
+I (.\CM3\core_cm3.h)(0x5BA5CCBB)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (.\CM3\system_stm32f10x.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_conf.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_gpio.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_rcc.h)(0x5BA5CCBB)
+I (.\Define\char.h)(0x5BA5CCBA)
+I (POS\CalucationFile.h)(0x5BC429D3)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
+F (.\POS\InitSetParameterFile.C)(0x601EA376)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\initsetparameterfile.o --omf_browse .\obj\initsetparameterfile.crf --depend .\obj\initsetparameterfile.d)
+I (.\Define\MyDefine.h)(0x6033C613)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (.\CM3\stm32f10x.h)(0x5BE1B476)
+I (.\CM3\core_cm3.h)(0x5BA5CCBB)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (.\CM3\system_stm32f10x.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_conf.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_gpio.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_rcc.h)(0x5BA5CCBB)
+I (.\Define\externVariable.h)(0x601E9B8C)
+I (.\StdPeripheralByDK\GPIO.H)(0x5BA5CCBC)
+I (.\Define\char.H)(0x5BA5CCBA)
+I (.\uCOS-II\Source\ucos_ii.h)(0x5BA5CCBB)
+I (.\APP\app_cfg.h)(0x601D5E86)
+I (.\APP\os_cfg.h)(0x5BA5CCBB)
+I (.\uCOS-II\Ports\os_cpu.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_flash.h)(0x5BA5CCBB)
+I (.\APP\include.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\bsp.h)(0x5BA8E8E8)
+I (.\FWlib\inc\stm32f10x_usart.h)(0x5BA5CCBB)
+I (.\StdPeripheralByDK\USART.H)(0x5BA5CCBC)
+I (.\StdPeripheralByDK\hw_config.h)(0x5BA5CCBC)
+I (.\CommonDevDriver\delay.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\watchdog.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\AT24C64.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\AT24C256.h)(0x5BA5CCBB)
+I (.\POS\CalucationFile.h)(0x5BC429D3)
+I (.\CommonDevDriver\Disp_1629DFile.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\ScanKeyFiles.h)(0x5BA5CCBB)
+I (.\POS\InitSetParameterFile.h)(0x6000244F)
+I (.\POS\SetW5500Net.h)(0x5BC42CBE)
+I (.\CommonDevDriver\w5500.h)(0x60154C04)
+I (.\CommonDevDriver\pcf8563.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\MoNiSPI.H)(0x5BA5CCBB)
+I (.\CommonDevDriver\MFRC522.h)(0x5BA5CCBB)
+I (.\POS\PSAM.h)(0x5BA5CCBA)
+I (.\POS\ISO7816.h)(0x5BA5CCBA)
+I (.\CommonDevDriver\SPI_FLASH.h)(0x5BA5CCBB)
+I (.\POS\RecordFiles.h)(0x5BA5CCBA)
+I (.\CommonDevDriver\485.H)(0x5BA5CCBB)
+I (POS\InitSetParameterFile.h)(0x6000244F)
+F (.\POS\SetW5500Net.c)(0x60365726)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\setw5500net.o --omf_browse .\obj\setw5500net.crf --depend .\obj\setw5500net.d)
+I (.\Define\MyDefine.h)(0x6033C613)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (.\CM3\stm32f10x.h)(0x5BE1B476)
+I (.\CM3\core_cm3.h)(0x5BA5CCBB)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (.\CM3\system_stm32f10x.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_conf.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_gpio.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_rcc.h)(0x5BA5CCBB)
+I (.\Define\char.h)(0x5BA5CCBA)
+I (POS\CalucationFile.h)(0x5BC429D3)
+I (POS\SetW5500Net.h)(0x5BC42CBE)
+I (.\CommonDevDriver\w5500.h)(0x60154C04)
+I (.\APP\include.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\bsp.h)(0x5BA8E8E8)
+I (.\FWlib\inc\stm32f10x_usart.h)(0x5BA5CCBB)
+I (.\StdPeripheralByDK\USART.H)(0x5BA5CCBC)
+I (.\StdPeripheralByDK\GPIO.h)(0x5BA5CCBC)
+I (.\StdPeripheralByDK\hw_config.h)(0x5BA5CCBC)
+I (.\CommonDevDriver\delay.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\watchdog.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\AT24C64.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\AT24C256.h)(0x5BA5CCBB)
+I (.\POS\CalucationFile.h)(0x5BC429D3)
+I (.\CommonDevDriver\Disp_1629DFile.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\ScanKeyFiles.h)(0x5BA5CCBB)
+I (.\POS\InitSetParameterFile.h)(0x6000244F)
+I (.\POS\SetW5500Net.h)(0x5BC42CBE)
+I (.\Define\externVariable.h)(0x601E9B8C)
+I (.\uCOS-II\Source\ucos_ii.h)(0x5BA5CCBB)
+I (.\APP\app_cfg.h)(0x601D5E86)
+I (.\APP\os_cfg.h)(0x5BA5CCBB)
+I (.\uCOS-II\Ports\os_cpu.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\pcf8563.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\MoNiSPI.H)(0x5BA5CCBB)
+I (.\CommonDevDriver\MFRC522.h)(0x5BA5CCBB)
+I (.\POS\PSAM.h)(0x5BA5CCBA)
+I (.\POS\ISO7816.h)(0x5BA5CCBA)
+I (.\CommonDevDriver\SPI_FLASH.h)(0x5BA5CCBB)
+I (.\POS\RecordFiles.h)(0x5BA5CCBA)
+I (.\CommonDevDriver\485.H)(0x5BA5CCBB)
+I (.\StdPeripheralByDK\NVIC.H)(0x5BA5CCBC)
+I (.\FWlib\inc\stm32f10x_flash.h)(0x5BA5CCBB)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
+F (.\POS\ConsumSubFile.C)(0x603517EA)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\consumsubfile.o --omf_browse .\obj\consumsubfile.crf --depend .\obj\consumsubfile.d)
+I (.\Define\MyDefine.h)(0x6033C613)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (.\CM3\stm32f10x.h)(0x5BE1B476)
+I (.\CM3\core_cm3.h)(0x5BA5CCBB)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (.\CM3\system_stm32f10x.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_conf.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_gpio.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_rcc.h)(0x5BA5CCBB)
+I (.\APP\include.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\bsp.h)(0x5BA8E8E8)
+I (.\FWlib\inc\stm32f10x_usart.h)(0x5BA5CCBB)
+I (.\StdPeripheralByDK\USART.H)(0x5BA5CCBC)
+I (.\StdPeripheralByDK\GPIO.h)(0x5BA5CCBC)
+I (.\StdPeripheralByDK\hw_config.h)(0x5BA5CCBC)
+I (.\CommonDevDriver\delay.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\watchdog.h)(0x5BA5CCBB)
+I (.\Define\char.h)(0x5BA5CCBA)
+I (.\CommonDevDriver\AT24C64.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\AT24C256.h)(0x5BA5CCBB)
+I (.\POS\CalucationFile.h)(0x5BC429D3)
+I (.\CommonDevDriver\Disp_1629DFile.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\ScanKeyFiles.h)(0x5BA5CCBB)
+I (.\POS\InitSetParameterFile.h)(0x6000244F)
+I (.\POS\SetW5500Net.h)(0x5BC42CBE)
+I (.\CommonDevDriver\w5500.h)(0x60154C04)
+I (.\Define\externVariable.h)(0x601E9B8C)
+I (.\uCOS-II\Source\ucos_ii.h)(0x5BA5CCBB)
+I (.\APP\app_cfg.h)(0x601D5E86)
+I (.\APP\os_cfg.h)(0x5BA5CCBB)
+I (.\uCOS-II\Ports\os_cpu.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\pcf8563.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\MoNiSPI.H)(0x5BA5CCBB)
+I (.\CommonDevDriver\MFRC522.h)(0x5BA5CCBB)
+I (.\POS\PSAM.h)(0x5BA5CCBA)
+I (.\POS\ISO7816.h)(0x5BA5CCBA)
+I (.\CommonDevDriver\SPI_FLASH.h)(0x5BA5CCBB)
+I (.\POS\RecordFiles.h)(0x5BA5CCBA)
+I (.\CommonDevDriver\485.H)(0x5BA5CCBB)
+I (.\cJSON\cJSON.h)(0x601514C5)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
+F (.\POS\ISO7816File.c)(0x601E98FD)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\iso7816file.o --omf_browse .\obj\iso7816file.crf --depend .\obj\iso7816file.d)
+F (.\POS\PSAM_Files.c)(0x5BA5CCBA)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\psam_files.o --omf_browse .\obj\psam_files.crf --depend .\obj\psam_files.d)
+I (.\uCOS-II\uC-CPU\cpu.h)(0x5BA5CCBB)
+I (.\uCOS-II\uC-CPU\cpu_def.h)(0x5BA5CCBB)
+I (.\uCOS-II\Ports\os_cpu.h)(0x5BA5CCBB)
+I (.\APP\app_cfg.h)(0x601D5E86)
+I (.\uCOS-II\Source\ucos_ii.h)(0x5BA5CCBB)
+I (.\APP\os_cfg.h)(0x5BA5CCBB)
+I (.\APP\include.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\bsp.h)(0x5BA8E8E8)
+I (.\FWlib\inc\stm32f10x_gpio.h)(0x5BA5CCBB)
+I (.\CM3\stm32f10x.h)(0x5BE1B476)
+I (.\CM3\core_cm3.h)(0x5BA5CCBB)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (.\CM3\system_stm32f10x.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_conf.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_rcc.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_usart.h)(0x5BA5CCBB)
+I (.\StdPeripheralByDK\USART.H)(0x5BA5CCBC)
+I (.\StdPeripheralByDK\GPIO.h)(0x5BA5CCBC)
+I (.\StdPeripheralByDK\hw_config.h)(0x5BA5CCBC)
+I (.\CommonDevDriver\delay.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\watchdog.h)(0x5BA5CCBB)
+I (.\Define\char.h)(0x5BA5CCBA)
+I (.\CommonDevDriver\AT24C64.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\AT24C256.h)(0x5BA5CCBB)
+I (.\POS\CalucationFile.h)(0x5BC429D3)
+I (.\Define\MyDefine.h)(0x6033C613)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (.\CommonDevDriver\Disp_1629DFile.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\ScanKeyFiles.h)(0x5BA5CCBB)
+I (.\POS\InitSetParameterFile.h)(0x6000244F)
+I (.\POS\SetW5500Net.h)(0x5BC42CBE)
+I (.\CommonDevDriver\w5500.h)(0x60154C04)
+I (.\Define\externVariable.h)(0x601E9B8C)
+I (.\CommonDevDriver\pcf8563.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\MoNiSPI.H)(0x5BA5CCBB)
+I (.\CommonDevDriver\MFRC522.h)(0x5BA5CCBB)
+I (.\POS\PSAM.h)(0x5BA5CCBA)
+I (.\POS\ISO7816.h)(0x5BA5CCBA)
+I (.\CommonDevDriver\SPI_FLASH.h)(0x5BA5CCBB)
+I (.\POS\RecordFiles.h)(0x5BA5CCBA)
+I (.\CommonDevDriver\485.H)(0x5BA5CCBB)
+F (.\POS\RecordFiles.C)(0x6033C59E)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\recordfiles.o --omf_browse .\obj\recordfiles.crf --depend .\obj\recordfiles.d)
+I (.\Define\MyDefine.h)(0x6033C613)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (.\CM3\stm32f10x.h)(0x5BE1B476)
+I (.\CM3\core_cm3.h)(0x5BA5CCBB)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (.\CM3\system_stm32f10x.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_conf.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_gpio.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_rcc.h)(0x5BA5CCBB)
+I (.\APP\include.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\bsp.h)(0x5BA8E8E8)
+I (.\FWlib\inc\stm32f10x_usart.h)(0x5BA5CCBB)
+I (.\StdPeripheralByDK\USART.H)(0x5BA5CCBC)
+I (.\StdPeripheralByDK\GPIO.h)(0x5BA5CCBC)
+I (.\StdPeripheralByDK\hw_config.h)(0x5BA5CCBC)
+I (.\CommonDevDriver\delay.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\watchdog.h)(0x5BA5CCBB)
+I (.\Define\char.h)(0x5BA5CCBA)
+I (.\CommonDevDriver\AT24C64.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\AT24C256.h)(0x5BA5CCBB)
+I (.\POS\CalucationFile.h)(0x5BC429D3)
+I (.\CommonDevDriver\Disp_1629DFile.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\ScanKeyFiles.h)(0x5BA5CCBB)
+I (.\POS\InitSetParameterFile.h)(0x6000244F)
+I (.\POS\SetW5500Net.h)(0x5BC42CBE)
+I (.\CommonDevDriver\w5500.h)(0x60154C04)
+I (.\Define\externVariable.h)(0x601E9B8C)
+I (.\uCOS-II\Source\ucos_ii.h)(0x5BA5CCBB)
+I (.\APP\app_cfg.h)(0x601D5E86)
+I (.\APP\os_cfg.h)(0x5BA5CCBB)
+I (.\uCOS-II\Ports\os_cpu.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\pcf8563.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\MoNiSPI.H)(0x5BA5CCBB)
+I (.\CommonDevDriver\MFRC522.h)(0x5BA5CCBB)
+I (.\POS\PSAM.h)(0x5BA5CCBA)
+I (.\POS\ISO7816.h)(0x5BA5CCBA)
+I (.\CommonDevDriver\SPI_FLASH.h)(0x5BA5CCBB)
+I (.\POS\RecordFiles.h)(0x5BA5CCBA)
+I (.\CommonDevDriver\485.H)(0x5BA5CCBB)
+I (.\cJSON\cJSON.h)(0x601514C5)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
+F (.\Task_eth_rec_Data.c)(0x6033C631)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\task_eth_rec_data.o --omf_browse .\obj\task_eth_rec_data.crf --depend .\obj\task_eth_rec_data.d)
+I (.\uCOS-II\uC-CPU\cpu.h)(0x5BA5CCBB)
+I (.\uCOS-II\uC-CPU\cpu_def.h)(0x5BA5CCBB)
+I (.\uCOS-II\Ports\os_cpu.h)(0x5BA5CCBB)
+I (.\APP\app_cfg.h)(0x601D5E86)
+I (.\uCOS-II\Source\ucos_ii.h)(0x5BA5CCBB)
+I (.\APP\os_cfg.h)(0x5BA5CCBB)
+I (.\APP\include.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\bsp.h)(0x5BA8E8E8)
+I (.\FWlib\inc\stm32f10x_gpio.h)(0x5BA5CCBB)
+I (.\CM3\stm32f10x.h)(0x5BE1B476)
+I (.\CM3\core_cm3.h)(0x5BA5CCBB)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (.\CM3\system_stm32f10x.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_conf.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_rcc.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_usart.h)(0x5BA5CCBB)
+I (.\StdPeripheralByDK\USART.H)(0x5BA5CCBC)
+I (.\StdPeripheralByDK\GPIO.h)(0x5BA5CCBC)
+I (.\StdPeripheralByDK\hw_config.h)(0x5BA5CCBC)
+I (.\CommonDevDriver\delay.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\watchdog.h)(0x5BA5CCBB)
+I (.\Define\char.h)(0x5BA5CCBA)
+I (.\CommonDevDriver\AT24C64.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\AT24C256.h)(0x5BA5CCBB)
+I (.\POS\CalucationFile.h)(0x5BC429D3)
+I (.\Define\MyDefine.h)(0x6033C613)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (.\CommonDevDriver\Disp_1629DFile.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\ScanKeyFiles.h)(0x5BA5CCBB)
+I (.\POS\InitSetParameterFile.h)(0x6000244F)
+I (.\POS\SetW5500Net.h)(0x5BC42CBE)
+I (.\CommonDevDriver\w5500.h)(0x60154C04)
+I (.\Define\externVariable.h)(0x601E9B8C)
+I (.\CommonDevDriver\pcf8563.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\MoNiSPI.H)(0x5BA5CCBB)
+I (.\CommonDevDriver\MFRC522.h)(0x5BA5CCBB)
+I (.\POS\PSAM.h)(0x5BA5CCBA)
+I (.\POS\ISO7816.h)(0x5BA5CCBA)
+I (.\CommonDevDriver\SPI_FLASH.h)(0x5BA5CCBB)
+I (.\POS\RecordFiles.h)(0x5BA5CCBA)
+I (.\CommonDevDriver\485.H)(0x5BA5CCBB)
+I (.\APP\descode.h)(0x5BA5CCBB)
+I (.\APP\dhcp.h)(0x5BE16E73)
+I (.\cJSON\cJSON.h)(0x601514C5)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdbool.h)(0x57F606B8)
+F (.\ReadWriteCardTask.c)(0x5C3B37E8)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\readwritecardtask.o --omf_browse .\obj\readwritecardtask.crf --depend .\obj\readwritecardtask.d)
+I (.\uCOS-II\uC-CPU\cpu.h)(0x5BA5CCBB)
+I (.\uCOS-II\uC-CPU\cpu_def.h)(0x5BA5CCBB)
+I (.\uCOS-II\Ports\os_cpu.h)(0x5BA5CCBB)
+I (.\APP\app_cfg.h)(0x601D5E86)
+I (.\uCOS-II\Source\ucos_ii.h)(0x5BA5CCBB)
+I (.\APP\os_cfg.h)(0x5BA5CCBB)
+I (.\APP\include.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\bsp.h)(0x5BA8E8E8)
+I (.\FWlib\inc\stm32f10x_gpio.h)(0x5BA5CCBB)
+I (.\CM3\stm32f10x.h)(0x5BE1B476)
+I (.\CM3\core_cm3.h)(0x5BA5CCBB)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (.\CM3\system_stm32f10x.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_conf.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_rcc.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_usart.h)(0x5BA5CCBB)
+I (.\StdPeripheralByDK\USART.H)(0x5BA5CCBC)
+I (.\StdPeripheralByDK\GPIO.h)(0x5BA5CCBC)
+I (.\StdPeripheralByDK\hw_config.h)(0x5BA5CCBC)
+I (.\CommonDevDriver\delay.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\watchdog.h)(0x5BA5CCBB)
+I (.\Define\char.h)(0x5BA5CCBA)
+I (.\CommonDevDriver\AT24C64.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\AT24C256.h)(0x5BA5CCBB)
+I (.\POS\CalucationFile.h)(0x5BC429D3)
+I (.\Define\MyDefine.h)(0x6033C613)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (.\CommonDevDriver\Disp_1629DFile.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\ScanKeyFiles.h)(0x5BA5CCBB)
+I (.\POS\InitSetParameterFile.h)(0x6000244F)
+I (.\POS\SetW5500Net.h)(0x5BC42CBE)
+I (.\CommonDevDriver\w5500.h)(0x60154C04)
+I (.\Define\externVariable.h)(0x601E9B8C)
+I (.\CommonDevDriver\pcf8563.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\MoNiSPI.H)(0x5BA5CCBB)
+I (.\CommonDevDriver\MFRC522.h)(0x5BA5CCBB)
+I (.\POS\PSAM.h)(0x5BA5CCBA)
+I (.\POS\ISO7816.h)(0x5BA5CCBA)
+I (.\CommonDevDriver\SPI_FLASH.h)(0x5BA5CCBB)
+I (.\POS\RecordFiles.h)(0x5BA5CCBA)
+I (.\CommonDevDriver\485.H)(0x5BA5CCBB)
+I (.\APP\descode.h)(0x5BA5CCBB)
+F (.\cJSON\cJSON.c)(0x5BA5CCBC)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\cjson.o --omf_browse .\obj\cjson.crf --depend .\obj\cjson.d)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\math.h)(0x57F606B6)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\float.h)(0x57F606B6)
+I (C:\Keil_v5\ARM\ARMCC\include\limits.h)(0x57F606B6)
+I (C:\Keil_v5\ARM\ARMCC\include\ctype.h)(0x57F606B6)
+I (cJSON\cJSON.h)(0x601514C5)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
+F (.\POS\downfile.c)(0x5CFE6BBA)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\downfile.o --omf_browse .\obj\downfile.crf --depend .\obj\downfile.d)
+I (.\uCOS-II\Ports\os_cpu.h)(0x5BA5CCBB)
+I (.\APP\app_cfg.h)(0x601D5E86)
+I (.\uCOS-II\Source\ucos_ii.h)(0x5BA5CCBB)
+I (.\APP\os_cfg.h)(0x5BA5CCBB)
+I (.\APP\include.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\bsp.h)(0x5BA8E8E8)
+I (.\FWlib\inc\stm32f10x_gpio.h)(0x5BA5CCBB)
+I (.\CM3\stm32f10x.h)(0x5BE1B476)
+I (.\CM3\core_cm3.h)(0x5BA5CCBB)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (.\CM3\system_stm32f10x.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_conf.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_rcc.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_usart.h)(0x5BA5CCBB)
+I (.\StdPeripheralByDK\USART.H)(0x5BA5CCBC)
+I (.\StdPeripheralByDK\GPIO.h)(0x5BA5CCBC)
+I (.\StdPeripheralByDK\hw_config.h)(0x5BA5CCBC)
+I (.\CommonDevDriver\delay.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\watchdog.h)(0x5BA5CCBB)
+I (.\Define\char.h)(0x5BA5CCBA)
+I (.\CommonDevDriver\AT24C64.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\AT24C256.h)(0x5BA5CCBB)
+I (.\POS\CalucationFile.h)(0x5BC429D3)
+I (.\Define\MyDefine.h)(0x6033C613)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (.\CommonDevDriver\Disp_1629DFile.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\ScanKeyFiles.h)(0x5BA5CCBB)
+I (.\POS\InitSetParameterFile.h)(0x6000244F)
+I (.\POS\SetW5500Net.h)(0x5BC42CBE)
+I (.\CommonDevDriver\w5500.h)(0x60154C04)
+I (.\Define\externVariable.h)(0x601E9B8C)
+I (.\CommonDevDriver\pcf8563.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\MoNiSPI.H)(0x5BA5CCBB)
+I (.\CommonDevDriver\MFRC522.h)(0x5BA5CCBB)
+I (.\POS\PSAM.h)(0x5BA5CCBA)
+I (.\POS\ISO7816.h)(0x5BA5CCBA)
+I (.\CommonDevDriver\SPI_FLASH.h)(0x5BA5CCBB)
+I (.\POS\RecordFiles.h)(0x5BA5CCBA)
+I (.\CommonDevDriver\485.H)(0x5BA5CCBB)
+I (.\cJSON\cJSON.h)(0x601514C5)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
+F (.\APP\uploadrecord.c)(0x5BA88AC9)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\uploadrecord.o --omf_browse .\obj\uploadrecord.crf --depend .\obj\uploadrecord.d)
+I (.\uCOS-II\Ports\os_cpu.h)(0x5BA5CCBB)
+I (APP\app_cfg.h)(0x601D5E86)
+I (.\uCOS-II\Source\ucos_ii.h)(0x5BA5CCBB)
+I (.\APP\os_cfg.h)(0x5BA5CCBB)
+I (APP\include.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\bsp.h)(0x5BA8E8E8)
+I (.\FWlib\inc\stm32f10x_gpio.h)(0x5BA5CCBB)
+I (.\CM3\stm32f10x.h)(0x5BE1B476)
+I (.\CM3\core_cm3.h)(0x5BA5CCBB)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (.\CM3\system_stm32f10x.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_conf.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_rcc.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_usart.h)(0x5BA5CCBB)
+I (.\StdPeripheralByDK\USART.H)(0x5BA5CCBC)
+I (.\StdPeripheralByDK\GPIO.h)(0x5BA5CCBC)
+I (.\StdPeripheralByDK\hw_config.h)(0x5BA5CCBC)
+I (.\CommonDevDriver\delay.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\watchdog.h)(0x5BA5CCBB)
+I (.\Define\char.h)(0x5BA5CCBA)
+I (.\CommonDevDriver\AT24C64.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\AT24C256.h)(0x5BA5CCBB)
+I (.\POS\CalucationFile.h)(0x5BC429D3)
+I (.\Define\MyDefine.h)(0x6033C613)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (.\CommonDevDriver\Disp_1629DFile.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\ScanKeyFiles.h)(0x5BA5CCBB)
+I (.\POS\InitSetParameterFile.h)(0x6000244F)
+I (.\POS\SetW5500Net.h)(0x5BC42CBE)
+I (.\CommonDevDriver\w5500.h)(0x60154C04)
+I (.\Define\externVariable.h)(0x601E9B8C)
+I (.\CommonDevDriver\pcf8563.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\MoNiSPI.H)(0x5BA5CCBB)
+I (.\CommonDevDriver\MFRC522.h)(0x5BA5CCBB)
+I (.\POS\PSAM.h)(0x5BA5CCBA)
+I (.\POS\ISO7816.h)(0x5BA5CCBA)
+I (.\CommonDevDriver\SPI_FLASH.h)(0x5BA5CCBB)
+I (.\POS\RecordFiles.h)(0x5BA5CCBA)
+I (.\CommonDevDriver\485.H)(0x5BA5CCBB)
+I (.\cJSON\cJSON.h)(0x601514C5)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
+F (.\APP\dns.c)(0x5BA8E9BA)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\dns.o --omf_browse .\obj\dns.crf --depend .\obj\dns.d)
+I (.\uCOS-II\Ports\os_cpu.h)(0x5BA5CCBB)
+I (APP\app_cfg.h)(0x601D5E86)
+I (.\uCOS-II\Source\ucos_ii.h)(0x5BA5CCBB)
+I (.\APP\os_cfg.h)(0x5BA5CCBB)
+I (APP\include.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\bsp.h)(0x5BA8E8E8)
+I (.\FWlib\inc\stm32f10x_gpio.h)(0x5BA5CCBB)
+I (.\CM3\stm32f10x.h)(0x5BE1B476)
+I (.\CM3\core_cm3.h)(0x5BA5CCBB)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (.\CM3\system_stm32f10x.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_conf.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_rcc.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_usart.h)(0x5BA5CCBB)
+I (.\StdPeripheralByDK\USART.H)(0x5BA5CCBC)
+I (.\StdPeripheralByDK\GPIO.h)(0x5BA5CCBC)
+I (.\StdPeripheralByDK\hw_config.h)(0x5BA5CCBC)
+I (.\CommonDevDriver\delay.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\watchdog.h)(0x5BA5CCBB)
+I (.\Define\char.h)(0x5BA5CCBA)
+I (.\CommonDevDriver\AT24C64.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\AT24C256.h)(0x5BA5CCBB)
+I (.\POS\CalucationFile.h)(0x5BC429D3)
+I (.\Define\MyDefine.h)(0x6033C613)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (.\CommonDevDriver\Disp_1629DFile.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\ScanKeyFiles.h)(0x5BA5CCBB)
+I (.\POS\InitSetParameterFile.h)(0x6000244F)
+I (.\POS\SetW5500Net.h)(0x5BC42CBE)
+I (.\CommonDevDriver\w5500.h)(0x60154C04)
+I (.\Define\externVariable.h)(0x601E9B8C)
+I (.\CommonDevDriver\pcf8563.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\MoNiSPI.H)(0x5BA5CCBB)
+I (.\CommonDevDriver\MFRC522.h)(0x5BA5CCBB)
+I (.\POS\PSAM.h)(0x5BA5CCBA)
+I (.\POS\ISO7816.h)(0x5BA5CCBA)
+I (.\CommonDevDriver\SPI_FLASH.h)(0x5BA5CCBB)
+I (.\POS\RecordFiles.h)(0x5BA5CCBA)
+I (.\CommonDevDriver\485.H)(0x5BA5CCBB)
+I (.\cJSON\cJSON.h)(0x601514C5)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F606B8)
+F (.\APP\dhcp.c)(0x5BE16ED5)(-c --cpu Cortex-M3 -g -O0 --apcs=interwork -I .\FWlib\inc -I .\CommonDevDriver -I .\CM3 -I .\uCOS-II\Ports -I .\uCOS-II\Source -I .\uCOS-II\uC-CPU -I .\APP -I .\StdPeripheralByDK -I .\Define -I .\POS -I .\cJSON -I ..\新平台ID程序系统-ID:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________-IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include-IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include-D__UVISION_VERSION="522" -D_RTE_ -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER -DSTM32F10X_HD -DUSE_STM3210B_EVAL-o .\obj\dhcp.o --omf_browse .\obj\dhcp.crf --depend .\obj\dhcp.d)
+I (.\uCOS-II\uC-CPU\cpu.h)(0x5BA5CCBB)
+I (.\uCOS-II\uC-CPU\cpu_def.h)(0x5BA5CCBB)
+I (.\uCOS-II\Ports\os_cpu.h)(0x5BA5CCBB)
+I (APP\app_cfg.h)(0x601D5E86)
+I (.\uCOS-II\Source\ucos_ii.h)(0x5BA5CCBB)
+I (.\APP\os_cfg.h)(0x5BA5CCBB)
+I (APP\include.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\bsp.h)(0x5BA8E8E8)
+I (.\FWlib\inc\stm32f10x_gpio.h)(0x5BA5CCBB)
+I (.\CM3\stm32f10x.h)(0x5BE1B476)
+I (.\CM3\core_cm3.h)(0x5BA5CCBB)
+I (C:\Keil_v5\ARM\ARMCC\include\stdint.h)(0x57F606B8)
+I (.\CM3\system_stm32f10x.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_conf.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_rcc.h)(0x5BA5CCBB)
+I (.\FWlib\inc\stm32f10x_usart.h)(0x5BA5CCBB)
+I (.\StdPeripheralByDK\USART.H)(0x5BA5CCBC)
+I (.\StdPeripheralByDK\GPIO.h)(0x5BA5CCBC)
+I (.\StdPeripheralByDK\hw_config.h)(0x5BA5CCBC)
+I (.\CommonDevDriver\delay.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\watchdog.h)(0x5BA5CCBB)
+I (.\Define\char.h)(0x5BA5CCBA)
+I (.\CommonDevDriver\AT24C64.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\AT24C256.h)(0x5BA5CCBB)
+I (.\POS\CalucationFile.h)(0x5BC429D3)
+I (.\Define\MyDefine.h)(0x6033C613)
+I (C:\Keil_v5\ARM\ARMCC\include\string.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdio.h)(0x57F606B8)
+I (.\CommonDevDriver\Disp_1629DFile.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\ScanKeyFiles.h)(0x5BA5CCBB)
+I (.\POS\InitSetParameterFile.h)(0x6000244F)
+I (.\POS\SetW5500Net.h)(0x5BC42CBE)
+I (.\CommonDevDriver\w5500.h)(0x60154C04)
+I (.\Define\externVariable.h)(0x601E9B8C)
+I (.\CommonDevDriver\pcf8563.h)(0x5BA5CCBB)
+I (.\CommonDevDriver\MoNiSPI.H)(0x5BA5CCBB)
+I (.\CommonDevDriver\MFRC522.h)(0x5BA5CCBB)
+I (.\POS\PSAM.h)(0x5BA5CCBA)
+I (.\POS\ISO7816.h)(0x5BA5CCBA)
+I (.\CommonDevDriver\SPI_FLASH.h)(0x5BA5CCBB)
+I (.\POS\RecordFiles.h)(0x5BA5CCBA)
+I (.\CommonDevDriver\485.H)(0x5BA5CCBB)
+I (APP\dhcp.h)(0x5BE16E73)
+I (.\cJSON\cJSON.h)(0x601514C5)
+I (C:\Keil_v5\ARM\ARMCC\include\stddef.h)(0x57F606B8)
+I (C:\Keil_v5\ARM\ARMCC\include\stdlib.h)(0x57F606B8)

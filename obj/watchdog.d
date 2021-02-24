@@ -1,0 +1,17 @@
+.\obj\watchdog.o: CommonDevDriver\watchdog.c
+.\obj\watchdog.o: .\CM3\stm32f10x.h
+.\obj\watchdog.o: .\CM3\core_cm3.h
+.\obj\watchdog.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\watchdog.o: .\CM3\system_stm32f10x.h
+.\obj\watchdog.o: .\FWlib\inc\stm32f10x_conf.h
+.\obj\watchdog.o: .\FWlib\inc\stm32f10x_gpio.h
+.\obj\watchdog.o: .\CM3\stm32f10x.h
+.\obj\watchdog.o: .\FWlib\inc\stm32f10x_rcc.h
+.\obj\watchdog.o: .\StdPeripheralByDK\gpio.H
+.\obj\watchdog.o: CommonDevDriver\watchdog.h
+.\obj\watchdog.o: .\Define\externVariable.h
+.\obj\watchdog.o: .\Define\char.H
+.\obj\watchdog.o: .\uCOS-II\Source\ucos_ii.h
+.\obj\watchdog.o: .\APP\app_cfg.h
+.\obj\watchdog.o: .\APP\os_cfg.h
+.\obj\watchdog.o: .\uCOS-II\Ports\os_cpu.h

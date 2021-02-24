@@ -283,6 +283,7 @@ void App_TaskStart(void* p_arg)
 					//脱机扇区号
 					memcpy(TempBuf,cJSON_GetObjectItem(arrayItem,"sector")->valuestring,(strlen(cJSON_GetObjectItem(arrayItem,"sector")->valuestring)));
 					HexStringToHexGroup(TempBuf,&usesectornum,2);
+					usesectornum = 10;//测试使用
 					//脱机限额
 					//memcpy(TempBuf,cJSON_GetObjectItem(arrayItem,"limitMoney")->valuestring,(strlen(cJSON_GetObjectItem(arrayItem,"limitMoney")->valuestring)));
 					LimtConsumeMoney = atoi(cJSON_GetObjectItem(arrayItem,"limitMoney")->valuestring);

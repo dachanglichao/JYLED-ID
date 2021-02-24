@@ -564,6 +564,9 @@ static void tcp_send_data_packet(u8 status,int cmd,u8 * data,int sendLength,int 
 		case ConsumeCmd://消费接口
 			HttpGetConsume();
 		break;
+		
+		case UpRecodCmd://上传脱机记录
+		break;
 	}
 	//Write_SOCK_Data_Buffer(7, data, sendLength);
 }

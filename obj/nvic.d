@@ -1,0 +1,11 @@
+.\obj\nvic.o: StdPeripheralByDK\NVIC.C
+.\obj\nvic.o: .\FWlib\inc\misc.h
+.\obj\nvic.o: .\CM3\stm32f10x.h
+.\obj\nvic.o: .\CM3\core_cm3.h
+.\obj\nvic.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\stdint.h
+.\obj\nvic.o: .\CM3\system_stm32f10x.h
+.\obj\nvic.o: .\FWlib\inc\stm32f10x_conf.h
+.\obj\nvic.o: .\FWlib\inc\stm32f10x_gpio.h
+.\obj\nvic.o: .\CM3\stm32f10x.h
+.\obj\nvic.o: .\FWlib\inc\stm32f10x_rcc.h
+.\obj\nvic.o: StdPeripheralByDK\NVIC.H
