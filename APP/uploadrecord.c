@@ -20,8 +20,7 @@ void App_TaskUploadRecord(void* p_arg)
 		{
 			Active_UpOffRe();
 		}
-		
-		
+			
 		OSTimeDlyHMSM(0, 0, 1, 0);//将任务挂起500ms	 		
 	}
 }

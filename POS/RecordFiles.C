@@ -580,10 +580,10 @@ void	Active_UpOffRe(void)
 	uchar  status;
 	uint   Addr;
 	uchar  DatasBuffer[32];
-	uchar recdata[32];
+	uchar recdata[512];
 	int reclen;
 	u8 err;
-	cJSON * root,*rootfor;
+	cJSON *object,*arrayItem;
 
 	//return;
 	OSMutexPend(SemFlashSpi,0,&err);  //申请互斥资源使用
@@ -620,27 +620,40 @@ void	Active_UpOffRe(void)
 	{
 		flag_reupcode=1; //主动上传脱机记录标志
 
-		DatasBuffer[19] = offline_UpIndex >> 8;
-		DatasBuffer[20] = offline_UpIndex & 0xFF;
-		tcp_send_and_rec_packet(0x2109,DatasBuffer+2,19,1,recdata,&reclen,3);
-		
-		root = cJSON_Parse((const char *)(recdata+3)); 
-		if(root != 0)
+//		DatasBuffer[19] = offline_UpIndex >> 8;
+//		DatasBuffer[20] = offline_UpIndex & 0xFF;
+		err = tcp_send_and_rec_packet(UpRecodCmd,DatasBuffer+1,19,1,recdata,&reclen,3);
+		if(!err)
 		{
-			status = cJSON_GetObjectItem(root,"returnType")->valueint;  
-			if(status == 0)
+			object=cJSON_Parse(recdata); //????????
+			if(!object)
 			{
-				DatasBuffer[0] = 0;
-				
+				cJSON_Delete(object);	
+				return ;
+			}
+			arrayItem = cJSON_GetObjectItem(object,"message"); //
+			if(strcmp(arrayItem->valuestring,"0"))
+			{
+				cJSON_Delete(object);	
+				return ;
+			}
+			else
+			{	
+				DatasBuffer[0] = 0;		
 				OSMutexPend(SemFlashSpi,0,&err);  //申请互斥资源使用
 				Addr=(ulong)offline_UpIndex*RECORD_SIZE;	
 				Flash_Write_Bytes(Addr,DatasBuffer,10);
 				offline_UpIndex++;
 				offline_UpIndex = offline_UpIndex%Off_MAXRECORD;
 				OSMutexPost(SemFlashSpi);  //互斥资源释放
+				
 			}
+			cJSON_Delete(object);
 		}
-		cJSON_Delete(root);
+		else
+		{
+			Write_SOCK_Data_Buffer(5,Tx_Buffer,11);
+		}	
 		//Write_SOCK_Data_Buffer(0,Tx_Buffer,11);
 	}
 	else//没有记录

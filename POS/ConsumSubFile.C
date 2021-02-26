@@ -92,7 +92,7 @@ void	ConsumSub(void)//消费主程序
 	
 
 	ReadKeyValue=ScanKeySub(KEY_ANY);//等待按键
-	if (global_key==(KEY_ESC | KEY_MENU))
+	//if (global_key==(KEY_ESC | KEY_MENU))
 	{ 
 		if(isReg == 0)
 		{
@@ -409,10 +409,10 @@ void	ConsumSub(void)//消费主程序
 											Read_Sysdate(NoNetRecord+9);
 											
 											BatchNum++;//消费流水号
-											NoNetRecord[15] = BatchNum>>24;
-											NoNetRecord[16] = BatchNum>>16;
-											NoNetRecord[17] = BatchNum>>8;
-											NoNetRecord[18] = BatchNum;
+											NoNetRecord[18] = BatchNum>>24;
+											NoNetRecord[17] = BatchNum>>16;
+											NoNetRecord[16] = BatchNum>>8;
+											NoNetRecord[15] = BatchNum;
 
 											Save_OffRecode();//存储脱机记录
 											Disp_Hello();//显示

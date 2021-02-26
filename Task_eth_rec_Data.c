@@ -543,6 +543,83 @@ static void HttpGetConsume(void)
 	Write_SOCK_Data_Buffer(7,sendTempp,request_len);
 	Write_SOCK_Data_Buffer(5,sendTempp,request_len);
 }
+
+/***************************************************
+//上传脱机记录
+***************************************************/
+static void HttpUpRecord(uint8_t *data)
+{
+	char	*out;
+	cJSON *root;
+	uchar buf[100];
+	uchar buf1[100];
+	uchar end[2];
+	u8 sendTempp[500]={0};
+	uint totalsize = 0,request_len = 0,header_len = 0;
+	
+	root=cJSON_CreateObject();
+	//添加接口命令
+	cJSON_AddItemToObject(root,"iterfaceName",cJSON_CreateString("offlineRecord"));		
+	//添加token
+	cJSON_AddItemToObject(root,"Token",cJSON_CreateString(tokenBuf));	
+	//站点号	
+	ChgUlongToBCDString(MainCode,Tx_Buffer,2);
+	HexGroupToHexString(Tx_Buffer,buf,2);
+	cJSON_AddItemToObject(root,"dev_id",cJSON_CreateString(buf));	
+	//设备编号
+	ChgUlongToBCDString(MainCode,Tx_Buffer,2);
+	HexGroupToHexString(Tx_Buffer,buf,2);
+	cJSON_AddItemToObject(root,"deviceSerial",cJSON_CreateString(buf));
+	//客户ID
+	HexGroupToHexString(customerId,buf,4);
+	cJSON_AddItemToObject(root,"customerId",cJSON_CreateString(buf));
+	//交易时间
+	//Read_Sysdate(SysTimeDatas.TimeString);
+	buf1[0] = 0x20;
+	memcpy(buf1+1,data+9,6);
+	HexGroupToHexString(buf1,buf,7);
+	cJSON_AddItemToObject(root,"time",cJSON_CreateString(buf));
+	//流水号
+	ChgUlongToBCDString(MainCode,Tx_Buffer,2);
+	BatchNum = *(volatile u32*)(&data +15);
+	ChgUlongToBCDString(BatchNum,Tx_Buffer+2,4);
+	HexGroupToHexString(Tx_Buffer,buf1,12);
+	memcpy(Tx_Buffer,buf1,4);
+	Tx_Buffer[4] = '-';
+	memcpy(Tx_Buffer+5,buf,14);
+	memcpy(Tx_Buffer+19,buf1+4,8);
+	
+	cJSON_AddItemToObject(root,"orderNo",cJSON_CreateString(Tx_Buffer));
+	//交易金额
+	memset(buf,0,20);
+	
+	//ChgUlongToBCDString(CurrentConsumMoney,Tx_Buffer,4);
+	memcpy(Tx_Buffer,data+5,4);
+	HexGroupToHexString(Tx_Buffer,buf,4);
+	cJSON_AddItemToObject(root,"conAmount",cJSON_CreateString(buf));
+	//卡号
+	memcpy(CardSerialNum,data+1,4);
+	HexGroupToHexString(CardSerialNum,buf,4);
+	cJSON_AddItemToObject(root,"cardId",cJSON_CreateString(buf));
+	
+	out=cJSON_PrintUnformatted(root);	
+	request_len = strlen(out);
+	memcpy(sendTempp,out,request_len);
+	end[0] = 0x0d;
+	end[1] = 0x0a;
+
+	strcat(sendTempp,end);
+	request_len +=2;
+//	sprintf(buf1,"%d.%d.%.d.%d:%d",S1_DIP[0],S1_DIP[1],S1_DIP[2],S1_DIP[3],svraddrport);
+//	header_len = snprintf(header,1024,HTTP_GETCONSUME_HEAD,buf1,request_len);
+//	strcat(header,out);
+	cJSON_Delete(root);	
+	free(out);	/* Print to text, Delete the cJSON, print it, release the string. */
+	//request_len = strlen(header);
+
+	Write_SOCK_Data_Buffer(7,sendTempp,request_len);
+	Write_SOCK_Data_Buffer(5,sendTempp,request_len);
+}
 static void tcp_send_data_packet(u8 status,int cmd,u8 * data,int sendLength,int entype)
 {
 	int sendLengthtrue;
@@ -566,6 +643,7 @@ static void tcp_send_data_packet(u8 status,int cmd,u8 * data,int sendLength,int 
 		break;
 		
 		case UpRecodCmd://上传脱机记录
+			HttpUpRecord(data);
 		break;
 	}
 	//Write_SOCK_Data_Buffer(7, data, sendLength);
