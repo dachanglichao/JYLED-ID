@@ -55,6 +55,7 @@
 #define 	GetBalanceCmd     			 0xA2//获取余额
 #define 	ConsumeCmd     			 		 0xA3//消费接口
 #define		UpRecodCmd							 0xA4//上传脱机记录
+#define		QueryToalConsumeMoney		 0xA5//查询消费总额
 #define 	QueryConsumeRecordCmd    0xAF//查询最近的三笔消费
 //#define 	QueryDayConsumeCmd   		 0xF1//查询当日消费金额笔数
 //#define 	AppointDayConsumeCmd   		 0xF2//指定某日的消费金额跟笔数

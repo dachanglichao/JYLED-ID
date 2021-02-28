@@ -92,7 +92,7 @@ void	ConsumSub(void)//消费主程序
 	
 
 	ReadKeyValue=ScanKeySub(KEY_ANY);//等待按键
-	//if (global_key==(KEY_ESC | KEY_MENU))
+	if (global_key==(KEY_ESC | KEY_MENU))
 	{ 
 		if(isReg == 0)
 		{
@@ -186,6 +186,11 @@ void	ConsumSub(void)//消费主程序
 								return;
 							}
 					 }
+//					 else if(ConsumMode ==CONSUM_RATION)
+//					 {
+//						ConsumCase=2;
+//						 return;
+//					 }
 					 else
 					 {
 					   ConsumCase=0;
@@ -212,7 +217,7 @@ void	ConsumSub(void)//消费主程序
 	           PrintConsumDatas(1);			
 			}
 			status=KeyBoardSetSysParamenter(bitHaveReadBalance|bitHaveLedError,ReadKeyValue);//输入消费金额
-      if (!status && (CurrentConsumMoney || ((InputCase&0xf0)==0x70 && ConsumMode==CONSUM_NUM) ) )//有消费额输入
+      if (!status && (CurrentConsumMoney || ((InputCase&0xf0)==0x70 && ConsumMode==CONSUM_NUM) ||ConsumMode ==CONSUM_RATION) )//有消费额输入
       {
         SumPrintMoney=0;
         MenuSort=InputMenuSort;
@@ -288,7 +293,7 @@ void	ConsumSub(void)//消费主程序
 				{
 					//memcpy(NoNetRecord,CardPrinterNum,3);
 					//CurrentConsumMoney
-					if(CurrentConsumMoney == 0)
+					if(CurrentConsumMoney == 0 &(ConsumMode!=CONSUM_RATION))
 						status = tcp_send_and_rec_packet(GetBalanceCmd,CardPrinterNum,6,1,recDataTemp,&recDataLength,3);
 					else
 					{
@@ -349,7 +354,10 @@ void	ConsumSub(void)//消费主程序
 							{
 								arrayItem = cJSON_GetObjectItem(object,"message"); 
 								status = atoi(arrayItem->valuestring);
-								DISP_ErrorSub(status);
+								DispBuffer[0]=Disp0_9String[(status/10)%10];
+								DispBuffer[1]=Disp0_9String[status%10];
+								memcpy(DispBuffer+2,DispErrorString+1*16+2,10);
+								LED_DispDatas_all(DispBuffer);
 							}			
 						}
 						cJSON_Delete(object);				
@@ -1011,18 +1019,92 @@ uchar	SelectDate(uchar * ptr)//选择消费日期
 	}
 }
 
+uchar	SelectEndDate(uchar * ptr)//选择消费日期
+{
+	uchar	st_data;
+	uchar	bbit=1;
+	uchar	Count=0;
+	uchar 	Fx[4]={5,6,8,9};
+	ulong	Long_Value;
+	DispBuffer[0]=0x79;//E
+	DispBuffer[1]=0x08;//_
+	DispBuffer[2]=0x5e;//d
+	DispBuffer[3]=0x08;//_
+	DispBuffer[7]=0x40;//-
+	ptr[0]=SysTimeDatas.S_Time.MonthChar;
+	ptr[1]=SysTimeDatas.S_Time.DayChar;
+	while (1)
+	{
+		if (bbit)
+		{
+			bbit=0;
+			st_data=ptr[0]>>4;
+			DispBuffer[Fx[0]]=Disp0_9String[st_data];
+			st_data=ptr[0]&0x0f;
+			DispBuffer[Fx[1]]=Disp0_9String[st_data];
+			st_data=ptr[1]>>4;
+			DispBuffer[Fx[2]]=Disp0_9String[st_data];
+			st_data=ptr[1]&0x0f;
+			DispBuffer[Fx[3]]=Disp0_9String[st_data];
+			LED_DispDatas_all(DispBuffer);
+		}
+		LED_NumFalsh_Disp(Fx[Count],1,0x10000);
+		Long_Value=ScanKeySub(KEY_0_9 | KEY_ENTER|KEY_ESC|KEY_MUL);
+		if (Long_Value)
+		{
+			if (Long_Value==KEY_ESC)
+				return	1;
+			else if (Long_Value==KEY_ENTER||Long_Value==KEY_MUL )
+				return	0;
+		 	else
+			{
+				st_data=ChgKeyValueToChar(Long_Value);
+				if (!Count)
+				{
+					ptr[0]&=0x0f;
+					st_data<<=4;
+					ptr[0]+=st_data;
+			  	}
+				else if (Count==1)
+				{
+					ptr[0]&=0xf0;
+					ptr[0]+=st_data;
+			  	}
+				else if (Count==2)
+				{
+					st_data<<=4;
+					ptr[1]&=0x0f;
+					ptr[1]+=st_data;
+			   	}
+				else if (Count==3)
+				{
+					ptr[1]&=0xf0;
+					ptr[1]+=st_data;
+				}
+				bbit=1;
+				Count++;
+				Count=Count%4;
+			}
+		}
+
+		Clr_WatchDog();
+	}
+}
+
 uchar	KeyBoardSetSysParamenter(uchar  bbit, ulong	InKeyValue)
 {
 	uchar	status,page;
-	u8 recDataTemp[100],sendDataTemp[100],datagetd[50];
+	u8 recDataTemp[500],sendDataTemp[100],datagetd[50],err;
 	int recDataLength;
-	cJSON * root,*rootfor;
+//	cJSON * root,*rootfor;
 	float databalance;
 	ulong iii,ii,Addr;
 	ulong	SumMoney=0;
 	uchar	LedX;
 	uchar	Buffer[32];
 	uchar	PPage;
+	cJSON *object;
+	cJSON *arrayItem;
 	//if(InKeyValue == 0) return 1;
 	
 	if (InKeyValue==KEY_ESC)
@@ -1109,41 +1191,69 @@ uchar	KeyBoardSetSysParamenter(uchar  bbit, ulong	InKeyValue)
 		
 
 			ComsumeDate[0] = SysTimeDatas.S_Time.YearChar;						
-			page =SelectDate(ComsumeDate+1);//选择消费日期	
+			page =SelectDate(ComsumeDate+1);//选择起始消费日期	
 			if(page)
 			{
 				InputCase = 0;
 				return;
 			}	
-			
-			sprintf(sendDataTemp,"%d-%02d-%02d%d-%02d-%02d",BCDToHex(SysTimeDatas.S_Time.YearChar)+2000,BCDToHex(ComsumeDate[1]),BCDToHex(ComsumeDate[2])
-			,BCDToHex(SysTimeDatas.S_Time.YearChar)+2000,BCDToHex(ComsumeDate[1]),BCDToHex(ComsumeDate[2]));
-			
-			status = tcp_send_and_rec_packet(0x2103,sendDataTemp,20,1,recDataTemp,&recDataLength,3);
-			
-			root = cJSON_Parse(recDataTemp+3); 
-			if(root != 0)
+			sendDataTemp[0] = (ComsumeDate[1]);
+			sendDataTemp[1] = (ComsumeDate[2]);
+			ComsumeDate[0] = SysTimeDatas.S_Time.YearChar;						
+			page =SelectEndDate(ComsumeDate+1);//选择终止消费日期	
+			if(page)
 			{
-				status = cJSON_GetObjectItem(root,"returnType")->valueint;  
-				if(status == 0)
+				InputCase = 0;
+				return;
+			}	
+			sendDataTemp[2] = (ComsumeDate[1]);
+			sendDataTemp[3] = (ComsumeDate[2]);
+			
+			err = tcp_send_and_rec_packet(QueryToalConsumeMoney,sendDataTemp,20,1,recDataTemp,&recDataLength,3);	
+			if(!err)
+			{
+				object=cJSON_Parse(recDataTemp); //
+				if(!object)
 				{
-					rootfor = cJSON_GetObjectItem(root,"data");  //balance1
-					if(rootfor != 0)
-					{
-						memcpy(datagetd,cJSON_GetObjectItem(rootfor,"amountsum")->valuestring,strlen(cJSON_GetObjectItem(rootfor,"amountsum")->valuestring));
-						//databalance = atof(datagetd); 
-						sscanf(datagetd,"%f",&databalance);									
-						iii = databalance * 100;
-						memcpy(DispBuffer,"\x6e\x79\x08\x08\x08",5);
-						ChgUlongToLongDispBuffer(iii,DispBuffer+5);	
-						LED_DispDatas_all(DispBuffer);
-						//return;
-					}
+					cJSON_Delete(object);	
+					return ;
 				}
+				arrayItem = cJSON_GetObjectItem(object,"message"); //
+				if(strcmp(arrayItem->valuestring,"0"))
+				{
+					cJSON_Delete(object);	
+					return ;
+				}	
+				Consum_Status=0;	//联网模式			
+				arrayItem = cJSON_GetObjectItem(object,"resultData"); //
+				
+				memcpy(sendDataTemp,cJSON_GetObjectItem(arrayItem,"toalMoney")->valuestring,(strlen(cJSON_GetObjectItem(arrayItem,"toalMoney")->valuestring)));
+				sscanf(sendDataTemp,"%f",&databalance);									
+				iii = databalance;
+				memcpy(DispBuffer,"\x6e\x79\x08\x08\x08",5);
+				ChgUlongToLongDispBuffer(iii,DispBuffer+5);	
+				LED_DispDatas_all(DispBuffer);
+				InputCase = 0x81;
+
+				memset(sendDataTemp,0,sizeof(sendDataTemp));
+				memcpy(sendDataTemp,cJSON_GetObjectItem(arrayItem,"ToalNumber")->valuestring,(strlen(cJSON_GetObjectItem(arrayItem,"ToalNumber")->valuestring)));				
+				cJSON_Delete(object);
 			}
-			cJSON_Delete(root);
-		
 		}		
+		else if (InputCase==0x81 &&  InKeyValue==KEY_ENTER )
+		{
+			iii = atoi(sendDataTemp);
+			memcpy(DispBuffer,"\x0e\x79\x08\x08\x08",5);//J____
+			DispBuffer[5]=Disp0_9String[iii/10000];
+			iii=iii%10000;
+			DispBuffer[6]=Disp0_9String[iii/1000];
+			iii=iii%1000;
+			DispBuffer[7]=Disp0_9String[iii/100];
+			iii=iii%100;
+			DispBuffer[8]=Disp0_9String[iii/10];
+			DispBuffer[9]=Disp0_9String[iii%10];
+			LED_DispDatas_all(DispBuffer);
+		}
 		else if (InputCase==0x31 &&  InKeyValue==KEY_MUL )//菜单+份数，设置简易价格
 		{//简易单价
 			InputCase=0x40;	
@@ -1155,16 +1265,13 @@ uchar	KeyBoardSetSysParamenter(uchar  bbit, ulong	InKeyValue)
 			if (bitLookSysDatas && InKeyValue==KEY_ENTER )
 			{
 				bitDispFlash=0;	
-			InputCase++;				
+				InputCase++;				
 				if(InputCase==0x52)
 				{
 					bitDispFlash=0;
-					bitLookSysDatas=1;
-						
-				InputCase =0x50;
-					
-				}				
-	      							
+					bitLookSysDatas=1;					
+					InputCase =0x50;					
+				}				     							
 			}
 		}	
 		if (ConsumMode==CONSUM_NUM && (InputCase&0xf0)!=0x70 &&  InKeyValue == KEY_MUL)//倒查流水，菜号+份数
@@ -1173,7 +1280,6 @@ uchar	KeyBoardSetSysParamenter(uchar  bbit, ulong	InKeyValue)
 			SerialUnion.S_DatasStruct.Comd = QueryConsumeRecordCmd;//	最近三笔消费查询
 //			OSSemPost(NeedSendData_Semp);  //发送信号量 数据发送	
 		}
-
 	}
 	status=0x20;
 	if (!InputCase)//取消费额部分
@@ -1181,7 +1287,7 @@ uchar	KeyBoardSetSysParamenter(uchar  bbit, ulong	InKeyValue)
 		bitAddStatus=0;
 		if (!bitHaveLedError )
 		{
-	       if (ConsumMode==CONSUM_SIMPLE)
+	    if (ConsumMode==CONSUM_SIMPLE)
 			{
 				CurrentConsumMoney=0;
 				if (( InKeyValue&(KEY_0_9|KEY_POINT|KEY_ADD)))			
@@ -1216,8 +1322,7 @@ uchar	KeyBoardSetSysParamenter(uchar  bbit, ulong	InKeyValue)
 		if ((InputCase&0xf0)==0x30)
 		{
 			if(InKeyValue == KEY_ADD)
-			{
-				
+			{			
 				InputCase=0;
 				bitHaveReadBalance=0;
 				CurrentConsumMoney=0;

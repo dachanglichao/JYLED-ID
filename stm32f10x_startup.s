@@ -3,8 +3,8 @@
 ; Amount of memory (in bytes) allocated for Stack and Heap
 ; Tailor those values to your application needs          
 ;***************************************************************************************
-Stack_Size   EQU     0x400
-Heap_Size    EQU     0x1000
+Stack_Size   EQU     0x600
+Heap_Size    EQU     0x1200
 
 ;*******************************************************************************
 ; Allocate space for the Stack

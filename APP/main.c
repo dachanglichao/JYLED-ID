@@ -46,9 +46,6 @@ static  void App_TaskCreate(void);
 extern void App_TaskUploadRecord(void* p_arg);
 static  void App_TaskStart(void* p_arg);
 
-
-
-
 bool startFlag = FALSE;
 /****************************************************************************
 * 名    称：int main(void)
@@ -325,8 +322,10 @@ void App_TaskStart(void* p_arg)
 				OSMutexPost(SemEthMac);
 			}		
 		}
-	
-		OSTimeDlyHMSM(0, 0, 5, 0);//将任务挂起500ms	 		
+		if(!isReg)
+			OSTimeDlyHMSM(0, 0, 1, 0);//将任务挂起500ms	
+		else
+			OSTimeDlyHMSM(0, 0, 5, 0);//将任务挂起500ms	
 	}
 }
 

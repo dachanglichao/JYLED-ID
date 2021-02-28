@@ -1,0 +1,214 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.22.0.0
+Copyright (C) 2016 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: lc Administrator, lc, LIC=1WSII-TNFTW-5A8DF-6FH8C-KND0C-P2AJX
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.22
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 4 (build 422)
+Assembler:       Armasm.exe V5.06 update 4 (build 422)
+Linker/Locator:  ArmLink.exe V5.06 update 4 (build 422)
+Library Manager: ArmAr.exe V5.06 update 4 (build 422)
+Hex Converter:   FromElf.exe V5.06 update 4 (build 422)
+CPU DLL:         SARMCM3.DLL V5.22
+Dialog DLL:      DCM.DLL V1.13.9.0
+Target DLL:      Segger\JL2CM3.dll V2.99.23.0
+Dialog DLL:      TCM.DLL V1.21.0.0
+ 
+<h2>Project:</h2>
+D:\工作\刘玉良修改项目\TCP_SOCKET\DK_Sunny.uvprojx
+Project File Date:  02/22/2021
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 4 (build 422)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'TDID(消费机)'
+compiling Task_eth_rec_Data.c...
+Task_eth_rec_Data.c(77): warning:  #177-D: variable "Buffer"  was declared but never referenced
+  	u8 Buffer[20];
+Task_eth_rec_Data.c(78): warning:  #177-D: variable "svraddrlen"  was declared but never referenced
+  	int svraddrlen = 0;
+Task_eth_rec_Data.c(81): warning:  #177-D: variable "dhcpret"  was declared but never referenced
+  	u8 dhcpret;
+Task_eth_rec_Data.c(233): warning:  #1295-D: Deprecated declaration startupdate - give arg types
+  void startupdate();
+Task_eth_rec_Data.c(237): warning:  #68-D: integer conversion resulted in a change of sign
+  	
+Task_eth_rec_Data.c(306): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+  	cJSON_AddItemToObject(root,"dev_id",cJSON_CreateString(buf));
+Task_eth_rec_Data.c(310): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+  	cJSON_AddItemToObject(root,"deviceSerial",cJSON_CreateString(buf));	
+Task_eth_rec_Data.c(313): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+  	cJSON_AddItemToObject(root,"customerId",cJSON_CreateString(buf));
+Task_eth_rec_Data.c(316): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+  	cJSON_AddItemToObject(root,"customerPwd",cJSON_CreateString(buf));
+Task_eth_rec_Data.c(323): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+  	strcat(sendTempp,end);
+Task_eth_rec_Data.c(323): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *restrict"
+  	strcat(sendTempp,end);
+Task_eth_rec_Data.c(329): warning:  #223-D: function "free" declared implicitly
+  	free(out);	/* Print to text, Delete the cJSON, print it, release the string. */
+Task_eth_rec_Data.c(295): warning:  #177-D: variable "buf1"  was declared but never referenced
+  	uchar buf1[100];
+Task_eth_rec_Data.c(297): warning:  #177-D: variable "totalsize"  was declared but never referenced
+  	uint totalsize = 0,request_len = 0,header_len = 0;
+Task_eth_rec_Data.c(297): warning:  #177-D: variable "header_len"  was declared but never referenced
+  	uint totalsize = 0,request_len = 0,header_len = 0;
+Task_eth_rec_Data.c(354): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+  	cJSON_AddItemToObject(root,"Token",cJSON_CreateString(tokenBuf));	
+Task_eth_rec_Data.c(358): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+  	cJSON_AddItemToObject(root,"dev_id",cJSON_CreateString(buf));	
+Task_eth_rec_Data.c(362): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+  	cJSON_AddItemToObject(root,"deviceSerial",cJSON_CreateString(buf));
+Task_eth_rec_Data.c(365): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+  	cJSON_AddItemToObject(root,"customerId",cJSON_CreateString(buf));
+Task_eth_rec_Data.c(368): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+  	cJSON_AddItemToObject(root,"deviceType",cJSON_CreateString(buf));
+Task_eth_rec_Data.c(371): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+  	cJSON_AddItemToObject(root,"deviseVersion",cJSON_CreateString(buf));
+Task_eth_rec_Data.c(379): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+  	strcat(sendTempp,end);
+Task_eth_rec_Data.c(379): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *restrict"
+  	strcat(sendTempp,end);
+Task_eth_rec_Data.c(385): warning:  #223-D: function "free" declared implicitly
+  	free(out);	/* Print to text, Delete the cJSON, print it, release the string. */
+Task_eth_rec_Data.c(344): warning:  #177-D: variable "buf1"  was declared but never referenced
+  	uchar buf1[100];
+Task_eth_rec_Data.c(347): warning:  #177-D: variable "totalsize"  was declared but never referenced
+  	uint totalsize = 0,request_len = 0,header_len = 0;
+Task_eth_rec_Data.c(347): warning:  #177-D: variable "header_len"  was declared but never referenced
+  	uint totalsize = 0,request_len = 0,header_len = 0;
+Task_eth_rec_Data.c(410): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+  	cJSON_AddItemToObject(root,"Token",cJSON_CreateString(tokenBuf));	
+Task_eth_rec_Data.c(414): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+  	cJSON_AddItemToObject(root,"dev_id",cJSON_CreateString(buf));	
+Task_eth_rec_Data.c(418): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+  	cJSON_AddItemToObject(root,"deviceSerial",cJSON_CreateString(buf));
+Task_eth_rec_Data.c(421): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+  	cJSON_AddItemToObject(root,"customerId",cJSON_CreateString(buf));
+Task_eth_rec_Data.c(424): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+  	cJSON_AddItemToObject(root,"cardId",cJSON_CreateString(buf));
+Task_eth_rec_Data.c(432): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+  	strcat(sendTempp,end);
+Task_eth_rec_Data.c(432): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *restrict"
+  	strcat(sendTempp,end);
+Task_eth_rec_Data.c(438): warning:  #223-D: function "free" declared implicitly
+  	free(out);	/* Print to text, Delete the cJSON, print it, release the string. */
+Task_eth_rec_Data.c(400): warning:  #177-D: variable "buf1"  was declared but never referenced
+  	uchar buf1[100];
+Task_eth_rec_Data.c(403): warning:  #177-D: variable "totalsize"  was declared but never referenced
+  	uint totalsize = 0,request_len = 0,header_len = 0;
+Task_eth_rec_Data.c(403): warning:  #177-D: variable "header_len"  was declared but never referenced
+  	uint totalsize = 0,request_len = 0,header_len = 0;
+Task_eth_rec_Data.c(462): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+  	cJSON_AddItemToObject(root,"Token",cJSON_CreateString(tokenBuf));	
+Task_eth_rec_Data.c(466): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+  	cJSON_AddItemToObject(root,"dev_id",cJSON_CreateString(buf));	
+Task_eth_rec_Data.c(470): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+  	cJSON_AddItemToObject(root,"deviceSerial",cJSON_CreateString(buf));
+Task_eth_rec_Data.c(473): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+  	cJSON_AddItemToObject(root,"customerId",cJSON_CreateString(buf));
+Task_eth_rec_Data.c(479): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+  	cJSON_AddItemToObject(root,"time",cJSON_CreateString(buf));
+Task_eth_rec_Data.c(489): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+  	cJSON_AddItemToObject(root,"orderNo",cJSON_CreateString(Tx_Buffer));
+Task_eth_rec_Data.c(494): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+  	cJSON_AddItemToObject(root,"conAmount",cJSON_CreateString(buf));
+Task_eth_rec_Data.c(497): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+  	cJSON_AddItemToObject(root,"cardId",cJSON_CreateString(buf));
+Task_eth_rec_Data.c(509): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+  	strcat(sendTempp,end);
+Task_eth_rec_Data.c(509): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *restrict"
+  	strcat(sendTempp,end);
+Task_eth_rec_Data.c(515): warning:  #223-D: function "free" declared implicitly
+  	free(out);	/* Print to text, Delete the cJSON, print it, release the string. */
+Task_eth_rec_Data.c(456): warning:  #177-D: variable "totalsize"  was declared but never referenced
+  	uint totalsize = 0,request_len = 0,header_len = 0;
+Task_eth_rec_Data.c(456): warning:  #177-D: variable "header_len"  was declared but never referenced
+  	uint totalsize = 0,request_len = 0,header_len = 0;
+Task_eth_rec_Data.c(539): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+  	cJSON_AddItemToObject(root,"Token",cJSON_CreateString(tokenBuf));	
+Task_eth_rec_Data.c(543): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+  	cJSON_AddItemToObject(root,"dev_id",cJSON_CreateString(buf));	
+Task_eth_rec_Data.c(547): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+  	cJSON_AddItemToObject(root,"deviceSerial",cJSON_CreateString(buf));
+Task_eth_rec_Data.c(550): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+  	cJSON_AddItemToObject(root,"customerId",cJSON_CreateString(buf));
+Task_eth_rec_Data.c(556): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+  	cJSON_AddItemToObject(root,"time",cJSON_CreateString(buf));
+Task_eth_rec_Data.c(567): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+  	cJSON_AddItemToObject(root,"orderNo",cJSON_CreateString(Tx_Buffer));
+Task_eth_rec_Data.c(574): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+  	cJSON_AddItemToObject(root,"conAmount",cJSON_CreateString(buf));
+Task_eth_rec_Data.c(578): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+  	cJSON_AddItemToObject(root,"cardId",cJSON_CreateString(buf));
+Task_eth_rec_Data.c(586): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+  	strcat(sendTempp,end);
+Task_eth_rec_Data.c(586): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *restrict"
+  	strcat(sendTempp,end);
+Task_eth_rec_Data.c(592): warning:  #223-D: function "free" declared implicitly
+  	free(out);	/* Print to text, Delete the cJSON, print it, release the string. */
+Task_eth_rec_Data.c(533): warning:  #177-D: variable "totalsize"  was declared but never referenced
+  	uint totalsize = 0,request_len = 0,header_len = 0;
+Task_eth_rec_Data.c(533): warning:  #177-D: variable "header_len"  was declared but never referenced
+  	uint totalsize = 0,request_len = 0,header_len = 0;
+Task_eth_rec_Data.c(616): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+  	cJSON_AddItemToObject(root,"Token",cJSON_CreateString(tokenBuf));	
+Task_eth_rec_Data.c(620): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+  	cJSON_AddItemToObject(root,"dev_id",cJSON_CreateString(buf));	
+Task_eth_rec_Data.c(624): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+  	cJSON_AddItemToObject(root,"deviceSerial",cJSON_CreateString(buf));
+Task_eth_rec_Data.c(627): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+  	cJSON_AddItemToObject(root,"customerId",cJSON_CreateString(buf));
+Task_eth_rec_Data.c(634): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+  	cJSON_AddItemToObject(root,"startTime",cJSON_CreateString(buf));
+Task_eth_rec_Data.c(640): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+  	cJSON_AddItemToObject(root,"endTime",cJSON_CreateString(buf));
+Task_eth_rec_Data.c(648): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "char *restrict"
+  	strcat(sendTempp,end);
+Task_eth_rec_Data.c(648): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *restrict"
+  	strcat(sendTempp,end);
+Task_eth_rec_Data.c(652): warning:  #223-D: function "free" declared implicitly
+  	free(out);	/* Print to text, Delete the cJSON, print it, release the string. */
+Task_eth_rec_Data.c(610): warning:  #177-D: variable "totalsize"  was declared but never referenced
+  	uint totalsize = 0,request_len = 0,header_len = 0;
+Task_eth_rec_Data.c(610): warning:  #177-D: variable "header_len"  was declared but never referenced
+  	uint totalsize = 0,request_len = 0,header_len = 0;
+Task_eth_rec_Data.c(660): warning:  #177-D: variable "sendLengthtrue"  was declared but never referenced
+  	int sendLengthtrue;
+Task_eth_rec_Data.c(724): warning:  #167-D: argument of type "unsigned char *" is incompatible with parameter of type "const char *"
+  		*length = strlen(dataRec);
+Task_eth_rec_Data.c(43): warning:  #177-D: function "analyzePostdata"  was declared but never referenced
+  static uint analyzePostdata(char *buf,char *Json_data)
+Task_eth_rec_Data.c(597): warning: C4487E: read from variable 'data' with offset out of bounds
+}
+Task_eth_rec_Data.c: 79 warnings, 0 errors
+linking...
+Program Size: Code=90288 RO-data=2000 RW-data=1372 ZI-data=45836  
+FromELF: creating hex file...
+".\obj\SOCKET_ID_07.axf" - 0 Error(s), 79 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.0.0.pack
+                ARM::CMSIS:CORE:5.0.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.0.0
+
+<h2>Collection of Component include folders:</h2>
+  D:\工作\刘玉良修改项目\TCP_SOCKET\RTE\_TDID________
+  C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include
+  C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.0.0
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>

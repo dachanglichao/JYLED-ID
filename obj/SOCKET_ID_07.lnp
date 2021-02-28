@@ -63,7 +63,7 @@
 ".\obj\uploadrecord.o"
 ".\obj\dns.o"
 ".\obj\dhcp.o"
---strict --scatter ".\obj\SOCKET_ID_02.sct"
+--strict --scatter ".\obj\SOCKET_ID_07.sct"
 --summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
---list ".\lis\SOCKET_ID_02.map" -o .\obj\SOCKET_ID_02.axf
+--list ".\lis\SOCKET_ID_07.map" -o .\obj\SOCKET_ID_07.axf

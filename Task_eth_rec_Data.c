@@ -80,7 +80,6 @@ void Handle_ETH_DATA(void* p_arg)
 	struct dhdr dhp;
 	u8 dhcpret;
 	
-	
 	while(1)
 	{
 		OSSemPend(SemHandleETH,0,&err);
@@ -137,51 +136,44 @@ void Handle_ETH_DATA(void* p_arg)
 									
 									isgetdns = 1;
 								}
-							
-								
+													
 								break;
 							case 0x05:
-								size=Read_SOCK_Data_Buffer(5, dataupdafdf);
-								/* Extract Destination IP */
-								S5_DIP[0]=dataupdafdf[0];
-								S5_DIP[1]=dataupdafdf[1];
-								S5_DIP[2]=dataupdafdf[2];
-								S5_DIP[3]=dataupdafdf[3];
-								Write_W5500_SOCK_4Byte(5, Sn_DIPR, S5_DIP);
+//								size=Read_SOCK_Data_Buffer(5, dataupdafdf);
+//								/* Extract Destination IP */
+//								S5_DIP[0]=dataupdafdf[0];
+//								S5_DIP[1]=dataupdafdf[1];
+//								S5_DIP[2]=dataupdafdf[2];
+//								S5_DIP[3]=dataupdafdf[3];
+//								Write_W5500_SOCK_4Byte(5, Sn_DIPR, S5_DIP);
 
-
-								/* Extract Destination Port Number */
-								S5_DPort=dataupdafdf[4]*0x100+dataupdafdf[5];
-								Write_W5500_SOCK_2Byte(5, Sn_DPORTR, S5_DPort);
-							
-								if(size < 8 + 6 +3 +4)
-								{
-									
-								}else
-								{
-									if(!BytesCheckSum(dataupdafdf+8,size-8))
-									{
-									
-										Buffer[0]=0xa0;
-										memcpy(Buffer+1,dataupdafdf+8,6);
-										Buffer[7]=CalCheckSum(Buffer,7);
-										WrBytesToAT24C64(DeviceID,Buffer,8);//
-									
-										Buffer[0]=0xa0;
-										memcpy(Buffer+1,dataupdafdf+14,2);
-										Buffer[3]=CalCheckSum(Buffer,3);
-										WrBytesToAT24C64(svrPort,Buffer,4);//
-										
-										svraddrlen = dataupdafdf[16];
-										
-										Buffer[0]=0xa0;
-										memcpy(Buffer+1,dataupdafdf+16,svraddrlen+1);
-										Buffer[svraddrlen+2]=CalCheckSum(Buffer,svraddrlen+2);
-										WrBytesToAT24C64(svraddr,Buffer,svraddrlen+3);//
-										
-										Write_SOCK_Data_Buffer(5,snedData+1,6);
-									}
-								}							
+//								/* Extract Destination Port Number */
+//								S5_DPort=dataupdafdf[4]*0x100+dataupdafdf[5];
+//								Write_W5500_SOCK_2Byte(5, Sn_DPORTR, S5_DPort);
+//									
+//								if(!BytesCheckSum(dataupdafdf+8,size-8))
+//								{
+//								
+//									Buffer[0]=0xa0;
+//									memcpy(Buffer+1,dataupdafdf+8,6);
+//									Buffer[7]=CalCheckSum(Buffer,7);
+//									WrBytesToAT24C64(DeviceID,Buffer,8);//
+//								
+//									Buffer[0]=0xa0;
+//									memcpy(Buffer+1,dataupdafdf+14,2);
+//									Buffer[3]=CalCheckSum(Buffer,3);
+//									WrBytesToAT24C64(svrPort,Buffer,4);//
+//									
+//									svraddrlen = dataupdafdf[16];
+//									
+//									Buffer[0]=0xa0;
+//									memcpy(Buffer+1,dataupdafdf+16,svraddrlen+1);
+//									Buffer[svraddrlen+2]=CalCheckSum(Buffer,svraddrlen+2);
+//									WrBytesToAT24C64(svraddr,Buffer,svraddrlen+3);//
+//									
+//									Write_SOCK_Data_Buffer(5,snedData+1,6);
+//								}
+															
 								break;
 							case 0x06:
 								while(1)
@@ -194,7 +186,6 @@ void Handle_ETH_DATA(void* p_arg)
 										break;
 									}
 								}
-
 								dtatlen += size;
 								for(d=0;d<size;d++)
 								{
@@ -202,17 +193,9 @@ void Handle_ETH_DATA(void* p_arg)
 								}
 								break;
 							case 0x07:
-								size=Read_SOCK_Data_Buffer(7, Rx_Buffer);
-								
-								//for(d=0;d<size;d++)
-								//if((strstr(Rx_Buffer,"{"))&&size)
-								{
-									Handle_Eth_data(Rx_Buffer,size);
-									Write_SOCK_Data_Buffer(5,Rx_Buffer,size);
-//									Write_W5500_SOCK_1Byte(7,Sn_CR,CLOSE);// 关闭端口,等待重新打开连接 
-//									Socket_Init(7);		//指定Socket(0~7)初始化,初始化端口0
-								}
-
+								size=Read_SOCK_Data_Buffer(7, Rx_Buffer);			
+								Handle_Eth_data(Rx_Buffer,size);
+							//	Write_SOCK_Data_Buffer(5,Rx_Buffer,size);
 								//S0_Data |= S_RECEIVE;
 								break;
 						}
@@ -223,12 +206,10 @@ void Handle_ETH_DATA(void* p_arg)
 						Socket_Init(k);		//指定Socket(0~7)初始化,初始化端口0
 					}
 				}
-			}
-			
+			}		
 			if(Read_W5500_1Byte(SIR) == 0) break; 
 		}
-		OSMutexPost(SemEthMac);
-		
+		OSMutexPost(SemEthMac);		
 	}
 }
 
@@ -242,14 +223,6 @@ int wantRecDataLenght = 0;
 
 char keyDes[8] = {0x31,0x32,0x33,0x34,0x35,0x36,0x37,0x38};
 void UDP_Write_SOCK_Data_Buffer(SOCKET s, unsigned char *dat_ptr, unsigned short size);
-
-u8 sendOpenCom[] = {0xFF,0xFF,0xFF,0xFF,0xFF,0xFF,
-
-	0x50,0xE5,0x49,0xAA,0x63,0x4F,0x50,0xE5,0x49,0xAA,0x63,0x4F,0x50,0xE5,0x49,0xAA,0x63,0x4F,0x50,0xE5,0x49,0xAA,0x63,0x4F,
-	0x50,0xE5,0x49,0xAA,0x63,0x4F,0x50,0xE5,0x49,0xAA,0x63,0x4F,0x50,0xE5,0x49,0xAA,0x63,0x4F,0x50,0xE5,0x49,0xAA,0x63,0x4F,
-	0x50,0xE5,0x49,0xAA,0x63,0x4F,0x50,0xE5,0x49,0xAA,0x63,0x4F,0x50,0xE5,0x49,0xAA,0x63,0x4F,0x50,0xE5,0x49,0xAA,0x63,0x4F,
-	0x50,0xE5,0x49,0xAA,0x63,0x4F,0x50,0xE5,0x49,0xAA,0x63,0x4F,0x50,0xE5,0x49,0xAA,0x63,0x4F,0x50,0xE5,0x49,0xAA,0x63,0x4F,
-};
 
 extern u8 isReg;
 extern u8 snedData[15+6];
@@ -310,8 +283,6 @@ void Handle_Eth_data(u8 *data,uint16 len)
 	wantRecDataLenght = len;
 	wantRecDataCmd = 0;
 }
-
-
 /***************************************************
 //获取TOKEN
 ***************************************************/
@@ -415,7 +386,7 @@ static void HttpCheckTime(void)
 	//request_len = strlen(header);
 
 	Write_SOCK_Data_Buffer(7,sendTempp,request_len);
-	Write_SOCK_Data_Buffer(5,sendTempp,request_len);
+	//Write_SOCK_Data_Buffer(5,sendTempp,request_len);
 }
 
 /***************************************************
@@ -468,7 +439,7 @@ static void HttpGetBalance(void)
 	//request_len = strlen(header);
 
 	Write_SOCK_Data_Buffer(7,sendTempp,request_len);
-	Write_SOCK_Data_Buffer(5,sendTempp,request_len);
+	//Write_SOCK_Data_Buffer(5,sendTempp,request_len);
 }
 
 /***************************************************
@@ -524,7 +495,11 @@ static void HttpGetConsume(void)
 	//卡号
 	HexGroupToHexString(CardSerialNum,buf,4);
 	cJSON_AddItemToObject(root,"cardId",cJSON_CreateString(buf));
-	
+	//添加消费模式接口
+	if(ConsumMode==CONSUM_RATION)
+		cJSON_AddItemToObject(root,"conType",cJSON_CreateString("2"));	
+	else
+		cJSON_AddItemToObject(root,"conType",cJSON_CreateString("1"));	
 	out=cJSON_PrintUnformatted(root);	
 	request_len = strlen(out);
 	memcpy(sendTempp,out,request_len);
@@ -541,7 +516,7 @@ static void HttpGetConsume(void)
 	//request_len = strlen(header);
 
 	Write_SOCK_Data_Buffer(7,sendTempp,request_len);
-	Write_SOCK_Data_Buffer(5,sendTempp,request_len);
+//	Write_SOCK_Data_Buffer(5,sendTempp,request_len);
 }
 
 /***************************************************
@@ -618,7 +593,67 @@ static void HttpUpRecord(uint8_t *data)
 	//request_len = strlen(header);
 
 	Write_SOCK_Data_Buffer(7,sendTempp,request_len);
-	Write_SOCK_Data_Buffer(5,sendTempp,request_len);
+//	Write_SOCK_Data_Buffer(5,sendTempp,request_len);
+}
+
+/***************************************************
+//查询消费总额
+***************************************************/
+static void QueryConsumeMoney(uint8_t *data)
+{
+	char	*out;
+	cJSON *root;
+	uchar buf[100];
+	uchar buf1[100];
+	uchar end[2];
+	u8 sendTempp[500]={0};
+	uint totalsize = 0,request_len = 0,header_len = 0;
+	
+	root=cJSON_CreateObject();
+	//添加接口命令
+	cJSON_AddItemToObject(root,"iterfaceName",cJSON_CreateString("getConsumeToalMoney"));		
+	//添加token
+	cJSON_AddItemToObject(root,"Token",cJSON_CreateString(tokenBuf));	
+	//站点号	
+	ChgUlongToBCDString(MainCode,Tx_Buffer,2);
+	HexGroupToHexString(Tx_Buffer,buf,2);
+	cJSON_AddItemToObject(root,"dev_id",cJSON_CreateString(buf));	
+	//设备编号
+	ChgUlongToBCDString(MainCode,Tx_Buffer,2);
+	HexGroupToHexString(Tx_Buffer,buf,2);
+	cJSON_AddItemToObject(root,"deviceSerial",cJSON_CreateString(buf));
+	//客户ID
+	HexGroupToHexString(customerId,buf,4);
+	cJSON_AddItemToObject(root,"customerId",cJSON_CreateString(buf));
+	//起始日期
+	//Read_Sysdate(SysTimeDatas.TimeString);
+	buf1[0] = 0x20;
+	buf1[1] = SysTimeDatas.S_Time.YearChar;
+	memcpy(buf1+2,data,2);
+	HexGroupToHexString(buf1,buf,4);
+	cJSON_AddItemToObject(root,"startTime",cJSON_CreateString(buf));
+	//截止日期
+	buf1[0] = 0x20;
+	buf1[1] = SysTimeDatas.S_Time.YearChar;
+	memcpy(buf1+2,data+2,2);
+	HexGroupToHexString(buf1,buf,4);
+	cJSON_AddItemToObject(root,"endTime",cJSON_CreateString(buf));
+
+	out=cJSON_PrintUnformatted(root);	
+	request_len = strlen(out);
+	memcpy(sendTempp,out,request_len);
+	end[0] = 0x0d;
+	end[1] = 0x0a;
+
+	strcat(sendTempp,end);
+	request_len +=2;
+
+	cJSON_Delete(root);	
+	free(out);	/* Print to text, Delete the cJSON, print it, release the string. */
+	//request_len = strlen(header);
+
+	Write_SOCK_Data_Buffer(7,sendTempp,request_len);
+	//Write_SOCK_Data_Buffer(5,sendTempp,request_len);
 }
 static void tcp_send_data_packet(u8 status,int cmd,u8 * data,int sendLength,int entype)
 {
@@ -645,8 +680,11 @@ static void tcp_send_data_packet(u8 status,int cmd,u8 * data,int sendLength,int 
 		case UpRecodCmd://上传脱机记录
 			HttpUpRecord(data);
 		break;
+		
+		case QueryToalConsumeMoney://查询消费总额
+			QueryConsumeMoney(data);
+		break;
 	}
-	//Write_SOCK_Data_Buffer(7, data, sendLength);
 }
 
 extern u8 wantRecDataData[1000];
@@ -658,9 +696,8 @@ int tcp_send_and_rec_packet(int cmd,u8 * data,int sendLength,int entType,u8 * da
 {
 	u8 err;
 
-	
 //	Write_W5500_SOCK_1Byte(7,Sn_CR,CLOSE);// 关闭端口,等待重新打开连接 
-//				Socket_Init(7);		//指定Socket(0~7)初始化,初始化端口0	
+//	Socket_Init(7);		//指定Socket(0~7)初始化,初始化端口0	
 	//Socket_Connect(7);
 	OSMutexPend(SemEthMacSENDREC,0,&err);  //申请互斥资源使用
 	
@@ -670,7 +707,7 @@ int tcp_send_and_rec_packet(int cmd,u8 * data,int sendLength,int entType,u8 * da
 	tcp_send_data_packet(0,cmd,data,sendLength,entType);
 	OSMutexPost(SemEthMac);
 	
-	timeout*=300;
+	timeout*=100;
 	while(--timeout)
 	{
 		OSTimeDlyHMSM(0, 0, 0, 10);//
@@ -692,7 +729,6 @@ int tcp_send_and_rec_packet(int cmd,u8 * data,int sendLength,int entType,u8 * da
 	{
 		OSMutexPost(SemEthMacSENDREC);
 		return -1;
-	}
-	
+	}	
 }
 

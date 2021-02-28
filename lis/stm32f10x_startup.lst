@@ -13,12 +13,12 @@ ARM Macro Assembler    Page 1
                         
     5 00000000         ;*******************************************************
                        ********************************
-    6 00000000 00000400 
+    6 00000000 00000600 
                        Stack_Size
-                               EQU              0x400
-    7 00000000 00001000 
+                               EQU              0x600
+    7 00000000 00001200 
                        Heap_Size
-                               EQU              0x1000
+                               EQU              0x1200
     8 00000000         
     9 00000000         ;*******************************************************
                        ************************
@@ -30,91 +30,91 @@ ARM Macro Assembler    Page 1
    13 00000000         
    14 00000000         Stack
    15 00000000                 SPACE            Stack_Size
-   16 00000400         
-   17 00000400         ;*******************************************************
+   16 00000600         
+   17 00000600         ;*******************************************************
                        ************************
-   18 00000400         ; Allocate space for the Heap
-   19 00000400         ;*******************************************************
+   18 00000600         ; Allocate space for the Heap
+   19 00000600         ;*******************************************************
                        ************************
-   20 00000400                 AREA             HEAP, NOINIT, READWRITE, ALIGN=
+   20 00000600                 AREA             HEAP, NOINIT, READWRITE, ALIGN=
 3
    21 00000000         
    22 00000000         Heap
    23 00000000                 SPACE            Heap_Size
-   24 00001000         
-   25 00001000         ;*******************************************************
+   24 00001200         
+   25 00001200         ;*******************************************************
                        *************************
-   26 00001000         ;*  Declarations for the interrupt handlers that are use
+   26 00001200         ;*  Declarations for the interrupt handlers that are use
                        d by the application.                                   
                                                          
-   27 00001000         ;*******************************************************
+   27 00001200         ;*******************************************************
                        *************************
-   28 00001000                 IMPORT           __main
-   29 00001000         
-   30 00001000                 IMPORT           OSPendSV
-   31 00001000                 IMPORT           SysTickHandler
-   32 00001000                 IMPORT           WWDG_IRQHandler
-   33 00001000                 IMPORT           PVD_IRQHandler
-   34 00001000                 IMPORT           TAMPER_IRQHandler
-   35 00001000                 IMPORT           RTC_IRQHandler
-   36 00001000                 IMPORT           FLASH_IRQHandler
-   37 00001000                 IMPORT           RCC_IRQHandler
-   38 00001000                 IMPORT           EXTI0_IRQHandler
-   39 00001000                 IMPORT           EXTI1_IRQHandler
-   40 00001000                 IMPORT           EXTI2_IRQHandler
-   41 00001000                 IMPORT           EXTI3_IRQHandler
+   28 00001200                 IMPORT           __main
+   29 00001200         
+   30 00001200                 IMPORT           OSPendSV
+   31 00001200                 IMPORT           SysTickHandler
+   32 00001200                 IMPORT           WWDG_IRQHandler
+   33 00001200                 IMPORT           PVD_IRQHandler
+   34 00001200                 IMPORT           TAMPER_IRQHandler
+   35 00001200                 IMPORT           RTC_IRQHandler
+   36 00001200                 IMPORT           FLASH_IRQHandler
+   37 00001200                 IMPORT           RCC_IRQHandler
+   38 00001200                 IMPORT           EXTI0_IRQHandler
+   39 00001200                 IMPORT           EXTI1_IRQHandler
+   40 00001200                 IMPORT           EXTI2_IRQHandler
+   41 00001200                 IMPORT           EXTI3_IRQHandler
 
 
 
 ARM Macro Assembler    Page 2 
 
 
-   42 00001000                 IMPORT           EXTI4_IRQHandler
-   43 00001000                 IMPORT           DMAChannel1_IRQHandler
-   44 00001000                 IMPORT           DMAChannel2_IRQHandler
-   45 00001000                 IMPORT           DMAChannel3_IRQHandler
-   46 00001000                 IMPORT           DMAChannel4_IRQHandler
-   47 00001000                 IMPORT           DMAChannel5_IRQHandler
-   48 00001000                 IMPORT           DMAChannel6_IRQHandler
-   49 00001000                 IMPORT           DMAChannel7_IRQHandler
-   50 00001000                 IMPORT           ADC_IRQHandler
-   51 00001000                 IMPORT           USB_HP_CAN_TX_IRQHandler
-   52 00001000                 IMPORT           USB_LP_CAN_RX0_IRQHandler
-   53 00001000                 IMPORT           CAN_RX1_IRQHandler
-   54 00001000                 IMPORT           CAN_SCE_IRQHandler
-   55 00001000                 IMPORT           EXTI9_5_IRQHandler
-   56 00001000                 IMPORT           TIM1_BRK_IRQHandler
-   57 00001000                 IMPORT           TIM1_UP_IRQHandler
-   58 00001000                 IMPORT           TIM1_TRG_COM_IRQHandler
-   59 00001000                 IMPORT           TIM1_CC_IRQHandler
-   60 00001000                 IMPORT           TIM2_IRQHandler
-   61 00001000                 IMPORT           TIM3_IRQHandler
-   62 00001000                 IMPORT           TIM4_IRQHandler
-   63 00001000                 IMPORT           I2C1_EV_IRQHandler
-   64 00001000                 IMPORT           I2C1_ER_IRQHandler
-   65 00001000                 IMPORT           I2C2_EV_IRQHandler
-   66 00001000                 IMPORT           I2C2_ER_IRQHandler
-   67 00001000                 IMPORT           SPI1_IRQHandler
-   68 00001000                 IMPORT           SPI2_IRQHandler
-   69 00001000                 IMPORT           USART1_IRQHandler
-   70 00001000                 IMPORT           USART2_IRQHandler
-   71 00001000                 IMPORT           USART3_IRQHandler
-   72 00001000                 IMPORT           EXTI15_10_IRQHandler
-   73 00001000                 IMPORT           RTCAlarm_IRQHandler
-   74 00001000                 IMPORT           USBWakeUp_IRQHandler
-   75 00001000         
-   76 00001000         
-   77 00001000         
-   78 00001000                 PRESERVE8
-   79 00001000         
-   80 00001000         ;*******************************************************
+   42 00001200                 IMPORT           EXTI4_IRQHandler
+   43 00001200                 IMPORT           DMAChannel1_IRQHandler
+   44 00001200                 IMPORT           DMAChannel2_IRQHandler
+   45 00001200                 IMPORT           DMAChannel3_IRQHandler
+   46 00001200                 IMPORT           DMAChannel4_IRQHandler
+   47 00001200                 IMPORT           DMAChannel5_IRQHandler
+   48 00001200                 IMPORT           DMAChannel6_IRQHandler
+   49 00001200                 IMPORT           DMAChannel7_IRQHandler
+   50 00001200                 IMPORT           ADC_IRQHandler
+   51 00001200                 IMPORT           USB_HP_CAN_TX_IRQHandler
+   52 00001200                 IMPORT           USB_LP_CAN_RX0_IRQHandler
+   53 00001200                 IMPORT           CAN_RX1_IRQHandler
+   54 00001200                 IMPORT           CAN_SCE_IRQHandler
+   55 00001200                 IMPORT           EXTI9_5_IRQHandler
+   56 00001200                 IMPORT           TIM1_BRK_IRQHandler
+   57 00001200                 IMPORT           TIM1_UP_IRQHandler
+   58 00001200                 IMPORT           TIM1_TRG_COM_IRQHandler
+   59 00001200                 IMPORT           TIM1_CC_IRQHandler
+   60 00001200                 IMPORT           TIM2_IRQHandler
+   61 00001200                 IMPORT           TIM3_IRQHandler
+   62 00001200                 IMPORT           TIM4_IRQHandler
+   63 00001200                 IMPORT           I2C1_EV_IRQHandler
+   64 00001200                 IMPORT           I2C1_ER_IRQHandler
+   65 00001200                 IMPORT           I2C2_EV_IRQHandler
+   66 00001200                 IMPORT           I2C2_ER_IRQHandler
+   67 00001200                 IMPORT           SPI1_IRQHandler
+   68 00001200                 IMPORT           SPI2_IRQHandler
+   69 00001200                 IMPORT           USART1_IRQHandler
+   70 00001200                 IMPORT           USART2_IRQHandler
+   71 00001200                 IMPORT           USART3_IRQHandler
+   72 00001200                 IMPORT           EXTI15_10_IRQHandler
+   73 00001200                 IMPORT           RTCAlarm_IRQHandler
+   74 00001200                 IMPORT           USBWakeUp_IRQHandler
+   75 00001200         
+   76 00001200         
+   77 00001200         
+   78 00001200                 PRESERVE8
+   79 00001200         
+   80 00001200         ;*******************************************************
                        ***************************
-   81 00001000         ;*  Reset code section.                                 
+   81 00001200         ;*  Reset code section.                                 
                                                                                
                                          
-   82 00001000         ;*******************************************************
+   82 00001200         ;*******************************************************
                        ***************************
-   83 00001000                 AREA             RESET, CODE, READONLY
+   83 00001200                 AREA             RESET, CODE, READONLY
    84 00000000                 THUMB
    85 00000000         
    86 00000000         ;*******************************************************
@@ -125,7 +125,7 @@ ARM Macro Assembler    Page 2
                        ************************
    89 00000000                 EXPORT           __Vectors
    90 00000000         __Vectors
-   91 00000000 00000400        DCD              Stack + Stack_Size 
+   91 00000000 00000600        DCD              Stack + Stack_Size 
                                                             ; Top of Stack
    92 00000004 00000000        DCD              Reset_Handler
 
@@ -343,8 +343,8 @@ ARM Macro Assembler    Page 6
                        ************************************
   252 0000000C                 END
               00000000 
-              00000400 
-              00001000 
+              00000600 
+              00001200 
               00000000 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
 ork --depend=.\obj\stm32f10x_startup.d -o.\obj\stm32f10x_startup.o -ID:\¹¤×÷\Áõ
@@ -531,7 +531,7 @@ Comment: __user_initial_stackheap used once
 ARM Macro Assembler    Page 1 Alphabetic symbol ordering
 Absolute symbols
 
-Heap_Size 00001000
+Heap_Size 00001200
 
 Symbol: Heap_Size
    Definitions
@@ -540,7 +540,7 @@ Symbol: Heap_Size
       At line 23 in file stm32f10x_startup.s
       At line 239 in file stm32f10x_startup.s
 
-Stack_Size 00000400
+Stack_Size 00000600
 
 Symbol: Stack_Size
    Definitions
