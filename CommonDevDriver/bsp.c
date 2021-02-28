@@ -61,7 +61,7 @@ void BSP_Init(void)
 	delay_ms(3000);
 	ReadSysParameter(0);//初始化系统参数
 	Load_Net_Parameters();//装载网络参数
-	//Beep_init();
+	Beep_init();
 	SysIC_Test();
 	
 	u485_GPIO_INT();

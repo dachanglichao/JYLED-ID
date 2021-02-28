@@ -213,8 +213,8 @@ void	ConsumSub(void)//消费主程序
 			}
 			if(status==CARD_NOCARD)	
 			{
-	        if (ReadKeyValue==KEY_ADD && SumPrintMoney && !InputCase)
-	           PrintConsumDatas(1);			
+				if (ReadKeyValue==KEY_ADD && SumPrintMoney && !InputCase)
+					 PrintConsumDatas(1);			
 			}
 			status=KeyBoardSetSysParamenter(bitHaveReadBalance|bitHaveLedError,ReadKeyValue);//输入消费金额
       if (!status && (CurrentConsumMoney || ((InputCase&0xf0)==0x70 && ConsumMode==CONSUM_NUM) ||ConsumMode ==CONSUM_RATION) )//有消费额输入
@@ -327,7 +327,16 @@ void	ConsumSub(void)//消费主程序
 									recDataTemp[1] = (iii >> 8) & 0xFF;
 									recDataTemp[2] = (iii >> 0) & 0xFF;
 									Disp_Balance(recDataTemp);//显示余额
-									ConsumCase=4;
+									if(CurrentConsumMoney == 0 &(ConsumMode!=CONSUM_RATION))
+									{
+										ConsumCase=1;
+										bitHaveReadBalance=1;
+										bitHaveDispBalance =1;
+										cJSON_Delete(object);
+										return;
+									}
+									else
+										ConsumCase=4;
 									cJSON_Delete(object);
 									
 									ChgUlongToBCDString(0,Buffer,4);
@@ -358,6 +367,7 @@ void	ConsumSub(void)//消费主程序
 								DispBuffer[1]=Disp0_9String[status%10];
 								memcpy(DispBuffer+2,DispErrorString+1*16+2,10);
 								LED_DispDatas_all(DispBuffer);
+								bitHaveLedError =1;
 							}			
 						}
 						cJSON_Delete(object);				
@@ -469,6 +479,7 @@ void	ConsumSub(void)//消费主程序
 				}
 				else
 				{
+					BeepOn(1);
 					if (ReadKeyValue==KEY_ESC)//等待清除错误||disp_delaycnt>disp_delaytime
 					{
 						bitHaveLedError=0;
