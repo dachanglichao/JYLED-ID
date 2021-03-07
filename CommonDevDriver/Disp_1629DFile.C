@@ -372,7 +372,8 @@ void	DispSumConsumMoney(uchar Mode,uchar	Num,ulong  MoneyValue)
 
 	if ( !MoneyValue)
 	{
-		memset(DispBuffer+LedX,0,4);
+		
+			memset(DispBuffer+LedX,0,4);
 		if(ConsumMode!=CONSUM_RATION)
 		{
 			if(!Consum_Status)
@@ -553,17 +554,21 @@ void	DispNetDatas(uchar aa)
 	}
 	LED_DispDatas_all(DispBuffer);
 }
+static uchar	Bufferb[24];;
 void	SetNetDatas(void)
 {
-	uchar	InputX=0;
-	volatile uchar	InputY=0;
+	volatile uchar	InputX=0;
+	volatile	uchar	InputY=0;
 	uchar	st_data;
 	uchar	i;
+	int sdf = 0;
 	uint	ii;
 	ulong	ReadKeyValue,iii;
 	uchar	bbit=1;
 	uchar	bitHaveInputDatas=0;
 	uchar	Buffera[24];
+	//uchar	Bufferb[24];
+	uint16_t tempbuf[24];
 	//mw	调整设置网络参数时的显示
 	const uchar	TopicString[5*19]={0x06,0x73,0x06,0x40,0x06,//	IP1-1
 								  0x06,0x73,0x06,0x40,0x5b,//   IP1-2
@@ -589,7 +594,18 @@ void	SetNetDatas(void)
 
 	RdBytesFromAT24C64(TcpCardDatas_Addr,Buffera,24);
 	if (Buffera[0]!=0xa0 || BytesCheckSum(Buffera,24))
-	memcpy(Buffera+1,DefaultNetDatas,22);//默认的网络参数
+	{
+		//memcpy(Buffera+1,DefaultNetDatas,22);//默认的网络参数
+		for(i=0;i<11;i++)
+		{
+			tempbuf[i] = FLASH_ReadHalfWord(TcpCardDatasFlashAdd +i*2);
+			Bufferb[i*2+1] = tempbuf[i]>>8 ;
+			Bufferb[i*2+2] = tempbuf[i] ;
+			
+			//memset(Bufferb,0,1);
+		}
+	}
+	
 	Buffera[0]=0xff;
 	Buffera[23]=0x08;
 	InputCount=0;
@@ -698,12 +714,26 @@ InStatr:
 					DispBuffer[5+i]=Disp0_9String[InputBuffer[i]];
 			}
 			LED_DispDatas_all(DispBuffer);
+//			sdf++;
+//			if(sdf >= 10) 
+//			{
+//			
+//			
+//				sdf = 0;
+//			}
 		}
 		Clr_WatchDog();	
 	}
 	Buffera[0]=0xa0;
 	Buffera[23]=CalCheckSum(Buffera,23);
 	WrBytesToAT24C64(TcpCardDatas_Addr,Buffera,24);
+	
+	for(i=0;i<22;)
+	{
+		tempbuf[i/2] = (Buffera[i+1]) *256 + (uint16_t)Buffera[i+2];
+		i+=2;
+	}
+	writeSysParameterToFlash(TcpCardDatasFlashAdd,tempbuf,22);
 }
 
 //========================================================================

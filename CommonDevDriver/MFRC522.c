@@ -158,12 +158,12 @@ void MFRC522_Initializtion(void)
 	//aa = Read_MFRC522(TModeReg);
 	//Write_MFRC522(TModeReg,0x1D);				//TAutoRestart=1为自动重载计时，0x0D3E是0.5ms的定时初值//test    
 	Write_MFRC522(TPrescalerReg,0x3E); 	//预分频值的低8位     
-	Write_MFRC522(TReloadRegL,0x52);		//计数器的低8位                
+	Write_MFRC522(TReloadRegL,0x62);		//计数器的低8位                
 	Write_MFRC522(TReloadRegH,0x00);		//计数器的高8位       
 	Write_MFRC522(TxAutoReg,0x40); 			//100%ASK     
 	Write_MFRC522(ModeReg,0x3D); 				//CRC初始值0x6363
 	Write_MFRC522(CommandReg,0x00);			//启动MFRC522  
-	Write_MFRC522(RFCfgReg, 0x4F);    //RxGain = 48dB调节卡感应距离      
+//	Write_MFRC522(RFCfgReg, 0x4F);    //RxGain = 48dB调节卡感应距离      
 	AntennaOn();          							//打开天线        							//打开天线 
 }
 //功能描述RC522和ISO14443卡通讯
@@ -533,8 +533,8 @@ unsigned char check_RFCPU_ResetInfo(unsigned char * RcvLen, void * Rcvdata)
 		}
 		if(status)
 		{
-//			MFRC522_Initializtion();
-//			OSTimeDlyHMSM(0,0,0,10); //将任务挂起1S
+			MFRC522_Initializtion();
+			OSTimeDlyHMSM(0,0,0,10); //将任务挂起1S
 		}
 	}
 

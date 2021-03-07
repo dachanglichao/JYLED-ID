@@ -1,0 +1,106 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.22.0.0
+Copyright (C) 2016 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: lc Administrator, lc, LIC=1WSII-TNFTW-5A8DF-6FH8C-KND0C-P2AJX
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Professional  Version: 5.22
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 4 (build 422)
+Assembler:       Armasm.exe V5.06 update 4 (build 422)
+Linker/Locator:  ArmLink.exe V5.06 update 4 (build 422)
+Library Manager: ArmAr.exe V5.06 update 4 (build 422)
+Hex Converter:   FromElf.exe V5.06 update 4 (build 422)
+CPU DLL:         SARMCM3.DLL V5.22
+Dialog DLL:      DCM.DLL V1.13.9.0
+Target DLL:      Segger\JL2CM3.dll V2.99.23.0
+Dialog DLL:      TCM.DLL V1.21.0.0
+ 
+<h2>Project:</h2>
+D:\工作\刘玉良修改项目\新版云ID工程\TCP_SOCKET\DK_Sunny.uvprojx
+Project File Date:  03/06/2021
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 4 (build 422)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Build target 'TDID(消费机)'
+compiling ConsumSubFile.C...
+.\Define\externVariable.h(135): warning:  #1-D: last line of file ends without a newline
+  extern uchar   CanNoNetLimit ;//脱机下是否判断限额
+POS\ConsumSubFile.C(53): warning:  #223-D: function "MFRC522_Auth" declared implicitly
+  	getreturnS = MFRC522_Auth(0x60,usesectornum*4,scidcode,CardSerialNum);		
+POS\ConsumSubFile.C(45): warning:  #177-D: variable "sw1sw2"  was declared but never referenced
+  	uint 	sw1sw2=0;
+POS\ConsumSubFile.C(46): warning:  #177-D: variable "FileAID"  was declared but never referenced
+  	uchar	FileAID[10];
+POS\ConsumSubFile.C(47): warning:  #177-D: variable "tempdata"  was declared but never referenced
+  	uchar tempdata[] = {0x01,0x10,0x00,0x10,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00};
+POS\ConsumSubFile.C(50): warning:  #177-D: variable "keydatabd"  was declared but never referenced
+  	uchar keydatabd[10];
+POS\ConsumSubFile.C(72): warning:  #223-D: function "MFRC522_Auth" declared implicitly
+  	getreturnS = MFRC522_Auth(0x60,usesectornum*4,scidcode,CardSerialNum);		
+POS\ConsumSubFile.C(136): warning:  #223-D: function "CheckPF8563" declared implicitly
+  	CheckPF8563();
+POS\ConsumSubFile.C(320): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *"
+  						object = cJSON_Parse(recDataTemp); 
+POS\ConsumSubFile.C(333): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *restrict"
+  									sscanf(datagetd,"%f",&databalance);		
+POS\ConsumSubFile.C(384): warning:  #223-D: function "atoi" declared implicitly
+  								status = atoi(arrayItem->valuestring);
+POS\ConsumSubFile.C(84): warning:  #177-D: variable "BufferBak"  was declared but never referenced
+  	uchar BufferBak[10];
+POS\ConsumSubFile.C(85): warning:  #177-D: variable "CardPrinterNumBak"  was declared but never referenced
+  	uchar CardPrinterNumBak[4];
+POS\ConsumSubFile.C(1259): warning:  #117-D: non-void function "KeyBoardSetSysParamenter"  should return a value
+  				return;
+POS\ConsumSubFile.C(1268): warning:  #117-D: non-void function "KeyBoardSetSysParamenter"  should return a value
+  				return;
+POS\ConsumSubFile.C(1276): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *"
+  				object=cJSON_Parse(recDataTemp); //
+POS\ConsumSubFile.C(1280): warning:  #117-D: non-void function "KeyBoardSetSysParamenter"  should return a value
+  					return ;
+POS\ConsumSubFile.C(1286): warning:  #117-D: non-void function "KeyBoardSetSysParamenter"  should return a value
+  					return ;
+POS\ConsumSubFile.C(1293): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *restrict"
+  				sscanf(sendDataTemp,"%f",&databalance);									
+POS\ConsumSubFile.C(1307): warning:  #223-D: function "atoi" declared implicitly
+  			iii = atoi(sendDataTemp);
+POS\ConsumSubFile.C(1158): warning:  #177-D: variable "datagetd"  was declared but never referenced
+  	u8 recDataTemp[500],sendDataTemp[100],datagetd[50],err;
+POS\ConsumSubFile.C(1445): warning:  #177-D: variable "PPage"  was declared but never referenced
+  	uchar	PPage;
+POS\ConsumSubFile.C(1447): warning:  #177-D: variable "ii"  was declared but never referenced
+  	uint	ii;
+POS\ConsumSubFile.C(1567): warning:  #223-D: function "Usart2ToPrint" declared implicitly
+  	Usart2ToPrint();
+POS\ConsumSubFile.C(1697): warning:  #550-D: variable "bbit"  was set but never used
+  	uchar	bbit=0;	
+POS\ConsumSubFile.C: 25 warnings, 0 errors
+linking...
+Program Size: Code=92606 RO-data=1994 RW-data=1372 ZI-data=45860  
+FromELF: creating hex file...
+".\obj\SOCKET_ID(连续刷卡测试).axf" - 0 Error(s), 25 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.0.0.pack
+                ARM::CMSIS:CORE:5.0.0
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.0.0
+
+<h2>Collection of Component include folders:</h2>
+  D:\工作\刘玉良修改项目\新版云ID工程\TCP_SOCKET\RTE\_TDID________
+  C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include
+  C:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: ARM::CMSIS:CORE:5.0.0
+Build Time Elapsed:  00:00:01
+</pre>
+</body>
+</html>

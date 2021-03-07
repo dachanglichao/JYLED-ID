@@ -475,11 +475,11 @@ ARM Macro Assembler    Page 8
               E000ED22 
               E000ED04 
 Command Line: --debug --xref --diag_suppress=9931 --cpu=Cortex-M3 --apcs=interw
-ork --depend=.\obj\os_cpu_a.d -o.\obj\os_cpu_a.o -ID:\¹¤×÷\ÁõÓñÁ¼ÐÞ¸ÄÏîÄ¿\TCP_S
-OCKET\RTE\_TDID________ -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSIS\Include -IC
-:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include --predefine="__UVISI
-ON_VERSION SETA 522" --predefine="_RTE_ SETA 1" --predefine="STM32F10X_HD SETA 
-1" --list=.\lis\os_cpu_a.lst uCOS-II\Ports\os_cpu_a.asm
+ork --depend=.\obj\os_cpu_a.d -o.\obj\os_cpu_a.o -ID:\¹¤×÷\ÁõÓñÁ¼ÐÞ¸ÄÏîÄ¿\ÐÂ°æÔ
+ÆID¹¤³Ì\TCP_SOCKET\RTE\_TDID________ -IC:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.0\CMSI
+S\Include -IC:\Keil_v5\ARM\PACK\Keil\STM32F1xx_DFP\2.1.0\Device\Include --prede
+fine="__UVISION_VERSION SETA 522" --predefine="_RTE_ SETA 1" --predefine="STM32
+F10X_HD SETA 1" --list=.\lis\os_cpu_a.lst uCOS-II\Ports\os_cpu_a.asm
 
 
 

@@ -132,3 +132,4 @@ extern uchar	posVersion[50];//固件版本号
 extern uchar tokenBuf[50];
 extern uchar		usesectornum;//脱机扇区号		
 extern ulong		LimtConsumeMoney;
+extern uchar   CanNoNetLimit ;//脱机下是否判断限额

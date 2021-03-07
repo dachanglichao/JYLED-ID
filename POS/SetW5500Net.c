@@ -17,6 +17,7 @@
 #include <stdio.h>  
 #include <stdbool.h>
 #include  <stdlib.h>
+#include "stm32f10x_flash.h"
 
 uint 	UdpDatasCount;
 uchar	ReAddrCount=0;
@@ -65,7 +66,8 @@ void W5500_Initialization(void)
 extern u8 snedData[15+6+10];
 void Load_Net_Parameters(void)
 {
-	uchar	Buffer[24];
+	uchar	Buffer[24],i;
+	uint16_t tempbuf[24];
 	uchar	ParameterDatas[27];
 	FLASH_Unlock();//解锁
 	MainCode=(*(vu16*) 0x8061000);
@@ -75,9 +77,20 @@ void Load_Net_Parameters(void)
 	RdBytesFromAT24C64(TcpCardDatas_Addr,Buffer,24);
 	if (Buffer[0]!=0xa0 || BytesCheckSum(Buffer,24))
 	{
-		memcpy(ParameterDatas,DefaultNetDatas,14);
-		memcpy(ParameterDatas+14,DefaultNetDatas,4);
-		memcpy(ParameterDatas+18,DefaultNetDatas+14,8);
+//		memcpy(ParameterDatas,DefaultNetDatas,14);
+//		memcpy(ParameterDatas+14,DefaultNetDatas,4);
+//		memcpy(ParameterDatas+18,DefaultNetDatas+14,8);
+		for(i=0;i<11;i++)
+		{
+			tempbuf[i] = FLASH_ReadHalfWord(TcpCardDatasFlashAdd +i*2);
+			Buffer[i*2+1] = tempbuf[i]>>8 ;
+			Buffer[i*2+2] = tempbuf[i] ;
+			memcpy(ParameterDatas,Buffer+1,14);
+			memcpy(ParameterDatas+14,Buffer+1,4);
+			memcpy(ParameterDatas+18,Buffer+15,8);
+			
+			//memset(Bufferb,0,1);
+		}
 	}
 	else
 	{
@@ -96,10 +109,10 @@ void Load_Net_Parameters(void)
 	Sub_Mask[2]=ParameterDatas[12];
 	Sub_Mask[3]=ParameterDatas[13];
 
-	Phy_Addr[0]=0x0c;//加载物理地址
-	Phy_Addr[1]=0x29;
-	Phy_Addr[2]=0xab;
-	Phy_Addr[3]=0x7c;
+	Phy_Addr[0]=0xF2;//加载物理地址
+	Phy_Addr[1]=0x78;
+	Phy_Addr[2]=0xd2;
+	Phy_Addr[3]=0x34;
 	Phy_Addr[4]=MainCode>>8;;
 	Phy_Addr[5]=MainCode;
 //	memcpy(Phy_Addr,snedData+1,6);

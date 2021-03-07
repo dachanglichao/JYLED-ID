@@ -330,7 +330,7 @@ static void HttpGetToken(void)
 	//request_len = strlen(header);
 
 	Write_SOCK_Data_Buffer(7,sendTempp,request_len);
-	Write_SOCK_Data_Buffer(5,sendTempp,request_len);
+//	Write_SOCK_Data_Buffer(5,sendTempp,request_len);
 }
 
 /***************************************************
@@ -710,7 +710,7 @@ int tcp_send_and_rec_packet(int cmd,u8 * data,int sendLength,int entType,u8 * da
 	timeout*=100;
 	while(--timeout)
 	{
-		OSTimeDlyHMSM(0, 0, 0, 10);//
+		OSTimeDlyHMSM(0, 0, 0, 5);//
 		if(wantRecDataCmd == 0)
 		{
 			break;

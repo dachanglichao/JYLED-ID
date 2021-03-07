@@ -42,41 +42,43 @@ POS\ConsumSubFile.C(72): warning:  #223-D: function "MFRC522_Auth" declared impl
   	getreturnS = MFRC522_Auth(0x60,usesectornum*4,scidcode,CardSerialNum);		
 POS\ConsumSubFile.C(136): warning:  #223-D: function "CheckPF8563" declared implicitly
   	CheckPF8563();
-POS\ConsumSubFile.C(310): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *"
+POS\ConsumSubFile.C(320): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *"
   						object = cJSON_Parse(recDataTemp); 
-POS\ConsumSubFile.C(323): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *restrict"
+POS\ConsumSubFile.C(333): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *restrict"
   									sscanf(datagetd,"%f",&databalance);		
-POS\ConsumSubFile.C(356): warning:  #223-D: function "atoi" declared implicitly
+POS\ConsumSubFile.C(375): warning:  #223-D: function "atoi" declared implicitly
   								status = atoi(arrayItem->valuestring);
 POS\ConsumSubFile.C(84): warning:  #177-D: variable "BufferBak"  was declared but never referenced
   	uchar BufferBak[10];
 POS\ConsumSubFile.C(85): warning:  #177-D: variable "CardPrinterNumBak"  was declared but never referenced
   	uchar CardPrinterNumBak[4];
-POS\ConsumSubFile.C(1195): warning:  #117-D: non-void function "KeyBoardSetSysParamenter"  should return a value
-  				return;
-POS\ConsumSubFile.C(1212): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *"
-  				object=cJSON_Parse(recDataTemp); //
-POS\ConsumSubFile.C(1216): warning:  #117-D: non-void function "KeyBoardSetSysParamenter"  should return a value
-  					return ;
 POS\ConsumSubFile.C(1222): warning:  #117-D: non-void function "KeyBoardSetSysParamenter"  should return a value
+  				return;
+POS\ConsumSubFile.C(1231): warning:  #117-D: non-void function "KeyBoardSetSysParamenter"  should return a value
+  				return;
+POS\ConsumSubFile.C(1239): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *"
+  				object=cJSON_Parse(recDataTemp); //
+POS\ConsumSubFile.C(1243): warning:  #117-D: non-void function "KeyBoardSetSysParamenter"  should return a value
   					return ;
-POS\ConsumSubFile.C(1228): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *restrict"
+POS\ConsumSubFile.C(1249): warning:  #117-D: non-void function "KeyBoardSetSysParamenter"  should return a value
+  					return ;
+POS\ConsumSubFile.C(1256): warning:  #167-D: argument of type "u8 *" is incompatible with parameter of type "const char *restrict"
   				sscanf(sendDataTemp,"%f",&databalance);									
-POS\ConsumSubFile.C(1242): warning:  #223-D: function "atoi" declared implicitly
+POS\ConsumSubFile.C(1270): warning:  #223-D: function "atoi" declared implicitly
   			iii = atoi(sendDataTemp);
-POS\ConsumSubFile.C(1094): warning:  #177-D: variable "datagetd"  was declared but never referenced
+POS\ConsumSubFile.C(1121): warning:  #177-D: variable "datagetd"  was declared but never referenced
   	u8 recDataTemp[500],sendDataTemp[100],datagetd[50],err;
-POS\ConsumSubFile.C(1380): warning:  #177-D: variable "PPage"  was declared but never referenced
+POS\ConsumSubFile.C(1408): warning:  #177-D: variable "PPage"  was declared but never referenced
   	uchar	PPage;
-POS\ConsumSubFile.C(1382): warning:  #177-D: variable "ii"  was declared but never referenced
+POS\ConsumSubFile.C(1410): warning:  #177-D: variable "ii"  was declared but never referenced
   	uint	ii;
-POS\ConsumSubFile.C(1502): warning:  #223-D: function "Usart2ToPrint" declared implicitly
+POS\ConsumSubFile.C(1530): warning:  #223-D: function "Usart2ToPrint" declared implicitly
   	Usart2ToPrint();
 POS\ConsumSubFile.C: 23 warnings, 0 errors
 linking...
-Program Size: Code=90548 RO-data=1996 RW-data=1476 ZI-data=45836  
+Program Size: Code=90472 RO-data=2000 RW-data=1372 ZI-data=45836  
 FromELF: creating hex file...
-".\obj\SOCKET_ID_03.axf" - 0 Error(s), 22 Warning(s).
+".\obj\SOCKET_ID_03.axf" - 0 Error(s), 23 Warning(s).
 
 <h2>Software Packages used:</h2>
 

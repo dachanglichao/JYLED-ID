@@ -309,4 +309,47 @@ unsigned char AddQuFan(uchar *str,uchar len)
 	sum = ~sum;
 	return sum;
 }
+
+//¸¡µãÊý×ª×Ö·û´®
+void FToStr1(float fl , char *str, uint8_t d)  // fl:???    d:????
+{
+    int     integer = 0;     //????
+    float   decimal  = 0;    //????
+    int     temp;
+    uint8_t i, n;
+    //????
+    integer = (int)(fl);
+    temp = integer;
+    n = 0;
+    do
+    {
+        n++;
+        temp = (int)(temp / 10);  //???????? n
+    }
+    while(temp != 0);
+ 
+    temp = integer;
+    for( i = 0; i < n ; i++)
+    {
+        *(str + n - 1 - i) = (uint8_t)(temp % 10) + '0'; //????
+        temp = (int)(temp / 10);
+    }
+    if( d == 0 )
+    {
+        *(str + i) = '\0';
+    }
+    else
+    {
+        *(str + i) = '.';
+    }
+    //????
+    decimal = fl - integer;
+    for(i = n + 1; i < d + n + 1 ; i++)
+    {
+        decimal = decimal * 10;
+        *(str + i) = (uint8_t)(decimal) + '0';
+        decimal = decimal - (uint8_t)(decimal);
+    }
+    *(str + i) = '\0';
+}
  

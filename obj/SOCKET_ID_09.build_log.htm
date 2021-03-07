@@ -27,10 +27,22 @@ Project File Date:  02/22/2021
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 4 (build 422)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'TDID(Ïû·Ñ»ú)'
+compiling bsp.c...
+CommonDevDriver\bsp.c(39): warning:  #177-D: variable "downflag"  was declared but never referenced
+  	ulong	ReadKeyValue,downflag;
+CommonDevDriver\bsp.c(40): warning:  #177-D: variable "i"  was declared but never referenced
+   	uchar	i,Downloadflag;
+CommonDevDriver\bsp.c(40): warning:  #177-D: variable "Downloadflag"  was declared but never referenced
+   	uchar	i,Downloadflag;
+CommonDevDriver\bsp.c(41): warning:  #177-D: variable "Buffer"  was declared but never referenced
+  	uchar Buffer[1];
+CommonDevDriver\bsp.c(138): warning:  #550-D: variable "bitPF8563Error"  was set but never used
+  	u8 bitStatus8563,bitPF8563Error;
+CommonDevDriver\bsp.c: 5 warnings, 0 errors
 linking...
-Program Size: Code=90356 RO-data=1996 RW-data=1372 ZI-data=45836  
+Program Size: Code=90352 RO-data=2000 RW-data=1372 ZI-data=45836  
 FromELF: creating hex file...
-".\obj\SOCKET_ID_09.axf" - 0 Error(s), 0 Warning(s).
+".\obj\SOCKET_ID_09.axf" - 0 Error(s), 5 Warning(s).
 
 <h2>Software Packages used:</h2>
 

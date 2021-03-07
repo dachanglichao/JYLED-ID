@@ -46,6 +46,8 @@ static  void App_TaskCreate(void);
 extern void App_TaskUploadRecord(void* p_arg);
 static  void App_TaskStart(void* p_arg);
 
+
+
 bool startFlag = FALSE;
 /****************************************************************************
 * 名    称：int main(void)
@@ -235,7 +237,7 @@ void App_TaskStart(void* p_arg)
 				memset(tokenBuf,0,50);
 				memcpy(tokenBuf,cJSON_GetObjectItem(arrayItem,"token")->valuestring,(strlen(cJSON_GetObjectItem(arrayItem,"token")->valuestring)));
 				isReg = 1;//连接到后台
-				Write_SOCK_Data_Buffer(5,tokenBuf,strlen(tokenBuf));
+//				Write_SOCK_Data_Buffer(5,tokenBuf,strlen(tokenBuf));
 				cJSON_Delete(object);	
 			}
 			if(err)
@@ -325,7 +327,7 @@ void App_TaskStart(void* p_arg)
 		if(!isReg)
 			OSTimeDlyHMSM(0, 0, 1, 0);//将任务挂起500ms	
 		else
-			OSTimeDlyHMSM(0, 0, 5, 0);//将任务挂起500ms	
+			OSTimeDlyHMSM(0, 0, 3, 0);//将任务挂起500ms	
 	}
 }
 

@@ -1,6 +1,7 @@
 #include "485.H"
 #include "GPIO.H"
 #include "USART.H"
+#include "stdio.h"
 
 //串口的4052选择管脚配置
 #define 	COM_SEL0_GPIO     		PE
@@ -89,3 +90,96 @@ void SelWifiMode(void)
  	COM1_SEL0 = 0;
 	COM1_SEL1 = 1;
  }
+ 
+ //TTS文字转语音
+ void mp3play(uint8_t *data)
+ {
+		DK_USART_PUTS_Arry(3,data,strlen(data));
+ }
+ //设置音量大小1--4
+ void setVolume(uint8_t num)
+ {
+	 uint8_t data1[]={"<V>1"};
+	 uint8_t data2[]={"<V>2"};
+	 uint8_t data3[]={"<V>3"};
+	 uint8_t data4[]={"<V>4"};
+	 
+	 switch (num)
+	 {
+		 case 1:
+			 mp3play(data1);
+		 break;
+		 case 2:
+			 mp3play(data2);
+		 break;
+		 case 3:
+			 mp3play(data3);
+		 break;
+		 case 4:
+			 mp3play(data4);
+		 break;
+	 }
+ }
+ 
+  //设置播放速度1--3
+ void setPlaySpeed(uint8_t num)
+ {
+	 uint8_t data1[]={"<S>1"};
+	 uint8_t data2[]={"<S>2"};
+	 uint8_t data3[]={"<S>3"};
+
+	 
+	 switch (num)
+	 {
+		 case 1:
+			 mp3play(data1);
+		 break;
+		 case 2:
+			 mp3play(data2);
+		 break;
+		 case 3:
+			 mp3play(data3);
+		 break;
+	 }
+ }
+ extern void	ChgMoneyToPrintBuffer(uint8_t ,uint32_t ,uint8_t * );
+////播放消费额
+//void playConsumeMoney(uint32_t money)
+//{
+//	uint8_t Buffer[20];
+//	uint8_t moneyBuf[20];
+//	uint8_t xiaofei[] = {"消费"};
+//	uint8_t yuan[] = {"元"};
+//	
+//	memset(	moneyBuf,0,20);
+//	memset(	Buffer,0,20);
+//	ChgMoneyToPrintBuffer('-',money,moneyBuf);
+//	
+//	memcpy(Buffer,xiaofei,strlen(xiaofei));
+//	memcpy(Buffer+strlen(xiaofei),moneyBuf,strlen(moneyBuf));
+//	memcpy(Buffer+strlen(xiaofei)+strlen(moneyBuf),yuan,2);
+//	
+//	DK_USART_PUTS_Arry(3,Buffer,sizeof(Buffer)); 
+//}
+
+
+//播放消费额
+void playConsumeMoney(float money)
+{
+	char Buffer[20];
+	char moneyBuf[20];
+	char xiaofei[] = {"消费"};
+	char yuan[] = {"元"};
+	
+	memset(	moneyBuf,0,20);
+	memset(	Buffer,0,20);
+	//ChgMoneyToPrintBuffer('-',money,moneyBuf);
+FToStr1(money,moneyBuf,2);
+  //sprintf(moneyBuf,"%.2f",money);
+	
+	memcpy(Buffer,xiaofei,strlen(xiaofei));
+	memcpy(Buffer+strlen(xiaofei),moneyBuf,strlen(moneyBuf));
+	memcpy(Buffer+strlen(xiaofei)+strlen(moneyBuf),yuan,2);
+	
+	DK_USART_PUTS_Arry(3,Buffer,sizeof(Buffer)); 
+}

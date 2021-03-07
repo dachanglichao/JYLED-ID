@@ -22,6 +22,7 @@ extern uint16_t DoubleBigToSmall(uint16_t a);
 extern void HexGroupToHexString(uchar *data,uchar *dst,uchar len);
 extern int HexStringToHexGroup(uchar *,uchar *,uint);
 extern unsigned char AddQuFan(uchar *str,uchar len);//累加和取反
-
+ //浮点数转字符串
+extern void FToStr1(float fl , char *str, uint8_t d);
 
 

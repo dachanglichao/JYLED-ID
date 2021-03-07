@@ -1,7 +1,7 @@
 #include "MyDefine.h"
 #include "include.h"
 #include "char.h"
-
+#include "485.H"
 
 uchar		InputMenuSort=0;
 uchar ShuRuMoney_Err = 0;//金额输入不完全
@@ -33,7 +33,7 @@ int tcp_send_and_rec_packet(int cmd,u8 * data,int sendLength,int entType,u8 * da
 void	DISP_ErrorSub(uchar Num);
 u8 refushstatusnetcnt = 0;
 extern u8 isReg;
-u8 istuoji = 1;
+u8 istuoji = 0;
 extern ulong global_key;
 extern ulong  BatchNum;
 
@@ -110,9 +110,9 @@ void	ConsumSub(void)//消费主程序
 	{
 		DispBuffer[10]=DispModeChar[ConsumMode];
 		if (BatModeFlag) //
-						DispBuffer[10]|=0x01;		
-					else
-						DispBuffer[10]&=0xfe;
+			DispBuffer[10]|=0x01;		
+		else
+			DispBuffer[10]&=0xfe;
 		if(isReg == 0 && istuoji == 1)
 		{
 			if(bitled)
@@ -151,6 +151,7 @@ void	ConsumSub(void)//消费主程序
 		  disp_delaycntflag=0;//显示关闭
 		  disp_delaycnt=0;//余额显示时间变量初始化
 			bitHaveDispBalance = 0;//已经显示金额
+			SingleMoney = 0;
 		break;	
 		
 		case 1:
@@ -207,6 +208,15 @@ void	ConsumSub(void)//消费主程序
 				status=RequestCard();
 				if (status)
 				{
+					if(SingleMoney)//已显示余额，已开始输入消费金额，未按确认键卡拿走报警
+					{
+						memset(DispBuffer,0,16);
+						memcpy(DispBuffer,"\x71\x77\x06\x38\x00\x79\x50\x50",8);
+						ConsumCase=4;//
+						bitHaveLedError =1;
+					}
+						
+					else
 					ConsumCase=0;//
 					return;
 				}
@@ -229,6 +239,7 @@ void	ConsumSub(void)//消费主程序
 		case 2:
 			if (!bitHaveReadBalance)//有输入金额，未读卡
       {
+				BeepOn(1);
 				status=RequestCard();
         if (!status)
         {
@@ -282,8 +293,7 @@ void	ConsumSub(void)//消费主程序
 			       if (ReadKeyValue==KEY_ADD && SumPrintMoney && ((InputCase&0xf0)==0x70))
 			          PrintConsumDatas(1);
 						 //ConsumCase=0;
-					}
-					
+					}				
 				}
       }
 			//已经读到卡
@@ -319,7 +329,7 @@ void	ConsumSub(void)//消费主程序
 									memset(datagetd,0,50);
 									memcpy(datagetd,cJSON_GetObjectItem(arrayItem,"cashBalance")->valuestring,strlen(cJSON_GetObjectItem(arrayItem,"cashBalance")->valuestring));
 									//databalance = atof(datagetd); 
-									Write_SOCK_Data_Buffer(5,datagetd,strlen(cJSON_GetObjectItem(arrayItem,"cashBalance")->valuestring));	
+//									Write_SOCK_Data_Buffer(5,datagetd,strlen(cJSON_GetObjectItem(arrayItem,"cashBalance")->valuestring));	
 									sscanf(datagetd,"%f",&databalance);		
 									databalance += 0.005;
 									iii = databalance ;
@@ -327,6 +337,15 @@ void	ConsumSub(void)//消费主程序
 									recDataTemp[1] = (iii >> 8) & 0xFF;
 									recDataTemp[2] = (iii >> 0) & 0xFF;
 									Disp_Balance(recDataTemp);//显示余额
+									
+									
+//									memset(datagetd,0,50);
+//									memcpy(datagetd,cJSON_GetObjectItem(arrayItem,"conAmount")->valuestring,strlen(cJSON_GetObjectItem(arrayItem,"conAmount")->valuestring));
+//									//databalance = atof(datagetd); 
+////									Write_SOCK_Data_Buffer(5,datagetd,strlen(cJSON_GetObjectItem(arrayItem,"cashBalance")->valuestring));	
+//									sscanf(datagetd,"%f",&databalance);		
+//									databalance += 0.0005;
+//									playConsumeMoney(databalance);//语音播放消费额
 									if(CurrentConsumMoney == 0 &(ConsumMode!=CONSUM_RATION))
 									{
 										ConsumCase=1;
@@ -391,62 +410,90 @@ void	ConsumSub(void)//消费主程序
 							}
 						else
 						{
-							ReadNoNetLimitMoney(LimtConsumeData_CPU);
-							jjj=ChgBCDStringToUlong(LimtConsumeData_CPU,4)+CurrentConsumMoney;
-							iii=LimtConsumeMoney;				
-							if(jjj>iii)  //超过脱机限额
+							if(CanNoNetLimit)//判断脱机限额
 							{
-								BeepOn(3);
-								DISP_ErrorSub(CARD_PURSENUM_ERROR); //超过脱机限额
-								ConsumCase=4;
-							}
-							else
-							{
-								if(CurrentConsumMoney)
+								ReadNoNetLimitMoney(LimtConsumeData_CPU);
+								jjj=ChgBCDStringToUlong(LimtConsumeData_CPU,4)+CurrentConsumMoney;
+								iii=LimtConsumeMoney;				
+								if(jjj>iii)  //超过脱机限额
 								{
-									ChgUlongToBCDString(jjj,Buffer,4);
-									for(i=0;i<5;i++)
-									{
-										status = WriteNoNetLimitMoney(Buffer); //写入脱机限额
-										if(!status)
-											break;
-									}									
-									if(!status)
-									{
-											if(ConsumMode==CONSUM_RATION)   
-											{				
-													NoNetRecord[0] =2;									
-											}
-											else
-											{
-													NoNetRecord[0] =1;
-											}																																						
-											memcpy(NoNetRecord+1,CardSerialNum,4);								
-											ChgUlongToBCDString(CurrentConsumMoney,NoNetRecord+5,4);
-
-											Read_Sysdate(NoNetRecord+9);
-											
-											BatchNum++;//消费流水号
-											NoNetRecord[18] = BatchNum>>24;
-											NoNetRecord[17] = BatchNum>>16;
-											NoNetRecord[16] = BatchNum>>8;
-											NoNetRecord[15] = BatchNum;
-
-											Save_OffRecode();//存储脱机记录
-											Disp_Hello();//显示
-											ConsumCase=4;											
-									}
-									else
-									{
-										 ConsumCase=0;
-									}
+									BeepOn(3);
+									DISP_ErrorSub(CARD_PURSENUM_ERROR); //超过脱机限额
+									ConsumCase=4;
 								}
 								else
 								{
-									Disp_Hello();
-									ConsumCase=4;
-								}							
+									if(CurrentConsumMoney)
+									{
+										ChgUlongToBCDString(jjj,Buffer,4);
+										for(i=0;i<5;i++)
+										{
+											status = WriteNoNetLimitMoney(Buffer); //写入脱机限额
+											if(!status)
+												break;
+										}									
+										if(!status)
+										{
+												if(ConsumMode==CONSUM_RATION)   
+												{				
+														NoNetRecord[0] =2;									
+												}
+												else
+												{
+														NoNetRecord[0] =1;
+												}																																						
+												memcpy(NoNetRecord+1,CardSerialNum,4);								
+												ChgUlongToBCDString(CurrentConsumMoney,NoNetRecord+5,4);
+
+												Read_Sysdate(NoNetRecord+9);
+												
+												BatchNum++;//消费流水号
+												NoNetRecord[18] = BatchNum>>24;
+												NoNetRecord[17] = BatchNum>>16;
+												NoNetRecord[16] = BatchNum>>8;
+												NoNetRecord[15] = BatchNum;
+
+												Save_OffRecode();//存储脱机记录
+												Disp_Hello();//显示
+												ConsumCase=4;											
+										}
+										else
+										{
+											 ConsumCase=0;
+										}
+									}
+									else
+									{
+										Disp_Hello();
+										ConsumCase=4;
+									}							
+								}
 							}
+							else//不判断脱机限额
+							{
+								if(ConsumMode==CONSUM_RATION)   
+								{				
+										NoNetRecord[0] =2;									
+								}
+								else
+								{
+										NoNetRecord[0] =1;
+								}																																						
+								memcpy(NoNetRecord+1,CardSerialNum,4);								
+								ChgUlongToBCDString(CurrentConsumMoney,NoNetRecord+5,4);
+
+								Read_Sysdate(NoNetRecord+9);
+								
+								BatchNum++;//消费流水号
+								NoNetRecord[18] = BatchNum>>24;
+								NoNetRecord[17] = BatchNum>>16;
+								NoNetRecord[16] = BatchNum>>8;
+								NoNetRecord[15] = BatchNum;
+
+								Save_OffRecode();//存储脱机记录
+								Disp_Hello();//显示
+								ConsumCase=4;	
+							}			
 						}
 					}
 					else //脱机不允许消费
@@ -489,13 +536,13 @@ void	ConsumSub(void)//消费主程序
 					}		
 				}
 			}
-//			else
-//			{
-//				OSTimeDlyHMSM(0,0,1,0); //余额显示时间
-//				bitHaveLedError=0;
-//						ConsumCase=0;
-//						DispSumConsumMoney(ConsumMode,0xff,0);
-//			}
+			else//连续刷卡消费测试
+			{
+				OSTimeDlyHMSM(0,0,1,0); //余额显示时间
+				bitHaveLedError=0;
+				ConsumCase=2;
+				DispSumConsumMoney(ConsumMode,0xff,0);
+			}
 			break;
 		case 5:  //密码验证
 			 status=CheckPinSub(ReadKeyValue);//PIN认证
@@ -761,10 +808,13 @@ uchar	InputSumConsumMoney(uchar bbit,uchar Mode,ulong  InKeyValue)//消费模式
 						FormatBuffer(3,InputBuffer,&InputCount);
 					}
 			 	}
-			    DispBuffer[0]=0x40;
-			    DispBuffer[1]=0x40;
-			    DispBuffer[2]=0x40;
-			    DispBuffer[3]=0x40;
+					if(!bitHaveDispBalance)
+					{
+						DispBuffer[0]=0x40;
+						DispBuffer[1]=0x40;
+						DispBuffer[2]=0x40;
+						DispBuffer[3]=0x40;
+					}
 			    ChgInputToLedBuffer(4,InputBuffer,6);
 			   	DispBuffer[10]=DispModeChar[ConsumMode];
 					if (BatModeFlag) //
@@ -1238,6 +1288,7 @@ uchar	KeyBoardSetSysParamenter(uchar  bbit, ulong	InKeyValue)
 				Consum_Status=0;	//联网模式			
 				arrayItem = cJSON_GetObjectItem(object,"resultData"); //
 				
+				memset(sendDataTemp,0,100);
 				memcpy(sendDataTemp,cJSON_GetObjectItem(arrayItem,"toalMoney")->valuestring,(strlen(cJSON_GetObjectItem(arrayItem,"toalMoney")->valuestring)));
 				sscanf(sendDataTemp,"%f",&databalance);									
 				iii = databalance;
@@ -1652,10 +1703,10 @@ void	ChgMoneyToPrintBuffer(uchar aa,ulong lll,uchar * ptr)
 		bb=(uchar) (lll/iii);
 		if (!bb)
 		{
-			if (!bbit && i<5)
-				*ptr++=aa;
-			else
-				* ptr++=0x30+bb;	
+//			if (!bbit && i<5)
+//				*ptr++=aa;
+//			else
+				//* ptr++=0x30+bb;	
 		}
 		else
 		{

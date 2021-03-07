@@ -162,6 +162,7 @@
 ///////////////////X25045地址定义////////////////////
 #define		MainCode_Addr				4//站点号0-3
 #define		ConsumStatus_Addr		7//是否脱机消费
+#define		NoNetLimit_Addr		0x200//脱机下是否判断限额
 #define		ReadCardCode_Addr		10 //读卡密码10-17
 #define		UserSector_Addr			18 //公共区的扇区18-20
 #define		LimtConsume_Addr		21//脱机限额地址

@@ -81,21 +81,26 @@ time[4]:  星期（0x01到0x07）
 ************************************************************************/
 void Read_Sysdate(unsigned char *ptr)
 {
-	 unsigned char time[7];
-	 IIC_ReadBuf(2,time,7);
-
+	unsigned char time[7],i;
+	
+	for(i=0;i<3;i++)
+	{
+		IIC_ReadBuf(2,time,7);
+		
 		ptr[0]=time[6]; //年
-    ptr[1]=time[5]&0x1f; //月
-    ptr[2]=time[3]&0x3f; //日
-    ptr[3]=time[2]&0x3f; //时
-    ptr[4]=time[1]&0x7f; //分
+		ptr[1]=time[5]&0x1f; //月
+		ptr[2]=time[3]&0x3f; //日
+		ptr[3]=time[2]&0x3f; //时
+		ptr[4]=time[1]&0x7f; //分
 		if (time[0]<0x80)
 			bitSysTimeDisable=0;
 		else
 			bitSysTimeDisable=1;
-    ptr[5]=time[0]&0x7f; //秒
+		ptr[5]=time[0]&0x7f; //秒
 		ptr[6]=time[4]&7;
-	  
+		if(ptr[1]!=0x1f &&ptr[2]!=0x3f)
+			break;
+	} 
 }
 
 uchar		DiagTimeString(uchar bbit,uchar * ptr)

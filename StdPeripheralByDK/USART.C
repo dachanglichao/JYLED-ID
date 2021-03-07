@@ -50,9 +50,9 @@ void DK_USART_Init(unsigned long Baud,unsigned char USARTx)
 	if(USARTx==3)
 	{
 	  RCC_APB1PeriphClockCmd(RCC_APB1Periph_USART3 , ENABLE);
-		GPIO_PinRemapConfig(GPIO_PartialRemap_USART3,ENABLE);  //端口管脚重映射
-		DK_GPIO_Init(PC,GPIO_Pin_10,AF_PP);	//复用推挽输出  TX
-		DK_GPIO_Init(PC,GPIO_Pin_11,IPU);	//  RX
+		//GPIO_PinRemapConfig(GPIO_PartialRemap_USART3,ENABLE);  //端口管脚重映射
+		DK_GPIO_Init(PB,GPIO_Pin_10,AF_PP);	//复用推挽输出  TX
+		DK_GPIO_Init(PB,GPIO_Pin_11,IPU);	//  RX
 		USART_Init(USART3, &USART_InitStructure);
 		USART_ClearITPendingBit(USART3,USART_IT_RXNE);//清楚中断位
 		USART_Cmd(USART3, ENABLE);					  

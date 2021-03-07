@@ -32,6 +32,7 @@ void	SysIC_Test(void);
 u8 isneedupdate = 0;
 void	Disp_Device_Num(uchar Num);
 void	SetIPModeCode(void);
+extern void	SetnonetLimit(void);//设置脱机情况下是否增加限额判断
 extern u8 isneeddhcp;
 void BSP_Init(void)
 {   
@@ -61,14 +62,16 @@ void BSP_Init(void)
 	delay_ms(3000);
 	ReadSysParameter(0);//初始化系统参数
 	Load_Net_Parameters();//装载网络参数
-	Beep_init();
+	//Beep_init();
 	SysIC_Test();
 	
 	u485_GPIO_INT();
 	DK_USART_Init(9600,2);     //二维码
+	DK_USART_Init(9600,3);     //语音串口
 	DK_USART_OPen_INT(2);
 	DK_NVIC_IRQ_Set(USART2_IRQn,0,0,ENABLE);//要实现外设中断，必须先设置外设的优先级
-	Usart2ToErMa(); 
+//	Usart2ToErMa(); 
+	SelWifiMode();
 	
 	PsamGpioInt();
 	PsamUSART_Configuration();	 	//串口1初始化为9600用于PSAM卡 
@@ -96,7 +99,8 @@ void BSP_Init(void)
 	}
 	else if (ReadKeyValue==(KEY_3 | KEY_5 | KEY_7))
 	{		
-			SetConsumModeEnableSub();//设置消费方式允许位及AL值查看			
+		SetConsumModeEnableSub();//设置消费方式允许位及AL值查看		
+		SetnonetLimit();		//设置脱机是否判断限额
 	}
 	else if (ReadKeyValue==(KEY_ENTER))
 	{

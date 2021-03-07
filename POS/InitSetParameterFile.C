@@ -12,6 +12,8 @@
 
 extern void 	LED_DispDatas_all(unsigned char * ptr);
 	
+ 
+void	SetnonetLimit(void);//设置脱机情况下是否增加限额判断
 void	SetCommModeSub(void);
 void	SetSysDateTime(ulong);//设置日期时间
 uchar	SelectDate(uchar * ptr);//选择消费日期
@@ -89,18 +91,27 @@ void	ReadSysParameter(uchar bbit)
 		LimtConsumeMoney = *(uint32_t*)(&LimtConsumeBuf);
 	}
 	
-	RdBytesFromAT24C64(ConsumStatus_Addr,Buffer,4);
+	RdBytesFromAT24C64(ConsumStatus_Addr,Buffer,4);//
 	if (!(memcmp(Buffer,ConsumStaCodeSymbl,4)))
 		CanNoNetConsume=1;//为1时不允许脱机消费
 	else
 		CanNoNetConsume=0;//允许脱机消费
 	
+	RdBytesFromAT24C64(NoNetLimit_Addr,Buffer,4);//CanNoNetLimit
+	if (!(memcmp(Buffer,ConsumStaCodeSymbl,4)))
+			CanNoNetLimit=1;//为1时脱机时判断限额
+	else
+			CanNoNetLimit=0;//允许脱机不判断限额
+	
+	RdBytesFromAT24C64(ConsumModeEnable_Addr,Buffer,3);//消费方式允许
+	if (!BytesCheckSum(Buffer,3) && Buffer[0]==0xa0)
+		ConsumModeEnable=Buffer[1];
 	if (!bbit)
 	{//第一次初试化，对消费方式进行初试化
 		ConsumMode=CONSUM_MONEY;//默认的消费方式
 		if (!(ConsumModeEnable&8))
 		{//不允许金额消费
-				for (i=0;i<4;i++)
+				for (i=1;i<4;i++)
 				{
 					if (ConsumModeEnable & (1<<i))
 					{	
@@ -271,7 +282,10 @@ void	ChgInputToLedBuffer(uchar LedX,uchar * ptr,uchar Num)//将输入的字符转换为显
 	 	if (st_data==0xff)
 			j++;
 	}
-	memset(DispBuffer+LedX,0,Num);
+	if(!bitHaveDispBalance)
+		memset(DispBuffer+LedX,0,Num);
+	else
+		memset(DispBuffer+5,0,Num);
 	if (j<Num)
 	{
 		for (i=0;i<(Num-j);i++)
@@ -328,6 +342,15 @@ void	DispConsumStatus(uchar bbit)
 		memcpy(DispBuffer,"\x76\x77\x3e\x79\x00\x00\x37\x79\x78\x00",10);//have net
 	else
 		memcpy(DispBuffer,"\x00\x37\x5c\x00\x00\x00\x37\x79\x78\x00",10);//no net
+	LED_DispDatas_all(DispBuffer);
+}
+
+void	DispNonetLimit(uchar bbit)	
+{
+	if(!bbit)
+		memcpy(DispBuffer,"\x76\x77\x3e\x79\x00\x00\x38\x06\x78\x00",10);//have LIT
+	else
+		memcpy(DispBuffer,"\x00\x37\x5c\x00\x00\x00\x38\x06\x78\x00",10);//no LIT
 	LED_DispDatas_all(DispBuffer);
 }
 void	SetConsumModeEnableSub(void)//设置消费方式允许位
@@ -627,6 +650,55 @@ void	SetConsumStatusCode(void)//设置脱机消费
 		CanNoNetConsume = 1;
 	}
 	WrBytesToAT24C64(ConsumStatus_Addr,Buffer,4);
+	BeepOn(2);
+	bitUpdateParameter=1;
+	ReadSysParameter(0);
+}
+
+void	SetnonetLimit(void)//设置脱机情况下是否增加限额判断
+{
+	uchar		Buffer[4];
+	ulong	Key_Long;
+	uchar	bbit;
+	
+	RdBytesFromAT24C64(NoNetLimit_Addr,Buffer,4);
+	if (!(memcmp(Buffer,ConsumStaCodeSymbl,4)))
+			bbit=1;//为1时不允许脱机消费
+	else
+			bbit=0;//允许脱机消费
+	
+	DispNonetLimit(!bbit);
+	while (1)
+	{
+		LED_NumFalsh_Disp(0,4,0xa000);
+		Key_Long=ScanKeySub(KEY_ESC|KEY_ENTER|KEY_ADD);
+		if (Key_Long==KEY_ESC)
+			return;
+		if (Key_Long==KEY_ENTER)
+			break;
+		if (Key_Long==KEY_ADD)
+		{
+			if(bbit)
+			{
+				bbit =0;
+			}
+			else
+				bbit =1;
+			DispNonetLimit(!bbit);	
+		}
+		Clr_WatchDog();
+	}
+	if (!bbit)
+	{
+		memset(Buffer,0xff,4);
+		CanNoNetLimit = 0;
+	}
+	else
+	{
+		memcpy(Buffer,ConsumStaCodeSymbl,4);
+		CanNoNetLimit = 1;
+	}
+	WrBytesToAT24C64(NoNetLimit_Addr,Buffer,4);
 	BeepOn(2);
 	bitUpdateParameter=1;
 	ReadSysParameter(0);

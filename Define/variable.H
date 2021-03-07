@@ -95,7 +95,7 @@ uchar 	BatModeFlag;
 uchar		bitHaveReadBalance=0;
 uchar		bitHaveDispBalance=0;
 uchar		Resend_Num=0;
-uchar		ConsumModeEnable = 0x0d;//消费方式允许
+uchar		ConsumModeEnable = 0x0f;//消费方式允许
 ulong		SumConsumMoney=0;//总消费额
 ulong		SumPrintMoney=0;//打印的总消费额
 
@@ -125,7 +125,8 @@ uchar		bitHaveInputDatas=0;
 ulong   LimtMoney;
 uchar   HaveOffRecord =0;
 
-uchar 	CanNoNetConsume =0;
+uchar 	CanNoNetConsume =0;//是否允许脱机消费
+uchar   CanNoNetLimit = 0;//脱机下是否判断限额
 uchar 	ComsumeDate[3];//消费日期
 uchar 	HaveSendDataFlag = 0;//
 uchar   ThreeRecord[24];
